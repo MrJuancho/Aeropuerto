@@ -11,6 +11,9 @@ public class Aeropuerto {
     private List<VuelosVuelta> regreso;
     private List<Admin> admin;
     private List<Lugar> lugares;
+    private String admin1 = "CarlosCata";
+    private String admin2 = "Juancho";
+    
 
     public void RegistrarUsuario(String nombre, String apellido, String mail, String password, ImageIcon profilePhoto, String userName)
     {
@@ -91,15 +94,15 @@ public class Aeropuerto {
         }
     }
 
-    public void AltaCata(String username, String password)
+    public void AltaCata()
     {
-        Admin niu = new Admin("CarlosCata","123456",true);
+        Admin niu = new Admin(admin1,"123456",true);
         admin.add(niu);
     }
     
-    public void AltaJuan(String username, String password)
+    public void AltaJuan()
     {
-        Admin niu = new Admin("Juancho","123456",true);
+        Admin niu = new Admin(admin2,"123456",true);
         admin.add(niu);
     }
 
@@ -119,5 +122,30 @@ public class Aeropuerto {
         }
     }
 
+    public List<Avion> getAviones() {
+        return aviones;
+    }
 
+    public List<Vuelos> getVuelos() {
+        return vuelos;
+    }
+
+    public List<Usuario> getUsuario() {
+        return usuario;
+    }
+
+    public List<VuelosVuelta> getRegreso() {
+        return regreso;
+    }
+
+    public List<Admin> getAdmin() {
+        return admin;
+    }
+
+    public List<Lugar> getLugares() {
+        return lugares;
+    }
+
+
+    
 }
