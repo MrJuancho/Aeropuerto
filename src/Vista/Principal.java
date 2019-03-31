@@ -118,6 +118,7 @@ public class Principal extends JFrame {
         setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(1280, 720));
+        getContentPane().setLayout(new java.awt.BorderLayout());
 
         AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
@@ -131,7 +132,7 @@ public class Principal extends JFrame {
         ToolBarUser.setLayout(new java.awt.BorderLayout());
 
         Navegacion.setOpaque(false);
-        Navegacion.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
+        Navegacion.setLayout(new java.awt.FlowLayout(1, 5, 2));
 
         SalidasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         SalidasB.setForeground(new java.awt.Color(255, 255, 255));
@@ -156,7 +157,7 @@ public class Principal extends JFrame {
         ToolBarUser.add(Navegacion, java.awt.BorderLayout.WEST);
 
         OpcionesUsuario.setOpaque(false);
-        OpcionesUsuario.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
+        OpcionesUsuario.setLayout(new java.awt.FlowLayout(1, 5, 3));
 
         jLabel9.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -243,7 +244,6 @@ public class Principal extends JFrame {
         TextoRegistro.setText("Registrate");
         PanelRegistro.add(TextoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
 
-        BotonRegresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\MrJua\\Desktop\\Aeropuerto\\src\\Images\\drawable-xhdpi\\ic_label_white_24dp.png")); // NOI18N
         BotonRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BotonRegresarMouseClicked(evt);
@@ -425,7 +425,6 @@ public class Principal extends JFrame {
         PanelPresentacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\MrJua\\Desktop\\Aeropuerto\\src\\Images\\apexFlights2.png")); // NOI18N
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         PanelPresentacion.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
 
@@ -452,7 +451,7 @@ public class Principal extends JFrame {
         PanelPrincipal.setLayout(new java.awt.BorderLayout(40, 15));
 
         jPanel2.setOpaque(false);
-        jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 7, 5));
+        jPanel2.setLayout(new java.awt.FlowLayout(1, 7, 5));
 
         IconoSuperior.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         IconoSuperior.setForeground(new java.awt.Color(255, 255, 255));

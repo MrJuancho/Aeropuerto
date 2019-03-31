@@ -429,11 +429,6 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="BotonRegresar">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\MrJua\Desktop\Aeropuerto\src\Images\drawable-xhdpi\ic_label_white_24dp.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BotonRegresarMouseClicked"/>
               </Events>
@@ -888,9 +883,6 @@
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\MrJua\Desktop\Aeropuerto\src\Images\apexFlights2.png"/>
-                </Property>
                 <Property name="horizontalTextPosition" type="int" value="2"/>
               </Properties>
               <Constraints>
