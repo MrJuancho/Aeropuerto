@@ -28,8 +28,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Modelo/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="92">
               <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+=======
+            <state relative-caret-position="161">
+              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+>>>>>>> aaf44670cd23f36e6b4e7baae7d73f6cbfc8c64b
             </state>
           </provider>
         </entry>
@@ -95,7 +100,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Images" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -127,17 +132,29 @@
       <updated>1554013624780</updated>
       <workItem from="1554013627944" duration="998000" />
       <workItem from="1554026960230" duration="3000" />
+<<<<<<< HEAD
       <workItem from="1554028737117" duration="274000" />
+=======
+      <workItem from="1554028557112" duration="725000" />
+>>>>>>> aaf44670cd23f36e6b4e7baae7d73f6cbfc8c64b
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1275000" />
+=======
+    <option name="totallyTimeSpent" value="1726000" />
+>>>>>>> aaf44670cd23f36e6b4e7baae7d73f6cbfc8c64b
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2557047" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
+>>>>>>> aaf44670cd23f36e6b4e7baae7d73f6cbfc8c64b
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -183,8 +200,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="92">
           <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+=======
+        <state relative-caret-position="161">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+>>>>>>> aaf44670cd23f36e6b4e7baae7d73f6cbfc8c64b
         </state>
       </provider>
     </entry>
