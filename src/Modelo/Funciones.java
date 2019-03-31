@@ -26,14 +26,19 @@ public class Funciones {
             
             switch(m){
                 case "1":
-                    System.out.println("Codigo de Vuelo:");
-                    flightcode = teclado.nextLine();
-                    System.out.println("Destino:");
-                    destino = teclado.nextLine();
-                    System.out.println("Avion Asignado:");
-                    avionA = new Avion();
+                    System.out.println("LLena el siguiente Registro...");
+                    System.out.print("Code Flight: ");
+                    String codeReg = teclado.nextLine();
+                    System.out.print("Destino: ");
+                    String desReg = teclado.nextLine();
+                    System.out.print("Hora de Abordaje: ");
+                    String hora = teclado.nextLine();
+                    System.out.println("Avion Asignado: ");
+                    System.out.println("Selecciona el avion a continuacion...");
+                    for (int i = 0; i < aeropuerto.getAviones().size(); i++) {
+                        
+                    }
                     break;
-                    
                 case "2":
                     System.out.println(" # de Vuelo  ||  Destino || "
                             + "Hora de Abordaje || Lugares Disponibles || "
@@ -51,9 +56,7 @@ public class Funciones {
                     String destinoMod = teclado.nextLine();
                     System.out.println("Hora de Abordaje:");
                     String horaMod = teclado.nextLine();
-                    
                     break;
-                    
                 case "3":
                     System.out.println("Vuelo a dar de baja");
                     break;
@@ -69,7 +72,6 @@ public class Funciones {
     public static void adminUsuarios()
     {
         String m,nombre,apellido,mail,password,userName;
-        ImageIcon profilePhoto;
         CardInformation cardInformation;
         ElectronicPayment electronicPayment;
         int ID;
@@ -112,15 +114,12 @@ public class Funciones {
                     mail = teclado.nextLine();
                     System.out.println("Password:");
                     password = teclado.nextLine();
-                    System.out.println("Imagen de perfil:");
-                    //profilePhoto asies
+                    System.out.println("URL Imagen de perfil:");
+                    String URL = teclado.nextLine();
+                    ImageIcon ProfilePhoto = new ImageIcon(URL);
                     System.out.println("Nombre de usuario:");
                     userName = teclado.nextLine();
-                    System.out.println("Tarjeta de credito:");
-                    //cardInformation asies
-                    System.out.println("Pago electronico:");
-                    //electronicPayment asies
-                    aeropuerto.ModificarUsuario(ID, nombre, apellido, ACoins, mail, password, profilePhoto, userName, cardInformation, electronicPayment);
+                    aeropuerto.ModificarUsuario(ID, nombre, apellido, ACoins, mail, password, ProfilePhoto, userName, aeropuerto.getUsuario().get(ID).getCardInformation(), aeropuerto.getUsuario().get(ID).getElectronicPayment());
                     break;
                     
                 case "0":
