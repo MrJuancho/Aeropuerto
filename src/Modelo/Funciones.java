@@ -35,9 +35,15 @@ public class Funciones {
                     break;
                     
                 case "2":
-                    System.out.println("  # de Vuelo  ||  Destino  ");
+                    System.out.println(" # de Vuelo  ||  Destino || "
+                            + "Hora de Abordaje || Lugares Disponibles || "
+                            + "Avion Asignado");
                     for (int i = 0; i < aeropuerto.getVuelos().size(); i++) {
-                        System.out.println(""+aeropuerto.getVuelos().get(i));
+                        System.out.println(" "+aeropuerto.getVuelos().get(i).getFlightCode()+
+                                " || "+aeropuerto.getVuelos().get(i).getDestino()+
+                                " || "+aeropuerto.getVuelos().get(i).getHoraAbordaje()+
+                                " || "+aeropuerto.getVuelos().get(i).getLugaresDisp()+
+                                " || "+aeropuerto.getVuelos().get(i).getAvionAsignado().getPlaca());
                     }
                     System.out.println("Numero de vuelo");
                     id = teclado.nextInt();
