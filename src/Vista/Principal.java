@@ -46,6 +46,7 @@ public class Principal extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        AdminPanel = new javax.swing.JPanel();
         UsuarioPanel = new javax.swing.JPanel();
         ToolBarUser = new javax.swing.JPanel();
         Navegacion = new javax.swing.JPanel();
@@ -66,7 +67,6 @@ public class Principal extends JFrame {
         MarcoUser = new javax.swing.JLabel();
         UserImage = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        AdminPanel = new javax.swing.JPanel();
         PanelLogin = new javax.swing.JPanel();
         PanelRegistro = new javax.swing.JPanel();
         TextoPass2 = new javax.swing.JLabel();
@@ -118,6 +118,9 @@ public class Principal extends JFrame {
         setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(1280, 720));
+
+        AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
 
         UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
         UsuarioPanel.setLayout(new java.awt.BorderLayout());
@@ -201,9 +204,6 @@ public class Principal extends JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MarcoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/imagenMarco.png"))); // NOI18N
-        MarcoUser.setMaximumSize(new java.awt.Dimension(100, 100));
-        MarcoUser.setMinimumSize(new java.awt.Dimension(100, 100));
-        MarcoUser.setPreferredSize(new java.awt.Dimension(100, 100));
         jPanel3.add(MarcoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
 
         UserImage.setMaximumSize(new java.awt.Dimension(100, 100));
@@ -221,9 +221,6 @@ public class Principal extends JFrame {
         UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
-
-        AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
 
         PanelLogin.setBackground(new java.awt.Color(33, 150, 243));
         PanelLogin.setLayout(new java.awt.BorderLayout());
