@@ -95,7 +95,7 @@ public class Main{
                     switch (m)
                     {
                         case "1":
-                            funciones.adminvuelos();
+                            funciones.adminVuelos();
                             break;
                             
                         case "2":
@@ -103,7 +103,7 @@ public class Main{
                             break;
                             
                         case "3":
-                            funciones.adminusuarios();
+                            funciones.adminUsuarios();
                             break;
                             
                         case "0":
