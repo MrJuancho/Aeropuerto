@@ -42,15 +42,13 @@ public class Funciones {
                                 " || "+aeropuerto.getVuelos().get(i).getLugaresDisp()+
                                 " || "+aeropuerto.getVuelos().get(i).getAvionAsignado().getPlaca());
                     }
-                    System.out.println("Numero de vuelo");
-                    id = teclado.nextInt();
-                    System.out.println("Codigo de Vuelo:");
-                    flightcode = teclado.nextLine();
-                    System.out.println("Destino:");
-                    destino = teclado.nextLine();
-                    System.out.println("Avion Asignado:");
-                    avionA = new Avion();
-                    aeropuerto.ModificarVuelo(id, flightcode, destino, avionA);
+                    System.out.println("Codigo de vuelo: ");
+                    String nVuelo = teclado.nextLine();
+                    System.out.println("Destino: ");
+                    String destinoMod = teclado.nextLine();
+                    System.out.println("Hora de Abordaje:");
+                    String horaMod = teclado.nextLine();
+                    
                     break;
                     
                 case "3":
