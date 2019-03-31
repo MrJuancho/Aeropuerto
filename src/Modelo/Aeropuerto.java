@@ -34,9 +34,15 @@ public class Aeropuerto {
 
     public void ModificarUsuario(int ID, String nombre, String apellido, double ACoins, String mail, String password, ImageIcon profilePhoto, String userName, CardInformation cardInformation, ElectronicPayment electronicPayment)
     {
-        Usuario modificado = new Usuario();
-        modificado = new Usuario(modificado.getID(),nombre,apellido,ACoins,mail,password,profilePhoto,userName,cardInformation,electronicPayment);
-        usuario.add(modificado);
+        usuario.get(ID).setNombre(nombre);
+        usuario.get(ID).setApellido(apellido);
+        usuario.get(ID).setACoins(ACoins);
+        usuario.get(ID).setMail(mail);
+        usuario.get(ID).setPassword(password);
+        usuario.get(ID).setProfilePhoto(profilePhoto);
+        usuario.get(ID).setUserName(userName);
+        usuario.get(ID).setCardInformation(cardInformation);
+        usuario.get(ID).setElectronicPayment(electronicPayment);
     }
 
     public void RegistrarAvion(String modelo, int noVuelos, String placa,Lugar lugar)
@@ -96,14 +102,14 @@ public class Aeropuerto {
 
     public void AltaCata()
     {
-        Admin niu = new Admin(admin1,"123456",true);
-        admin.add(niu);
+        Admin Cata = new Admin(admin1,"271700",true);
+        admin.add(Cata);
     }
     
     public void AltaJuan()
     {
-        Admin niu = new Admin(admin2,"123456",true);
-        admin.add(niu);
+        Admin Juan = new Admin(admin2,"140198",true);
+        admin.add(Juan);
     }
 
     public void Registrarlugares(int ID, int clase, int precio, boolean isAvailable)
@@ -144,8 +150,5 @@ public class Aeropuerto {
 
     public List<Lugar> getLugares() {
         return lugares;
-    }
-
-
-    
+    ç
 }
