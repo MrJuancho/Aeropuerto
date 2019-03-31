@@ -146,6 +146,11 @@ public class Aeropuerto {
         return lugares;
     }
 
+    public String getAdmin1() {
+        return admin1;
+    }
 
-    
+    public String getAdmin2() {
+        return admin2;
+    }
 }
