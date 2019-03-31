@@ -4,6 +4,7 @@ public class CardInformation {
     private String CardNumber;
     private String expDate;
     private String CCV;
+    private int Fondos;
 
     public CardInformation() {
     }
@@ -36,5 +37,13 @@ public class CardInformation {
 
     public void setCCV(String CCV) {
         this.CCV = CCV;
+    }
+
+    public int getFondos() {
+        return Fondos;
+    }
+
+    public void setFondos(int Fondos) {
+        this.Fondos = Fondos;
     }
 }

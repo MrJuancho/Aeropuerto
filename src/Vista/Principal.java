@@ -118,7 +118,6 @@ public class Principal extends JFrame {
         setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(1280, 720));
-        getContentPane().setLayout(new java.awt.BorderLayout());
 
         AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
@@ -132,7 +131,7 @@ public class Principal extends JFrame {
         ToolBarUser.setLayout(new java.awt.BorderLayout());
 
         Navegacion.setOpaque(false);
-        Navegacion.setLayout(new java.awt.FlowLayout(1, 5, 2));
+        Navegacion.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
 
         SalidasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         SalidasB.setForeground(new java.awt.Color(255, 255, 255));
@@ -157,7 +156,7 @@ public class Principal extends JFrame {
         ToolBarUser.add(Navegacion, java.awt.BorderLayout.WEST);
 
         OpcionesUsuario.setOpaque(false);
-        OpcionesUsuario.setLayout(new java.awt.FlowLayout(1, 5, 3));
+        OpcionesUsuario.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
 
         jLabel9.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -451,7 +450,7 @@ public class Principal extends JFrame {
         PanelPrincipal.setLayout(new java.awt.BorderLayout(40, 15));
 
         jPanel2.setOpaque(false);
-        jPanel2.setLayout(new java.awt.FlowLayout(1, 7, 5));
+        jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 7, 5));
 
         IconoSuperior.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         IconoSuperior.setForeground(new java.awt.Color(255, 255, 255));
