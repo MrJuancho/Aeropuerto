@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class Funciones {
    static Scanner teclado = new Scanner(System.in);
-    public static void adminaviones()
+   
+    public static void adminVuelos()
     {
         String flightcode,destino,avionAsignado,m;
         Avion avionA;
@@ -20,15 +21,14 @@ public class Funciones {
             System.out.println("0 >> Regresar");
             m = teclado.nextLine();
             
-            switch(m)
-            {
+            switch(m){
                 case "1":
                     System.out.println("Codigo de Vuelo:");
                     flightcode = teclado.nextLine();
                     System.out.println("Destino:");
                     destino = teclado.nextLine();
                     System.out.println("Avion Asignado:");
-                    avionAsignado = new Avion();
+                    avionA = new Avion();
                     break;
                     
                 case "2":
@@ -43,8 +43,8 @@ public class Funciones {
                     System.out.println("Destino:");
                     destino = teclado.nextLine();
                     System.out.println("Avion Asignado:");
-                    avionAsignado = new Avion();
-                    aeropuerto.ModificarVuelo(id, flightcode, destino, avionAsignado);
+                    avionA = new Avion();
+                    aeropuerto.ModificarVuelo(id, flightcode, destino, avionA);
                     break;
                     
                 case "3":
@@ -54,8 +54,7 @@ public class Funciones {
         }while(m!="0");
     }
     
-    public static void adminvuelos()
-    {
+    public static void adminvuelos(){
         
     }
     
