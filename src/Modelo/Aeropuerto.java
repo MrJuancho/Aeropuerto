@@ -17,7 +17,7 @@ public class Aeropuerto {
 
     public void RegistrarUsuario(String nombre, String apellido, String mail, String password, ImageIcon profilePhoto, String userName)
     {
-        Usuario nuevo = new Usuario(usuario.size()+1,nombre,apellido,0,mail,password,profilePhoto,userName,null,null);
+        Usuario nuevo = new Usuario(usuario.size(),nombre,apellido,0,mail,password,profilePhoto,userName,null,null);
         usuario.add(nuevo);
     }
 
