@@ -8,7 +8,7 @@ public class Vuelos {
     private String Destino;
     private Avion AvionAsignado;
     private int lugaresDisp;
-    private Date horaAbordaje;
+    private String horaAbordaje;
 
     public Vuelos() {
     }
@@ -52,11 +52,11 @@ public class Vuelos {
         AvionAsignado = avionAsignado;
     }
 
-    public Date getHoraAbordaje() {
+    public String getHoraAbordaje() {
         return horaAbordaje;
     }
 
-    public void setHoraAbordaje(Date horaAbordaje) {
+    public void setHoraAbordaje(String horaAbordaje) {
         this.horaAbordaje = horaAbordaje;
     }
 
