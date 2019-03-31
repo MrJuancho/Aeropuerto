@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebdcc9dd-59ee-460a-884f-c95d34a0865d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Vista/Principal.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Principal.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vista/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Principal.java" afterDir="false" />
-    </list>
+    <list default="true" id="ebdcc9dd-59ee-460a-884f-c95d34a0865d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,16 +110,15 @@
       <updated>1554013624780</updated>
       <workItem from="1554013627944" duration="998000" />
       <workItem from="1554026960230" duration="3000" />
-      <workItem from="1554028557112" duration="550000" />
+      <workItem from="1554028557112" duration="725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1551000" />
+    <option name="totallyTimeSpent" value="1726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
