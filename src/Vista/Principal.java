@@ -595,17 +595,16 @@ public class Principal extends JFrame {
     }
     
     private void myComponents(){
-        
              setLocationRelativeTo(null);
-             cambiarsize(jLabel4,"C:\\Users\\MrJua\\Documents\\NetBeansProjects\\Aeropuerto\\src\\Images\\_recortado.png");
-             cambiarsize(FondoOpciones,"C:\\Users\\MrJua\\Documents\\NetBeansProjects\\Aeropuerto\\src\\Images\\_recortado2.png");
-             cambiarsize(UserImage,"C:\\Users\\MrJua\\Documents\\NetBeansProjects\\Aeropuerto\\src\\Images\\milos.jpg");
+             cambiarsize(jLabel4,"/Images/_recortado.png");
+             cambiarsize(FondoOpciones,"/Images/_recortado2.png");
+             cambiarsize(UserImage,"/Images/milos.jpg");
     }
     
     private void cambiarsize(JLabel jl,String url_imagen){
           BufferedImage img = null;
             try {
-                img = ImageIO.read(new File(url_imagen));
+                img = ImageIO.read(getClass().getResource(url_imagen));
             } catch (IOException e) {
                 e.printStackTrace();
             }
