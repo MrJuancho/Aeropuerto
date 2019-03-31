@@ -54,14 +54,22 @@ public class Funciones {
         }while(m!="0");
     }
     
-    public static void adminvuelos()
+    public static void adminaviones()
     {
         
     }
     
     public static void adminusuarios()
     {
+        String flightcode,destino,avionAsignado,m;
+        Avion avionA;
+        Aeropuerto aeropuerto = new Aeropuerto();
+        int id;
         
+        do
+        {
+            
+        }while()
     }
 }
 
