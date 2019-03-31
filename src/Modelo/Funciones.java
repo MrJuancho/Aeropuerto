@@ -8,7 +8,7 @@ public class Funciones {
     public static void adminaviones()
     {
         String flightcode,destino,avionAsignado,m;
-        Avion avionAsignado;
+        Avion avionA;
         Aeropuerto aeropuerto = new Aeropuerto();
         int id;
         do
