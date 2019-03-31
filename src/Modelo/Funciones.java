@@ -134,5 +134,59 @@ public class Funciones {
             }
         }while(m!="0");
     }
+    
+    public void mortalVuelos()
+    {
+        Aeropuerto aeropuerto = new Aeropuerto();
+        String m;
+        do
+        {
+            System.out.println("¿Qué operacion desea realizar?");
+            System.out.println("1 >> Vuelos Salida");
+            System.out.println("2 >> Ver Vuelos de Llegada");
+            System.out.println("0 >> Regresar");
+            m = teclado.nextLine();
+            switch(m)
+            {
+                case "1":
+                    System.out.println("Ingrese la opcion deseada");
+                    System.out.println("1 >> Ver vuelos de salida");
+                    System.out.println("2 >> Comprar Vuelo");
+                    System.out.println("0 >> Regresar");
+                    m = teclado.nextLine();
+                    switch (m)
+                    {
+                        case "1":
+                            System.out.println("  ID  ||  Flight Code || Destino || Avion Asignado");
+                            for (int i = 0; i < aeropuerto.getVuelos().size(); i++) {
+                                
+                            }
+                            break;
+                            
+                        case "2":
+                            break;
+                            
+                        case "0":
+                            break;
+                    }
+                    break;
+                    
+                case "2":
+                    break;
+                    
+                case "0":
+                    break;
+                    
+                default:
+                    System.out.println("Inserte una opcion valida");
+                    break;
+            }
+        }while(m!="0");
+    }
+    
+    public void mortalPagos()
+    {
+        
+    }
 }
 
