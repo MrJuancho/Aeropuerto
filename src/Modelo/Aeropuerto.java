@@ -91,9 +91,15 @@ public class Aeropuerto {
         }
     }
 
-    public void Alta(String username, String password)
+    public void AltaCata(String username, String password)
     {
-        Admin niu = new Admin(username,password,true);
+        Admin niu = new Admin("CarlosCata","123456",true);
+        admin.add(niu);
+    }
+    
+    public void AltaJuan(String username, String password)
+    {
+        Admin niu = new Admin("Juancho","123456",true);
         admin.add(niu);
     }
 
