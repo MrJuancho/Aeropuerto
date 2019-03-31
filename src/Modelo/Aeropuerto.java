@@ -150,9 +150,7 @@ public class Aeropuerto {
 
     public List<Lugar> getLugares() {
         return lugares;
-<<<<<<< HEAD
-    ç
-=======
+
     }
 
     public String getAdmin1() {
@@ -162,5 +160,4 @@ public class Aeropuerto {
     public String getAdmin2() {
         return admin2;
     }
->>>>>>> 843500334c012e1bd3d7c471e047d2e0e964732e
 }

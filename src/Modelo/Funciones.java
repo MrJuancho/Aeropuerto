@@ -1,7 +1,10 @@
 package Modelo;
 
 import Controlador.Avion;
+import Controlador.CardInformation;
+import Controlador.ElectronicPayment;
 import java.util.Scanner;
+import javax.swing.ImageIcon;
 
 public class Funciones {
    static Scanner teclado = new Scanner(System.in);
@@ -63,11 +66,14 @@ public class Funciones {
         
     }
     
-    public static void adminusuarios()
+    public static void adminUsuarios()
     {
         String m,nombre,apellido,mail,password,userName;
-        
+        ImageIcon profilePhoto;
+        CardInformation cardInformation;
+        ElectronicPayment electronicPayment;
         int ID;
+        double ACoins;
         Aeropuerto aeropuerto = new Aeropuerto();
         
         do
@@ -97,15 +103,32 @@ public class Funciones {
                     System.out.println("Numero Identificador");
                     ID = teclado.nextInt();
                     System.out.println("Nombre:");
-                    
-                    
+                    nombre = teclado.nextLine();
+                    System.out.println("Apellido:");
+                    apellido = teclado.nextLine();
+                    System.out.println("Apex Coins:");
+                    ACoins = teclado.nextDouble();
+                    System.out.println("Email:");
+                    mail = teclado.nextLine();
+                    System.out.println("Password:");
+                    password = teclado.nextLine();
+                    System.out.println("Imagen de perfil:");
+                    //profilePhoto asies
+                    System.out.println("Nombre de usuario:");
+                    userName = teclado.nextLine();
+                    System.out.println("Tarjeta de credito:");
+                    //cardInformation asies
+                    System.out.println("Pago electronico:");
+                    //electronicPayment asies
+                    aeropuerto.ModificarUsuario(ID, nombre, apellido, ACoins, mail, password, profilePhoto, userName, cardInformation, electronicPayment);
                     break;
                     
                 case "0":
+                    System.out.println("Regresando");
                     break;
                    
                 default: 
-                    System.out.println("");
+                    System.out.println("Inserte una opcion valida");
             }
         }while(m!="0");
     }
