@@ -10,5 +10,4 @@ public class Main {
         Principal v = new Principal();
         v.setVisible(true);
     }
-    
 }
