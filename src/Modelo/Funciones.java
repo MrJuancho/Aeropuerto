@@ -3,6 +3,7 @@ package Modelo;
 import Controlador.Avion;
 import Controlador.CardInformation;
 import Controlador.ElectronicPayment;
+import Controlador.Usuario;
 import java.util.Scanner;
 import javax.swing.ImageIcon;
 
@@ -132,8 +133,7 @@ public class Funciones {
         }while(m!="0");
     }
     
-    public void mortalVuelos()
-    {
+    public void mortalVuelos(Usuario user){
         int id,lugar;
         Aeropuerto aeropuerto = new Aeropuerto();
         String m,pago;
@@ -155,11 +155,9 @@ public class Funciones {
                     switch (m)
                     {
                         case "1":
-                            
+           
                             break;
-                            
                         case "2":
-                            
                             System.out.println("Inserte el vuelo que desea comprar:");
                             id = teclado.nextInt();
                             aeropuerto.getVuelos().get(id).getAvionAsignado().getLugares();
@@ -167,8 +165,8 @@ public class Funciones {
                             System.out.println("Que lugar deseas?");
                             lugar = teclado.nextInt();
                             aeropuerto.getLugares().get(lugar).setAvailable(false);
-                            do
-                            {
+                            boolean isDone = false;
+                            do{
                                 System.out.println("Elija el metodo de pago");
                                 System.out.println("1 >> Apex Coins");
                                 System.out.println("2 >> Pago con Tarjeta");
@@ -176,21 +174,22 @@ public class Funciones {
                                 switch(pago)
                                 {
                                     case "1":
-                                        aeropuerto.getUsuario().get(lugar).setACoins(id);
-                                        break;
-                                        
+                                    user.setACoins((user.getACoins()-aeropuerto.getLugares().get(lugar).getPrecio()));
+                                    isDone = true;
+                                    break;
                                     case "2":
-                                        break;
-                                        
+                                    user.getCardInformation().setFondos(user.getCardInformation().getFondos()-aeropuerto.getLugares().get(lugar).getPrecio());
+                                    isDone = true;
+                                    break;
+                                    case "0":
+                                    System.out.println("Lo cancelaste >:O");
+                                    break;
                                     default:
-                                        System.out.println("Inserte una opcion valida");
-                                        
+                                    System.out.println("Inserte una opcion valida");
+                                    break;
                                 }
-                                
-                            }while(pago !="0");
-                            
-                            break;
-                            
+                            }while(pago !="0" || isDone == true);
+                            break;  
                         case "0":
                             break;
                     }
