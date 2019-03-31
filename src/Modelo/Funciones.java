@@ -134,8 +134,9 @@ public class Funciones {
     
     public void mortalVuelos()
     {
+        int id,lugar;
         Aeropuerto aeropuerto = new Aeropuerto();
-        String m;
+        String m,pago;
         do
         {
             System.out.println("¿Qué operacion desea realizar?");
@@ -154,13 +155,39 @@ public class Funciones {
                     switch (m)
                     {
                         case "1":
-                            System.out.println("  ID  ||  Flight Code || Destino || Avion Asignado");
-                            for (int i = 0; i < aeropuerto.getVuelos().size(); i++) {
-                                System.out.println(""+aeropuerto.getVuelos().get(i).getId()+"  ||  "+aeropuerto.getVuelos().get(i).getFlightCode()+"  ||  "+aeropuerto.getVuelos().get(i).getDestino()+"  ||  "+aeropuerto.getVuelos().get(i).getAvionAsignado());
-                            }
+                            
                             break;
                             
                         case "2":
+                            
+                            System.out.println("Inserte el vuelo que desea comprar:");
+                            id = teclado.nextInt();
+                            aeropuerto.getVuelos().get(id).getAvionAsignado().getLugares();
+                            //muestra lugares disponibles
+                            System.out.println("Que lugar deseas?");
+                            lugar = teclado.nextInt();
+                            aeropuerto.getLugares().get(lugar).setAvailable(false);
+                            do
+                            {
+                                System.out.println("Elija el metodo de pago");
+                                System.out.println("1 >> Apex Coins");
+                                System.out.println("2 >> Pago con Tarjeta");
+                                pago = teclado.nextLine();
+                                switch(pago)
+                                {
+                                    case "1":
+                                        aeropuerto.getUsuario().get(lugar).setACoins(id);
+                                        break;
+                                        
+                                    case "2":
+                                        break;
+                                        
+                                    default:
+                                        System.out.println("Inserte una opcion valida");
+                                        
+                                }
+                                
+                            }while(pago !="0");
                             
                             break;
                             

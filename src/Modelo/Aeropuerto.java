@@ -118,16 +118,6 @@ public class Aeropuerto {
         lugares.add(lugar);
     }
 
-    public void BajaLugares(int ID){
-        Lugar lugar = new Lugar();
-        for (int i = 0; i < lugares.size(); i++) {
-            if(ID == lugares.get(i).getID())
-            {
-                lugares.remove(ID);
-            }
-        }
-    }
-
     public List<Avion> getAviones() {
         return aviones;
     }
