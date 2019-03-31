@@ -81,7 +81,6 @@ public class Main{
                 UserName = teclado.nextLine();
                 System.out.println("Contraseña:");
                 password = teclado.nextLine();
-                System.out.println("");
                 aeropuerto.RegistrarUsuario(nombre, apellido, mail, password,null, UserName);
                 
                 do
