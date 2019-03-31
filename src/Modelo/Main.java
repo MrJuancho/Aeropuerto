@@ -45,7 +45,7 @@ public class Main{
             System.out.println("Contraseña:");
             password = teclado.nextLine();
             
-            if(usuario == admin1||usuario == admin2)
+            if(usuario.equals(admin1)||usuario.equals(admin2))
             {
                 do
                 {
@@ -72,6 +72,7 @@ public class Main{
                             
                         case "0":
                             System.out.println("Good Lucky");
+                            bandera = false;
                             break;
                             
                         default:
