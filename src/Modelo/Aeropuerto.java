@@ -165,10 +165,10 @@ public class Aeropuerto {
     public void MostrarUsuarios(){
         for (int i = 0; i < usuario.size(); i++) {
             System.out.println("ID >>> "+i);
-            System.out.println("➤ Nombre >>"+usuario.get(i).getNombre();
-            System.out.println("➤ Apellidos  >>"+usuario.get(i).getApellido();
-            System.out.println("➤ Mail >>"+usuario.get(i).getMail();
-            System.out.println("➤ UserName >>"+usuario.get(i).getUserName();
+            System.out.println("➤ Nombre >>"+usuario.get(i).getNombre());
+            System.out.println("➤ Apellidos  >>"+usuario.get(i).getApellido());
+            System.out.println("➤ Mail >>"+usuario.get(i).getMail());
+            System.out.println("➤ UserName >>"+usuario.get(i).getUserName());
             System.out.println("");
         }
     }
@@ -176,10 +176,10 @@ public class Aeropuerto {
     public void MostrarVuelos(){
         for (int i = 0; i < vuelos.size(); i++) {
             System.out.println("ID >>> "+i);
-            System.out.println("➤ FlightCode >>"+usuario.get(i).getNombre();
-            System.out.println("➤ Destino  >>"+usuario.get(i).getApellido();
-            System.out.println("➤ AvionAsignado >>"+usuario.get(i).getMail();
-            System.out.println("➤ Lugares Disponibles >>"+usuario.get(i).getUserName();
+            System.out.println("➤ FlightCode >>"+usuario.get(i).getNombre());
+            System.out.println("➤ Destino  >>"+usuario.get(i).getApellido());
+            System.out.println("➤ AvionAsignado >>"+usuario.get(i).getMail());
+            System.out.println("➤ Lugares Disponibles >>"+usuario.get(i).getUserName());
             System.out.println("");
         }
     }
