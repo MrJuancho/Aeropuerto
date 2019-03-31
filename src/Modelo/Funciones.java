@@ -14,7 +14,7 @@ public class Funciones {
         int id;
         do
         {
-            System.out.println("Qué operacion deseas realizar?");
+            System.out.println("¿Qué operacion deseas realizar?");
             System.out.println("1 >> Registrar Vuelo");
             System.out.println("2 >> Modificar Vuelo");
             System.out.println("3 >> Cancelar Vuelo");
@@ -61,15 +61,49 @@ public class Funciones {
     
     public static void adminusuarios()
     {
-        String flightcode,destino,avionAsignado,m;
-        Avion avionA;
+        String m,nombre,apellido,mail,password,userName;
+        
+        int ID;
         Aeropuerto aeropuerto = new Aeropuerto();
-        int id;
         
         do
         {
-            
-        }while()
+            System.out.println("¿Que operacion deseas realizar?");
+            System.out.println("1 >> Baja de usuario");
+            System.out.println("2 >> Modificacion de usuario");
+            System.out.println("0 >> Regresar");
+            m = teclado.nextLine();
+            switch(m)
+            {
+                case "1":
+                    System.out.println("ID || Nombre(s) || Apellidos");
+                    for (int i = 0; i < aeropuerto.getUsuario().size(); i++) {
+                        System.out.println(""+aeropuerto.getUsuario().get(i).getID()+" || "+aeropuerto.getUsuario().get(i).getNombre()+" || "+aeropuerto.getUsuario().get(i).getApellido()+"");
+                    }
+                    System.out.println("Numero Identificador");
+                    ID = teclado.nextInt();
+                    aeropuerto.EliminarUsuario(ID);
+                    break;
+                    
+                case "2":
+                    System.out.println("ID || Nombre(s) || Apellidos");
+                    for (int i = 0; i < aeropuerto.getUsuario().size(); i++) {
+                        System.out.println(""+aeropuerto.getUsuario().get(i).getID()+" || "+aeropuerto.getUsuario().get(i).getNombre()+" || "+aeropuerto.getUsuario().get(i).getApellido()+"");
+                    }
+                    System.out.println("Numero Identificador");
+                    ID = teclado.nextInt();
+                    System.out.println("Nombre:");
+                    
+                    
+                    break;
+                    
+                case "0":
+                    break;
+                   
+                default: 
+                    System.out.println("");
+            }
+        }while(m!="0");
     }
 }
 
