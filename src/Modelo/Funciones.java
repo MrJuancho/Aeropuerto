@@ -156,11 +156,12 @@ public class Funciones {
                         case "1":
                             System.out.println("  ID  ||  Flight Code || Destino || Avion Asignado");
                             for (int i = 0; i < aeropuerto.getVuelos().size(); i++) {
-                                
+                                System.out.println(""+aeropuerto.getVuelos().get(i).getId()+"  ||  "+aeropuerto.getVuelos().get(i).getFlightCode()+"  ||  "+aeropuerto.getVuelos().get(i).getDestino()+"  ||  "+aeropuerto.getVuelos().get(i).getAvionAsignado());
                             }
                             break;
                             
                         case "2":
+                            
                             break;
                             
                         case "0":
