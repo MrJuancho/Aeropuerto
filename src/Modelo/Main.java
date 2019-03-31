@@ -1,13 +1,21 @@
 package Modelo;
 
+import Controlador.Admin;
 import Controlador.CardInformation;
 import Controlador.ElectronicPayment;
 import Vista.Principal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import javax.swing.ImageIcon;
 
 public class Main{
+    
     static Scanner teclado = new Scanner(System.in);
+    static List<Admin> admin = new ArrayList<Admin>();
+    static String admin1 = "CarlosCata";
+    static String admin2 = "Juancho";
+    
     public static void main(String[] args) {
         Funciones funciones = new Funciones();
         Principal v = new Principal();
@@ -21,8 +29,12 @@ public class Main{
         boolean bandera = true;
         ImageIcon profilePhoto;
         Aeropuerto aeropuerto = new Aeropuerto();
-        aeropuerto.AltaCata();
-        aeropuerto.AltaJuan();
+        
+        Admin Cata = new Admin(admin1,"270798",true);
+        admin.add(Cata);
+        
+        Admin Juan = new Admin(admin2,"140198",true);
+        admin.add(Juan);
         
         do
         {
@@ -33,7 +45,7 @@ public class Main{
             System.out.println("Contraseña:");
             password = teclado.nextLine();
             
-            if(usuario == aeropuerto.getAdmin1()||usuario == aeropuerto.getAdmin2())
+            if(usuario == admin1||usuario == admin2)
             {
                 do
                 {
@@ -119,6 +131,5 @@ public class Main{
             
         }while(!bandera);
     }
-    
 }
 
