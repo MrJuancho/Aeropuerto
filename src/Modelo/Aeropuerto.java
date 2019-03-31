@@ -11,10 +11,12 @@ public class Aeropuerto {
     private List<VuelosVuelta> regreso;
     private List<Admin> admin;
     private List<Lugar> lugares;
+    private String admin1 = "CarlosCata";
+    private String admin2 = "Juancho";
 
-    public void RegistrarUsuario(String nombre, String apellido, String mail, String password, ImageIcon profilePhoto, String userName)
+    public void RegistrarUsuario(String nombre, String apellido, String mail, String password,String userName)
     {
-        Usuario nuevo = new Usuario(usuario.size()+1,nombre,apellido,0,mail,password,profilePhoto,userName,null,null);
+        Usuario nuevo = new Usuario(usuario.size()+1,nombre,apellido,0,mail,password,null,userName,null,null);
         usuario.add(nuevo);
     }
 
@@ -22,9 +24,9 @@ public class Aeropuerto {
     {
         Usuario eliminar = new Usuario();
         for (int i = 0; i < usuario.size(); i++) {
-            if(ID == usuario.get(i).getID())
+            if(ID-1 == usuario.get(i).getID())
             {
-                usuario.remove(ID);
+                usuario.remove(ID-1);
             }
         }
     }
@@ -32,7 +34,7 @@ public class Aeropuerto {
     public void ModificarUsuario(int ID, String nombre, String apellido, double ACoins, String mail, String password, ImageIcon profilePhoto, String userName, CardInformation cardInformation, ElectronicPayment electronicPayment)
     {
         Usuario modificado = new Usuario();
-        modificado = new Usuario(modificado.getID(),nombre,apellido,ACoins,mail,password,profilePhoto,userName,cardInformation,electronicPayment);
+        modificado = new Usuario(usuario.get(ID-1).getID(),nombre,apellido,ACoins,mail,password,profilePhoto,userName,cardInformation,electronicPayment);
         usuario.add(modificado);
     }
 
@@ -53,7 +55,7 @@ public class Aeropuerto {
         }
     }
 
-    public void RegistrarVuelo(int id, String flightCode, String destino, Avion avionAsignado)
+    public void RegistrarVuelo(String flightCode, String destino, Avion avionAsignado)
     {
         Vuelos registrar = new Vuelos(vuelos.size()+1,flightCode,destino,avionAsignado);
         vuelos.add(registrar);
@@ -62,8 +64,8 @@ public class Aeropuerto {
     public void CancelarVuelo(int id) {
         Vuelos cancelar = new Vuelos();
         for (int i = 0; i < vuelos.size(); i++) {
-            if (id == vuelos.get(i).getId()) {
-                vuelos.remove(id);
+            if (id-1 == vuelos.get(i).getId()) {
+                vuelos.remove(id-1);
             }
         }
     }
@@ -71,13 +73,15 @@ public class Aeropuerto {
     public void ModificarVuelo(int id, String flightCode, String destino, Avion avionAsignado)
     {
         Vuelos modificar = new Vuelos();
-        modificar = new Vuelos(modificar.getId(),flightCode,destino,avionAsignado);
+        modificar = new Vuelos(vuelos.get(id-1).getId(),flightCode,destino,avionAsignado);
+        vuelos.add(modificar);
     }
 
     public void VueloRegreso(String horaLLegada,Avion ALlegada, String procedencia)
     {
         VuelosVuelta regreso = new VuelosVuelta();
-        regreso = new VuelosVuelta(horaLLegada,regreso.getID(),ALlegada,procedencia);
+        regreso = new VuelosVuelta(horaLLegada,this.regreso.size()+1,ALlegada,procedencia);
+        this.regreso.add(regreso);
     }
 
     public void BajaVueloVuelta(int id)
@@ -91,15 +95,15 @@ public class Aeropuerto {
         }
     }
 
-    public void AltaCata(String username, String password)
+    public void AltaCata()
     {
-        Admin niu = new Admin("CarlosCata","123456",true);
+        Admin niu = new Admin(admin1,"123456",true);
         admin.add(niu);
     }
     
-    public void AltaJuan(String username, String password)
+    public void AltaJuan()
     {
-        Admin niu = new Admin("Juancho","123456",true);
+        Admin niu = new Admin(admin2,"123456",true);
         admin.add(niu);
     }
 
@@ -119,5 +123,37 @@ public class Aeropuerto {
         }
     }
 
+    public String getAdmin1() {
+        return admin1;
+    }
 
+    public String getAdmin2() {
+        return admin2;
+    }
+
+    public List<Avion> getAviones() {
+        return aviones;
+    }
+
+    public List<Vuelos> getVuelos() {
+        return vuelos;
+    }
+
+    public List<Usuario> getUsuario() {
+        return usuario;
+    }
+
+    public List<VuelosVuelta> getRegreso() {
+        return regreso;
+    }
+
+    public List<Admin> getAdmin() {
+        return admin;
+    }
+
+    public List<Lugar> getLugares() {
+        return lugares;
+    }
+    
+    
 }
