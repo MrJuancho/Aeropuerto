@@ -102,7 +102,7 @@ public class Aeropuerto {
 
     public void AltaCata()
     {
-        Admin Cata = new Admin(admin1,"271700",true);
+        Admin Cata = new Admin(admin1,"270700",true);
         admin.add(Cata);
     }
     
