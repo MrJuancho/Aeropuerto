@@ -1,6 +1,12 @@
 package Modelo;
 
 import Controlador.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import javax.swing.*;
 import java.util.List;
 
@@ -10,6 +16,9 @@ public class Aeropuerto {
     private List<Usuario> usuario;
     private List<VuelosVuelta> regreso;
     private List<Lugar> lugares;
+    public String UserFileLocation = "/Archivos/Usuarios.txt";
+    public String AdminsFileLocation = "/Archivos/Admins.txt";
+    
 
     public void RegistrarUsuario(String nombre, String apellido, String mail, String password, ImageIcon profilePhoto, String userName)
     {
@@ -163,5 +172,4 @@ public class Aeropuerto {
     public void MostrarLugares(){
         
     }
-    
 }
