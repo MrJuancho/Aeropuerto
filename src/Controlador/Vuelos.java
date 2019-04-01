@@ -1,7 +1,5 @@
 package Controlador;
 
-import java.util.Date;
-
 public class Vuelos {
     private int id;
     private String FlightCode;
