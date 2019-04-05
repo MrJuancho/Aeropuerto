@@ -127,25 +127,24 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return String.format("ID: %s\r\n"
-                + "Usuario: %s\r\n"
-                + "Contraseña: %s\r\n"
-                + "Nombre(s): %s\r\n"
-                + "Apellidos: %s\r\n"
-                + "Correo: %s\r\n"
-                + "URLPhoto: %s\r\n"
+        return "ID: "+ID+"\r\n"
+                + "Usuario: "+UserName+"\r\n"
+                + "Contraseña: "+password+"\r\n"
+                + "Nombre(s): "+nombre+"\r\n"
+                + "Apellidos: "+apellido+"\r\n"
+                + "Correo: "+mail+"\r\n"
+                + "URLPhoto: "+profilePhoto+"\r\n"
                 + "Card Information: \r\n"
-                + "\tCard Number: %s\r\n"
-                + "\tCCV: %s\r\n"
-                + "\tExp Date: %s\r\n"
-                + "\tFondos: %d\r\n"
+                + "\tCard Number: "+cardInformation.getCardNumber()+"\r\n"
+                + "\tCCV: "+cardInformation.getCCV()+"\r\n"
+                + "\tExp Date: "+cardInformation.getExpDate()+"\r\n"
+                + "\tFondos: "+cardInformation.getFondos()+"\r\n"
                 + "Electronic Payment:\r\n"
-                + "\tProvider: %s\r\n"
-                + "\tMail: %s\r\n"
-                + "\tPassword: %s\r\n"
-                + "\tFondos: %d\r\n"
-                + "Apex Coins: $%d\r\n",
-                ID,UserName,password,nombre,apellido,mail,profilePhoto,cardInformation,electronicPayment);
+                + "\tProvider: "+electronicPayment.getProvider()+"\r\n"
+                + "\tMail: "+electronicPayment.getMail()+"\r\n"
+                + "\tPassword: "+electronicPayment.getPassword()+"\r\n"
+                + "\tFondos: "+electronicPayment.getFondos()+"\r\n"
+                + "Apex Coins: "+ACoins+"\r\n";
     }
     
    public void GuardarObjeto(boolean sobreescribir){

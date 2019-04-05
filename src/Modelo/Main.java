@@ -32,6 +32,6 @@ public class Main{
         
         Alan.GuardarObjeto(false);
         ArrayList<Usuario> u = Alan.LeerObjetos();
-        Alan.toString();
+        System.out.println(u.get(0));
     }
 }
