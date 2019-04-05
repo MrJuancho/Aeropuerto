@@ -3,6 +3,7 @@ package Modelo;
 import Controlador.Admin;
 import Controlador.CardInformation;
 import Controlador.ElectronicPayment;
+import Controlador.Usuario;
 import Vista.Principal;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -26,5 +27,11 @@ public class Main{
         ArrayList<Admin> a = Juan.LeerObjetos();
         System.out.println(a.get(0));
         System.out.println(a.get(1));
+        
+        Usuario Alan = new Usuario(0,"Alan","Gamboa",1000,"alan@gmail.com","123456","","Kingag09",null,null);
+        
+        Alan.GuardarObjeto(false);
+        ArrayList<Usuario> u = Alan.LeerObjetos();
+        Alan.toString();
     }
 }

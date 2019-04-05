@@ -6,7 +6,6 @@
 package Vista;
 
 import Controlador.Usuario;
-import Modelo.Aeropuerto;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -30,7 +29,7 @@ import javax.swing.*;
  */
 public class Principal extends JFrame {
     
-    Aeropuerto funciones = new Aeropuerto();
+
 
     /**
      * Creates new form Principal

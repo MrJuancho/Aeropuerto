@@ -9,10 +9,11 @@ public class CardInformation {
     public CardInformation() {
     }
 
-    public CardInformation(String cardNumber, String expDate, String CCV) {
+    public CardInformation(String cardNumber, String expDate, String CCV, int fondos) {
         CardNumber = cardNumber;
         this.expDate = expDate;
         this.CCV = CCV;
+        this.Fondos = fondos;
     }
 
     public String getCardNumber() {

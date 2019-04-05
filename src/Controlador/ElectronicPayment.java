@@ -4,14 +4,16 @@ public class ElectronicPayment {
     private String provider;
     private String mail;
     private String password;
+    private int fondos; 
 
     public ElectronicPayment() {
     }
 
-    public ElectronicPayment(String provider, String mail, String password) {
+    public ElectronicPayment(String provider, String mail, String password, int fondos) {
         this.provider = provider;
         this.mail = mail;
         this.password = password;
+        this.fondos = fondos;
     }
 
     public String getProvider() {
@@ -36,5 +38,13 @@ public class ElectronicPayment {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getFondos() {
+        return fondos;
+    }
+
+    public void setFondos(int fondos) {
+        this.fondos = fondos;
     }
 }

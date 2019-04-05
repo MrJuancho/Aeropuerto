@@ -1,15 +1,21 @@
 package Controlador;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.*;
 
 public class Usuario {
     private int ID;
     private String nombre;
     private String apellido;
-    private double ACoins;
+    private int ACoins;
     private String mail;
     private String password;
-    private ImageIcon profilePhoto;
+    private String profilePhoto;
     private String UserName;
     private CardInformation cardInformation;
     private ElectronicPayment electronicPayment;
@@ -17,7 +23,7 @@ public class Usuario {
 
     public Usuario() {}
 
-    public Usuario(int ID, String nombre, String apellido, double ACoins, String mail, String password, ImageIcon profilePhoto, String userName, CardInformation cardInformation, ElectronicPayment electronicPayment) {
+    public Usuario(int ID, String nombre, String apellido, int ACoins, String mail, String password, String profilePhoto, String userName, CardInformation cardInformation, ElectronicPayment electronicPayment) {
         this.ID = ID;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -58,7 +64,7 @@ public class Usuario {
         return ACoins;
     }
 
-    public void setACoins(double ACoins) {
+    public void setACoins(int ACoins) {
         this.ACoins = ACoins;
     }
 
@@ -78,14 +84,15 @@ public class Usuario {
         this.password = password;
     }
 
-    public ImageIcon getProfilePhoto() {
+    public String getProfilePhoto() {
         return profilePhoto;
     }
 
-    public void setProfilePhoto(ImageIcon profilePhoto) {
+    public void setProfilePhoto(String profilePhoto) {
         this.profilePhoto = profilePhoto;
     }
 
+    
     public String getUserName() {
         return UserName;
     }
@@ -116,5 +123,137 @@ public class Usuario {
 
     public void setAdmin(boolean admin) {
         isAdmin = admin;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("ID: %s\r\n"
+                + "Usuario: %s\r\n"
+                + "Contraseña: %s\r\n"
+                + "Nombre(s): %s\r\n"
+                + "Apellidos: %s\r\n"
+                + "Correo: %s\r\n"
+                + "URLPhoto: %s\r\n"
+                + "Card Information: \r\n"
+                + "\tCard Number: %s\r\n"
+                + "\tCCV: %s\r\n"
+                + "\tExp Date: %s\r\n"
+                + "\tFondos: %d\r\n"
+                + "Electronic Payment:\r\n"
+                + "\tProvider: %s\r\n"
+                + "\tMail: %s\r\n"
+                + "\tPassword: %s\r\n"
+                + "\tFondos: %d\r\n"
+                + "Apex Coins: $%d\r\n",
+                ID,UserName,password,nombre,apellido,mail,profilePhoto,cardInformation,electronicPayment);
+    }
+    
+   public void GuardarObjeto(boolean sobreescribir){
+        File file=new File("Usuarios.txt");
+        try{
+            FileWriter fw=new FileWriter(file.getAbsoluteFile(),sobreescribir);
+            BufferedWriter bw=new BufferedWriter(fw);
+            bw.write(String.format("%d", this.ID));
+            bw.newLine();
+            bw.write(this.UserName);
+            bw.newLine();
+            bw.write(this.password);
+            bw.newLine();
+            bw.write(this.nombre);
+            bw.newLine();
+            bw.write(this.apellido);
+            bw.newLine();
+            bw.write(this.mail);
+            bw.newLine();
+            bw.write(this.profilePhoto);
+            bw.newLine();
+            if(cardInformation != null){
+            bw.write(this.cardInformation.getCardNumber());
+            bw.newLine();
+            bw.write(this.cardInformation.getCCV());
+            bw.newLine();
+            bw.write(this.cardInformation.getExpDate());
+            bw.newLine();
+            bw.write(String.format("%d", this.cardInformation.getFondos()));
+            bw.newLine();
+            }else{
+                bw.write("");
+                bw.newLine();
+                bw.write("");
+                bw.newLine();
+                bw.write("");
+                bw.newLine();
+                bw.write(String.format("%d",0));
+                bw.newLine();
+            }
+            if(electronicPayment != null){
+            bw.write(this.electronicPayment.getProvider());
+            bw.newLine();
+            bw.write(this.electronicPayment.getMail());
+            bw.newLine();
+            bw.write(this.electronicPayment.getPassword());
+            bw.newLine();
+            bw.write(String.format("%d", this.electronicPayment.getFondos()));
+            bw.newLine();
+            }else{
+                bw.write("");
+                bw.newLine();
+                bw.write("");
+                bw.newLine();
+                bw.write("");
+                bw.newLine();
+                bw.write(String.format("%d",0));
+                bw.newLine();
+            }
+            bw.write(String.format("%d",this.ACoins));
+            bw.newLine();
+            bw.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public ArrayList<Usuario> LeerObjetos(){
+        try{
+            Scanner lectura = new Scanner(new File("Usuarios.txt"));
+            lectura.useDelimiter("-|\n");
+
+            ArrayList<Usuario> usuarios = new ArrayList<>();
+            while (lectura.hasNext()) {
+                String Id = lectura.next();
+                String user = lectura.next();
+                String pass = lectura.next();
+                String name = lectura.next();
+                String lname = lectura.next();
+                String mail = lectura.next();
+                String URLPhoto = lectura.next();
+                String CNumber = lectura.next();
+                String CCV = lectura.next();
+                String ExpD = lectura.next();
+                String fondos = lectura.next();
+                String prov = lectura.next();
+                String maile = lectura.next();
+                String passe = lectura.next();
+                String felectronic = lectura.next();
+                String AC = lectura.next();
+                
+                int id,fe,fo,ac;
+                fe = Integer.parseInt(felectronic.trim());
+                fo = Integer.parseInt(fondos.trim());
+                id = Integer.parseInt(Id.trim());
+                ac = Integer.parseInt(AC.trim());
+                
+                ElectronicPayment etmp = new ElectronicPayment(prov,maile,passe,fe);
+                CardInformation ctmp = new CardInformation(CNumber, ExpD, CCV,fo);
+                
+                Usuario tmp = new Usuario(id,name,lname,ac,mail,pass,URLPhoto,user,ctmp,etmp);
+                usuarios.add(tmp);
+            }
+            return usuarios;
+        }catch(IOException e){
+            e.printStackTrace();
+            return null;
+        }
+        
     }
 }
