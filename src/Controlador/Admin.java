@@ -1,17 +1,20 @@
 package Controlador;
 
-import java.io.FileInputStream;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.Serializable;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Spliterator;
 
 public class Admin {
     private String Username;
     private String password;
     private boolean isAdmin = true;
+    
 
     public Admin() {
     }
@@ -44,6 +47,46 @@ public class Admin {
     public void setAdmin(boolean admin) {
         isAdmin = admin;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Usuario: %s\r\nContraseña: %s\r\n",Username,password);
+    }
     
+    public void GuardarObjeto(boolean sobreescribir){
+        File file=new File("Admins.txt");
+        try{
+            FileWriter fw=new FileWriter(file.getAbsoluteFile(),sobreescribir);
+            BufferedWriter bw=new BufferedWriter(fw);
+            bw.write(this.Username);
+            bw.newLine();
+            bw.write(this.password);
+            bw.newLine();
+            bw.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public ArrayList<Admin> LeerObjetos(){
+        try{
+            Scanner lectura = new Scanner(new File("Admins.txt"));
+            lectura.useDelimiter("-|\n");
+
+            ArrayList<Admin> admins = new ArrayList<>();
+            while (lectura.hasNext()) {
+                String username = lectura.next();
+                String pass = lectura.next();
+
+                Admin tmp = new Admin(username,pass);
+                admins.add(tmp);
+            }
+            return admins;
+        }catch(IOException e){
+            e.printStackTrace();
+            return null;
+        }
+        
+    }
     
 }

@@ -20,5 +20,11 @@ public class Main{
         Juan.setPassword("140198");
         Cata.setPassword("270700");
         
+        Juan.GuardarObjeto(false);
+        Cata.GuardarObjeto(true);
+        
+        ArrayList<Admin> a = Juan.LeerObjetos();
+        System.out.println(a.get(0));
+        System.out.println(a.get(1));
     }
 }
