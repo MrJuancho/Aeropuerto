@@ -22,7 +22,7 @@ public class Usuario {
     private boolean isAdmin = false;
 
     public Usuario() {}
-
+    
     public Usuario(int ID, String nombre, String apellido, int ACoins, String mail, String password, String profilePhoto, String userName, CardInformation cardInformation, ElectronicPayment electronicPayment) {
         this.ID = ID;
         this.nombre = nombre;
