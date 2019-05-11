@@ -1,6 +1,14 @@
 package Controlador;
 
-public class Vuelos {
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+public class Vuelos implements Serializable{
     private int id;
     private String FlightCode;
     private String Destino;
@@ -59,4 +67,33 @@ public class Vuelos {
     }
 
     public int getLugaresDisp(){ return AvionAsignado.getLugares().size(); }
+    
+    public void setFileVuelo(){
+        String archivo = "vuelos.dat";
+        try{
+            ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
+            escritura.writeObject(this);
+            escritura.close();
+        }catch(FileNotFoundException ex){
+            ex.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public Vuelos getFileVuelo(){
+        String archivo = "vuelos.dat";
+        try{
+            ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
+            Vuelos salida = (Vuelos) lectura.readObject();
+            lectura.close();
+            return salida;
+        }catch(IOException e){
+            e.printStackTrace();
+            return null;
+        }catch(ClassNotFoundException ex){
+            ex.printStackTrace();
+            return null;
+        }
+    }
 }

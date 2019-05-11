@@ -39,14 +39,8 @@ public class Principal extends JFrame {
      * Creates new form Principal
      */
     public Principal() {
-        
-        
         initComponents();
         myComponents();
-        
-        
-        
- 
     }
 
     /**
@@ -550,7 +544,6 @@ public class Principal extends JFrame {
     }//GEN-LAST:event_MinimizarMouseClicked
 
     private void BotonLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLoginMouseClicked
-        Admins = masterAd.LeerObjetos();
         if(PassField.getPassword().length == 0){
             separadorPassword.setBackground(new Color(239,83,80));
             separadorPassword.setForeground(new Color(239,83,80));
@@ -561,23 +554,22 @@ public class Principal extends JFrame {
             separadorNombre.setForeground(new Color(239,83,80));
             ErrorName.setText("Ingresa tu Username...");
         }
-        Admin entrada = new Admin(UserField.getText(),String.valueOf(PassField.getPassword()));
-        for (int i = 0; i < Admins.size(); i++) {
-            if(Admins.get(i).getUsername().contains(entrada.getUsername()) && Admins.get(i).getPassword().contains(entrada.getPassword())){
-                
-            }else{
-               if(!Admins.get(i).getPassword().contains(entrada.getPassword())){
-                    separadorPassword.setBackground(new Color(239,83,80));
-                    separadorPassword.setForeground(new Color(239,83,80));
-                    ErrorPass.setText("Contraseña Incorrecta...");
-                }
-                if(!Admins.get(i).getUsername().contains(entrada.getUsername())){
-                    separadorNombre.setBackground(new Color(239,83,80));
-                    separadorNombre.setForeground(new Color(239,83,80));
-                    ErrorName.setText("Username Incorrecto...");
-                }
-            }
-        }
+//        for (int i = 0; i < Admins.size(); i++) {
+//            if(Admins.get(i).getUsername().contains(entrada.getUsername()) && Admins.get(i).getPassword().contains(entrada.getPassword())){
+//                
+//            }else{
+//               if(!Admins.get(i).getPassword().contains(entrada.getPassword())){
+//                    separadorPassword.setBackground(new Color(239,83,80));
+//                    separadorPassword.setForeground(new Color(239,83,80));
+//                    ErrorPass.setText("Contraseña Incorrecta...");
+//                }
+//                if(!Admins.get(i).getUsername().contains(entrada.getUsername())){
+//                    separadorNombre.setBackground(new Color(239,83,80));
+//                    separadorNombre.setForeground(new Color(239,83,80));
+//                    ErrorName.setText("Username Incorrecto...");
+//                }
+//            }
+//        }
     }//GEN-LAST:event_BotonLoginMouseClicked
 
     private void RegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistroMouseClicked

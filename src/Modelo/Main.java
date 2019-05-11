@@ -12,7 +12,6 @@ import javax.swing.ImageIcon;
 
 public class Main{
     
-<<<<<<< HEAD
    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -43,9 +42,5 @@ public class Main{
                 new Principal().setVisible(true);
             }
         });
-=======
-    public static void main(String[] args) {
-        
->>>>>>> parent of c160520... Files 1.0.1
     }
 }

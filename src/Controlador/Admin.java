@@ -21,6 +21,27 @@ public class Admin implements Serializable {
         this.password = password;
         this.isAdmin = isAdmin;
     }
+
+    public String getUsername() {
+        return Username;
+    }
+
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isIsAdmin() {
+        return isAdmin;
+    }
+    
     
     public void setFileAdmin(){
         String archivo = "admins.dat";

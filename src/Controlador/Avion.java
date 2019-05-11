@@ -1,8 +1,15 @@
 package Controlador;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.List;
 
-public class Avion {
+public class Avion implements Serializable {
     private String modelo;
     private int NoVuelos;
     private String placa;
@@ -47,5 +54,34 @@ public class Avion {
 
     public void setLugares(List<Lugar> lugares) {
         this.lugares = lugares;
+    }
+    
+    public void setFileAvion(){
+        String archivo = "aviones.dat";
+        try{
+            ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
+            escritura.writeObject(this);
+            escritura.close();
+        }catch(FileNotFoundException ex){
+            ex.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public Avion getFileAvion(){
+        String archivo = "aviones.dat";
+        try{
+            ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
+            Avion salida = (Avion) lectura.readObject();
+            lectura.close();
+            return salida;
+        }catch(IOException e){
+            e.printStackTrace();
+            return null;
+        }catch(ClassNotFoundException ex){
+            ex.printStackTrace();
+            return null;
+        }
     }
 }

@@ -1,6 +1,14 @@
 package Controlador;
 
-public class CardInformation {
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+public class CardInformation implements Serializable{
     private String CardNumber;
     private String expDate;
     private String CCV;
@@ -46,5 +54,34 @@ public class CardInformation {
 
     public void setFondos(int Fondos) {
         this.Fondos = Fondos;
+    }
+    
+    public void setFileCard(){
+        String archivo = "credit_cards.dat";
+        try{
+            ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
+            escritura.writeObject(this);
+            escritura.close();
+        }catch(FileNotFoundException ex){
+            ex.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public CardInformation getFileCard(){
+        String archivo = "credit_cards.dat";
+        try{
+            ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
+            CardInformation salida = (CardInformation) lectura.readObject();
+            lectura.close();
+            return salida;
+        }catch(IOException e){
+            e.printStackTrace();
+            return null;
+        }catch(ClassNotFoundException ex){
+            ex.printStackTrace();
+            return null;
+        }
     }
 }

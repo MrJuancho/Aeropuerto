@@ -2,13 +2,19 @@ package Controlador;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.*;
 
-public class Usuario {
+public class Usuario implements Serializable{
     private int ID;
     private String nombre;
     private String apellido;
@@ -120,139 +126,34 @@ public class Usuario {
     public boolean isAdmin() {
         return isAdmin;
     }
-
-    public void setAdmin(boolean admin) {
-        isAdmin = admin;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: "+ID+"\r\n"
-                + "Usuario: "+UserName+"\r\n"
-                + "Contraseña: "+password+"\r\n"
-                + "Nombre(s): "+nombre+"\r\n"
-                + "Apellidos: "+apellido+"\r\n"
-                + "Correo: "+mail+"\r\n"
-                + "URLPhoto: "+profilePhoto+"\r\n"
-                + "Card Information: \r\n"
-                + "\tCard Number: "+cardInformation.getCardNumber()+"\r\n"
-                + "\tCCV: "+cardInformation.getCCV()+"\r\n"
-                + "\tExp Date: "+cardInformation.getExpDate()+"\r\n"
-                + "\tFondos: "+cardInformation.getFondos()+"\r\n"
-                + "Electronic Payment:\r\n"
-                + "\tProvider: "+electronicPayment.getProvider()+"\r\n"
-                + "\tMail: "+electronicPayment.getMail()+"\r\n"
-                + "\tPassword: "+electronicPayment.getPassword()+"\r\n"
-                + "\tFondos: "+electronicPayment.getFondos()+"\r\n"
-                + "Apex Coins: "+ACoins+"\r\n";
-    }
     
-   public void GuardarObjeto(boolean sobreescribir){
-        File file=new File("Usuarios.txt");
+    public void setFileUser(){
+        String archivo = "users.dat";
         try{
-            FileWriter fw=new FileWriter(file.getAbsoluteFile(),sobreescribir);
-            BufferedWriter bw=new BufferedWriter(fw);
-            bw.write(String.format("%d", this.ID));
-            bw.newLine();
-            bw.write(this.UserName);
-            bw.newLine();
-            bw.write(this.password);
-            bw.newLine();
-            bw.write(this.nombre);
-            bw.newLine();
-            bw.write(this.apellido);
-            bw.newLine();
-            bw.write(this.mail);
-            bw.newLine();
-            bw.write(this.profilePhoto);
-            bw.newLine();
-            if(cardInformation != null){
-            bw.write(this.cardInformation.getCardNumber());
-            bw.newLine();
-            bw.write(this.cardInformation.getCCV());
-            bw.newLine();
-            bw.write(this.cardInformation.getExpDate());
-            bw.newLine();
-            bw.write(String.format("%d", this.cardInformation.getFondos()));
-            bw.newLine();
-            }else{
-                bw.write("");
-                bw.newLine();
-                bw.write("");
-                bw.newLine();
-                bw.write("");
-                bw.newLine();
-                bw.write(String.format("%d",0));
-                bw.newLine();
-            }
-            if(electronicPayment != null){
-            bw.write(this.electronicPayment.getProvider());
-            bw.newLine();
-            bw.write(this.electronicPayment.getMail());
-            bw.newLine();
-            bw.write(this.electronicPayment.getPassword());
-            bw.newLine();
-            bw.write(String.format("%d", this.electronicPayment.getFondos()));
-            bw.newLine();
-            }else{
-                bw.write("");
-                bw.newLine();
-                bw.write("");
-                bw.newLine();
-                bw.write("");
-                bw.newLine();
-                bw.write(String.format("%d",0));
-                bw.newLine();
-            }
-            bw.write(String.format("%d",this.ACoins));
-            bw.newLine();
-            bw.close();
+            ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
+            escritura.writeObject(this);
+            escritura.close();
+        }catch(FileNotFoundException ex){
+            ex.printStackTrace();
         }catch(IOException e){
             e.printStackTrace();
         }
     }
     
-    public ArrayList<Usuario> LeerObjetos(){
+    public Usuario getFileUSer(){
+        String archivo = "users.dat";
         try{
-            Scanner lectura = new Scanner(new File("Usuarios.txt"));
-            lectura.useDelimiter("-|\n");
-
-            ArrayList<Usuario> usuarios = new ArrayList<>();
-            while (lectura.hasNext()) {
-                String Id = lectura.next();
-                String user = lectura.next();
-                String pass = lectura.next();
-                String name = lectura.next();
-                String lname = lectura.next();
-                String mail = lectura.next();
-                String URLPhoto = lectura.next();
-                String CNumber = lectura.next();
-                String CCV = lectura.next();
-                String ExpD = lectura.next();
-                String fondos = lectura.next();
-                String prov = lectura.next();
-                String maile = lectura.next();
-                String passe = lectura.next();
-                String felectronic = lectura.next();
-                String AC = lectura.next();
-                
-                int id,fe,fo,ac;
-                fe = Integer.parseInt(felectronic.trim());
-                fo = Integer.parseInt(fondos.trim());
-                id = Integer.parseInt(Id.trim());
-                ac = Integer.parseInt(AC.trim());
-                
-                ElectronicPayment etmp = new ElectronicPayment(prov,maile,passe,fe);
-                CardInformation ctmp = new CardInformation(CNumber, ExpD, CCV,fo);
-                
-                Usuario tmp = new Usuario(id,name,lname,ac,mail,pass,URLPhoto,user,ctmp,etmp);
-                usuarios.add(tmp);
-            }
-            return usuarios;
+            ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
+            
+            Usuario salida = (Usuario) lectura.readObject();
+            lectura.close();
+            return salida;
         }catch(IOException e){
             e.printStackTrace();
             return null;
+        }catch(ClassNotFoundException ex){
+            ex.printStackTrace();
+            return null;
         }
-        
     }
 }
