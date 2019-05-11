@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Controlador.Admin;
 import Controlador.Usuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -29,17 +30,23 @@ import javax.swing.*;
  * @author MrJua
  */
 public class Principal extends JFrame {
-    
-
+    Usuario master = new Usuario();
+    ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
+    ArrayList<Admin> Admins = new ArrayList<Admin>();
+    Admin masterAd = new Admin();
 
     /**
      * Creates new form Principal
      */
     public Principal() {
-        Usuario master = new Usuario();
-        ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
+        
+        
         initComponents();
         myComponents();
+        
+        
+        
+ 
     }
 
     /**
@@ -428,7 +435,8 @@ public class Principal extends JFrame {
 
         separadorPassword.setBackground(new java.awt.Color(255, 255, 255));
         separadorPassword.setForeground(new java.awt.Color(255, 255, 255));
-        PanelEntrada.add(separadorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 420, 10));
+        separadorPassword.setOpaque(true);
+        PanelEntrada.add(separadorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 388, 420, -1));
 
         TextoUser.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
         TextoUser.setForeground(new java.awt.Color(255, 255, 255));
@@ -437,7 +445,8 @@ public class Principal extends JFrame {
 
         separadorNombre.setBackground(new java.awt.Color(255, 255, 255));
         separadorNombre.setForeground(new java.awt.Color(255, 255, 255));
-        PanelEntrada.add(separadorNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 420, 10));
+        separadorNombre.setOpaque(true);
+        PanelEntrada.add(separadorNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 288, 420, -1));
 
         BotonLogin.setBackground(new java.awt.Color(124, 77, 255));
         BotonLogin.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
@@ -456,6 +465,7 @@ public class Principal extends JFrame {
         Registro.setFont(new java.awt.Font("Montserrat", 3, 24)); // NOI18N
         Registro.setForeground(new java.awt.Color(124, 77, 255));
         Registro.setText("Regitrate ahora");
+        Registro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Registro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RegistroMouseClicked(evt);
@@ -468,13 +478,18 @@ public class Principal extends JFrame {
         TextoLogin2.setText("¿No tienes una cuenta?");
         PanelEntrada.add(TextoLogin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, -1, -1));
 
+        UserField.setBackground(new java.awt.Color(33, 150, 243));
         UserField.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
         UserField.setForeground(new java.awt.Color(255, 255, 255));
+        UserField.setToolTipText("");
+        UserField.setActionCommand("<Not Set>");
         UserField.setBorder(null);
         UserField.setCaretColor(new java.awt.Color(255, 255, 255));
         UserField.setOpaque(false);
+        UserField.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         PanelEntrada.add(UserField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 420, 30));
 
+        PassField.setBackground(new java.awt.Color(33, 150, 243));
         PassField.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
         PassField.setForeground(new java.awt.Color(255, 255, 255));
         PassField.setBorder(null);
@@ -535,6 +550,7 @@ public class Principal extends JFrame {
     }//GEN-LAST:event_MinimizarMouseClicked
 
     private void BotonLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLoginMouseClicked
+        Admins = masterAd.LeerObjetos();
         if(PassField.getPassword().length == 0){
             separadorPassword.setBackground(new Color(239,83,80));
             separadorPassword.setForeground(new Color(239,83,80));
@@ -544,6 +560,23 @@ public class Principal extends JFrame {
             separadorNombre.setBackground(new Color(239,83,80));
             separadorNombre.setForeground(new Color(239,83,80));
             ErrorName.setText("Ingresa tu Username...");
+        }
+        Admin entrada = new Admin(UserField.getText(),String.valueOf(PassField.getPassword()));
+        for (int i = 0; i < Admins.size(); i++) {
+            if(Admins.get(i).getUsername().contains(entrada.getUsername()) && Admins.get(i).getPassword().contains(entrada.getPassword())){
+                
+            }else{
+               if(!Admins.get(i).getPassword().contains(entrada.getPassword())){
+                    separadorPassword.setBackground(new Color(239,83,80));
+                    separadorPassword.setForeground(new Color(239,83,80));
+                    ErrorPass.setText("Contraseña Incorrecta...");
+                }
+                if(!Admins.get(i).getUsername().contains(entrada.getUsername())){
+                    separadorNombre.setBackground(new Color(239,83,80));
+                    separadorNombre.setForeground(new Color(239,83,80));
+                    ErrorName.setText("Username Incorrecto...");
+                }
+            }
         }
     }//GEN-LAST:event_BotonLoginMouseClicked
 
@@ -593,44 +626,8 @@ public class Principal extends JFrame {
             separadorNombreR.setForeground(new Color(239,83,80));
             ErrorRegN.setText("Ingresa un nombre...");
         }
-        
     }//GEN-LAST:event_BotonRegistrarMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Principal().setVisible(true);
-            }
-        });
-    }
-    
     private void myComponents(){
              setLocationRelativeTo(null);
              cambiarsize(jLabel4,"/Images/_recortado.png");
@@ -649,8 +646,6 @@ public class Principal extends JFrame {
         Image.SCALE_SMOOTH);
              jl.setIcon(new ImageIcon(dimg));
     }
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AdminPanel;
     private javax.swing.JTextField ApellidosReg;
