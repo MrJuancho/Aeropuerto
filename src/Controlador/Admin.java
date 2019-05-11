@@ -1,5 +1,6 @@
 package Controlador;
 
+<<<<<<< HEAD
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,6 +12,8 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.Spliterator;
 
+=======
+>>>>>>> parent of c160520... Files 1.0.1
 public class Admin {
     private String Username;
     private String password;
@@ -20,9 +23,10 @@ public class Admin {
     public Admin() {
     }
 
-    public Admin(String username, String password) {
+    public Admin(String username, String password, boolean isAdmin) {
         Username = username;
         this.password = password;
+        this.isAdmin = isAdmin;
     }
 
     public String getUsername() {
@@ -48,6 +52,7 @@ public class Admin {
     public void setAdmin(boolean admin) {
         isAdmin = admin;
     }
+<<<<<<< HEAD
 
     @Override
     public String toString() {
@@ -89,4 +94,6 @@ public class Admin {
         }
         
     }
+=======
+>>>>>>> parent of c160520... Files 1.0.1
 }
