@@ -1,6 +1,7 @@
 package Controlador;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,6 +13,8 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.Spliterator;
 
+=======
+>>>>>>> parent of c160520... Files 1.0.1
 =======
 >>>>>>> parent of c160520... Files 1.0.1
 public class Admin {
@@ -52,6 +55,7 @@ public class Admin {
     public void setAdmin(boolean admin) {
         isAdmin = admin;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -95,6 +99,8 @@ public class Admin {
         }
         
     }
+=======
+>>>>>>> parent of c160520... Files 1.0.1
 =======
 >>>>>>> parent of c160520... Files 1.0.1
 }
