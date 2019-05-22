@@ -28,6 +28,7 @@ public class Principal extends JFrame {
     ArrayList<Admin> admins = new ArrayList<Admin>();
     Usuario actual;
     Admin adminactual;
+    String entrada,newname,newapellido,newmail,newpassw;
     
     public Principal() {
         initComponents();
@@ -69,11 +70,22 @@ public class Principal extends JFrame {
         Opciones = new javax.swing.JPanel();
         MarcoUser = new javax.swing.JLabel();
         UserImage = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        PagoElectronico = new javax.swing.JLabel();
+        NombreUsuario = new javax.swing.JLabel();
+        Apellido = new javax.swing.JLabel();
+        Acoins = new javax.swing.JLabel();
+        Mail = new javax.swing.JLabel();
+        Informaciondetarjeta = new javax.swing.JLabel();
+        Contraseña = new javax.swing.JLabel();
+        Nombre = new javax.swing.JLabel();
+        lapiznom_user = new javax.swing.JLabel();
+        lapiz_pagoelec = new javax.swing.JLabel();
+        lapiz_nom = new javax.swing.JLabel();
+        lapiz_apellido = new javax.swing.JLabel();
+        lapiz_acoins = new javax.swing.JLabel();
+        lapiz_mail = new javax.swing.JLabel();
+        lapiz_passw = new javax.swing.JLabel();
+        lapiz_inforcard = new javax.swing.JLabel();
         PanelLogin = new javax.swing.JPanel();
         PanelRegistro = new javax.swing.JPanel();
         separadorPassR = new javax.swing.JSeparator();
@@ -323,28 +335,102 @@ public class Principal extends JFrame {
         UserImage.setPreferredSize(new java.awt.Dimension(100, 100));
         Opciones.add(UserImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 100, -1));
 
-        jLabel2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText(" ");
-        Opciones.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, -1, -1));
+        PagoElectronico.setBackground(new java.awt.Color(0, 0, 0));
+        PagoElectronico.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        PagoElectronico.setForeground(new java.awt.Color(0, 0, 0));
+        PagoElectronico.setText("Pago Electronico");
+        Opciones.add(PagoElectronico, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 270, -1));
 
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Nombre");
-        Opciones.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
+        NombreUsuario.setBackground(new java.awt.Color(0, 0, 0));
+        NombreUsuario.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        NombreUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        NombreUsuario.setText("Nombre Usuario");
+        Opciones.add(NombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 270, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        Opciones.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+        Apellido.setBackground(new java.awt.Color(0, 0, 0));
+        Apellido.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Apellido.setForeground(new java.awt.Color(0, 0, 0));
+        Apellido.setText("Apellido");
+        Opciones.add(Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 230, -1));
 
-        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel11.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Nombre Usuario");
-        Opciones.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+        Acoins.setBackground(new java.awt.Color(0, 0, 0));
+        Acoins.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Acoins.setForeground(new java.awt.Color(0, 0, 0));
+        Acoins.setText("ACoins");
+        Opciones.add(Acoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 270, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        Opciones.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, -1, -1));
+        Mail.setBackground(new java.awt.Color(0, 0, 0));
+        Mail.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Mail.setForeground(new java.awt.Color(0, 0, 0));
+        Mail.setText("Mail");
+        Opciones.add(Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 260, -1));
+
+        Informaciondetarjeta.setBackground(new java.awt.Color(0, 0, 0));
+        Informaciondetarjeta.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Informaciondetarjeta.setForeground(new java.awt.Color(0, 0, 0));
+        Informaciondetarjeta.setText("Informacion de Tarjeta");
+        Opciones.add(Informaciondetarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 270, -1));
+
+        Contraseña.setBackground(new java.awt.Color(0, 0, 0));
+        Contraseña.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Contraseña.setForeground(new java.awt.Color(0, 0, 0));
+        Contraseña.setText("Contraseña");
+        Opciones.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 250, -1));
+
+        Nombre.setBackground(new java.awt.Color(0, 0, 0));
+        Nombre.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Nombre.setForeground(new java.awt.Color(0, 0, 0));
+        Nombre.setText("Nombre");
+        Opciones.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 250, -1));
+
+        lapiznom_user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiznom_user.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiznom_userMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiznom_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, -1));
+
+        lapiz_pagoelec.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        Opciones.add(lapiz_pagoelec, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, -1, -1));
+
+        lapiz_nom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_nom.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_nomMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, -1));
+
+        lapiz_apellido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_apellido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_apellidoMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, -1));
+
+        lapiz_acoins.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        Opciones.add(lapiz_acoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
+
+        lapiz_mail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_mail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_mailMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, -1, -1));
+
+        lapiz_passw.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_passw.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_passwMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_passw, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, -1, -1));
+
+        lapiz_inforcard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        Opciones.add(lapiz_inforcard, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, -1));
 
         PanelOpUser.add(Opciones, java.awt.BorderLayout.CENTER);
 
@@ -714,6 +800,11 @@ public class Principal extends JFrame {
                 revalidate();
                 actual = usuarios.get(i);
                 nombreUser.setText(actual.getNombre());
+                NombreUsuario.setText(actual.getUserName());
+                Apellido.setText(actual.getApellido());
+                Nombre.setText(actual.getNombre());
+                Mail.setText(actual.getMail());
+                Contraseña.setText(actual.getPassword());
             }else{
                if(!usuarios.get(i).getPassword().contains(entrada.getPassword())){
                     separadorPassword.setBackground(new Color(239,83,80));
@@ -806,6 +897,8 @@ public class Principal extends JFrame {
            separadorNombreR.setForeground(new Color(255,255,255));
            ErrorRegU.setText("");
         }
+        registrado.setACoins(0);
+        registrado.setID(usuarios.size());
         if(!registrado.getNombre().equals("") && !registrado.getApellido().equals("") && !registrado.getMail().equals("") 
                 && !registrado.getUserName().equals("") && !registrado.getPassword().equals("")){
             registrado.setFileUser(usuarios);
@@ -862,6 +955,76 @@ public class Principal extends JFrame {
         UsuarioPanel.revalidate();
     }//GEN-LAST:event_nombreAdminMouseClicked
 
+    private void lapiznom_userMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiznom_userMouseClicked
+        boolean g;
+        do
+        {
+            entrada = JOptionPane.showInputDialog("Ingresa tu nuevo nombre: ");
+            if(entrada.length() >0)
+                g = true;
+            else
+                g=false;
+        }while(g!=true);
+        actual.setNombre(entrada);
+        NombreUsuario.setText(entrada);
+    }//GEN-LAST:event_lapiznom_userMouseClicked
+
+    private void lapiz_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_nomMouseClicked
+        boolean g;
+        do
+        {
+            newname = JOptionPane.showInputDialog("Ingresa tu nuevo nombre: ");
+            if(newname.length() >0)
+                g = true;
+            else
+                g=false;
+        }while(g!=true);
+        actual.setNombre(newname);
+        Nombre.setText(newname);
+    }//GEN-LAST:event_lapiz_nomMouseClicked
+
+    private void lapiz_apellidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_apellidoMouseClicked
+        boolean g;
+        do
+        {
+            newapellido = JOptionPane.showInputDialog("Ingresa tu nuevo nombre: ");
+            if(newapellido.length() >0)
+                g = true;
+            else
+                g=false;
+        }while(g!=true);
+        actual.setNombre(newapellido);
+        Apellido.setText(newapellido);
+    }//GEN-LAST:event_lapiz_apellidoMouseClicked
+
+    private void lapiz_mailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_mailMouseClicked
+        boolean g;
+        do
+        {
+            newmail = JOptionPane.showInputDialog("Ingresa tu nuevo nombre: ");
+            if(newmail.length() >0)
+                g = true;
+            else
+                g=false;
+        }while(g!=true);
+        actual.setNombre(newmail);
+        Mail.setText(newmail);
+    }//GEN-LAST:event_lapiz_mailMouseClicked
+
+    private void lapiz_passwMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_passwMouseClicked
+        boolean g;
+        do
+        {
+            newpassw = JOptionPane.showInputDialog("Ingresa tu nuevo nombre: ");
+            if(newpassw.length() >0)
+                g = true;
+            else
+                g=false;
+        }while(g!=true);
+        actual.setNombre(newpassw);
+        Contraseña.setText(newpassw);
+    }//GEN-LAST:event_lapiz_passwMouseClicked
+
     private void myComponents(){
             BufferedImage img = null;
             try{
@@ -889,11 +1052,14 @@ public class Principal extends JFrame {
              jl.setIcon(new ImageIcon(dimg));
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Acoins;
     private javax.swing.JPanel AdminPanel;
+    private javax.swing.JLabel Apellido;
     private javax.swing.JTextField ApellidosReg;
     private javax.swing.JButton BotonLogin;
     private javax.swing.JButton BotonRegistrar;
     private javax.swing.JLabel BotonRegresar;
+    private javax.swing.JLabel Contraseña;
     private javax.swing.JLabel DestinosB;
     private javax.swing.JLabel EditAviones;
     private javax.swing.JLabel EditLlegadas;
@@ -909,16 +1075,21 @@ public class Principal extends JFrame {
     private javax.swing.JLabel FondoOpciones;
     private javax.swing.JLabel IconoSuperior;
     private javax.swing.JPanel Imagen;
+    private javax.swing.JLabel Informaciondetarjeta;
     private javax.swing.JLabel LlegadasB;
+    private javax.swing.JLabel Mail;
     private javax.swing.JTextField MailReg;
     private javax.swing.JLabel MarcoUser;
     private javax.swing.JLabel Minimizar;
     private javax.swing.JPanel Navegacion;
     private javax.swing.JPanel NavegacionAdmin;
+    private javax.swing.JLabel Nombre;
     private javax.swing.JTextField NombreReg;
+    private javax.swing.JLabel NombreUsuario;
     private javax.swing.JPanel Opciones;
     private javax.swing.JPanel OpcionesUsuario;
     private javax.swing.JPanel OpcionesUsuarioAdmin;
+    private javax.swing.JLabel PagoElectronico;
     private javax.swing.JPanel PanelBotones;
     private javax.swing.JPanel PanelDestinos;
     private javax.swing.JPanel PanelEntrada;
@@ -954,17 +1125,20 @@ public class Principal extends JFrame {
     private javax.swing.JPanel UsuarioPanel;
     private javax.swing.JLabel imguser;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lapiz_acoins;
+    private javax.swing.JLabel lapiz_apellido;
+    private javax.swing.JLabel lapiz_inforcard;
+    private javax.swing.JLabel lapiz_mail;
+    private javax.swing.JLabel lapiz_nom;
+    private javax.swing.JLabel lapiz_pagoelec;
+    private javax.swing.JLabel lapiz_passw;
+    private javax.swing.JLabel lapiznom_user;
     private javax.swing.JLabel nombreAdmin;
     private javax.swing.JLabel nombreUser;
     private javax.swing.JLabel nombreuser;
