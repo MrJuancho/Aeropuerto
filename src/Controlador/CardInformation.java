@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class CardInformation implements Serializable{
     private String CardNumber;
@@ -56,11 +57,12 @@ public class CardInformation implements Serializable{
         this.Fondos = Fondos;
     }
     
-    public void setFileCard(){
+    public void setFileCard(ArrayList<CardInformation> cardInformation){
         String archivo = "credit_cards.dat";
+        cardInformation.add(this);
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
-            escritura.writeObject(this);
+            escritura.writeObject(cardInformation);
             escritura.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -69,11 +71,11 @@ public class CardInformation implements Serializable{
         }
     }
     
-    public CardInformation getFileCard(){
+    public ArrayList<CardInformation> getFileCard(){
         String archivo = "credit_cards.dat";
         try{
             ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
-            CardInformation salida = (CardInformation) lectura.readObject();
+            ArrayList<CardInformation> salida = (ArrayList<CardInformation>) lectura.readObject();
             lectura.close();
             return salida;
         }catch(IOException e){

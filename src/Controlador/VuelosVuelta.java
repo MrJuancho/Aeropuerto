@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class VuelosVuelta implements Serializable {
     private String horaLLegada;
@@ -56,11 +57,12 @@ public class VuelosVuelta implements Serializable {
         this.Procedencia = Procedencia;
     }
     
-    public void setFileVVuelata(){
+    public void setFileVVuelata(ArrayList<VuelosVuelta> vuelosVuelta){
         String archivo = "admins.dat";
+        vuelosVuelta.add(this);
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
-            escritura.writeObject(this);
+            escritura.writeObject(vuelosVuelta);
             escritura.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -69,11 +71,11 @@ public class VuelosVuelta implements Serializable {
         }
     }
     
-    public VuelosVuelta getFileVVuelta(){
+    public ArrayList<VuelosVuelta> getFileVVuelta(){
         String archivo = "admins.dat";
         try{
             ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
-            VuelosVuelta salida = (VuelosVuelta) lectura.readObject();
+            ArrayList<VuelosVuelta> salida = (ArrayList<VuelosVuelta>) lectura.readObject();
             lectura.close();
             return salida;
         }catch(IOException e){

@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 public class Admin implements Serializable {
     private String Username;
@@ -43,11 +44,12 @@ public class Admin implements Serializable {
     }
     
     
-    public void setFileAdmin(){
+    public void setFileAdmin(ArrayList<Admin> admin){
         String archivo = "admins.dat";
+        admin.add(this);
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
-            escritura.writeObject(this);
+            escritura.writeObject(admin);
             escritura.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -56,11 +58,11 @@ public class Admin implements Serializable {
         }
     }
     
-    public Admin getFileAdmin(){
+    public ArrayList<Admin> getFileAdmin(){
         String archivo = "admins.dat";
         try{
             ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
-            Admin salida = (Admin) lectura.readObject();
+            ArrayList<Admin> salida = (ArrayList<Admin>) lectura.readObject();
             lectura.close();
             return salida;
         }catch(IOException e){

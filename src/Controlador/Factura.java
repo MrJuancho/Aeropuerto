@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Factura implements Serializable {
@@ -67,11 +68,12 @@ public class Factura implements Serializable {
         VueloComprado = vueloComprado;
     }
     
-    public void setFileFactura(){
+    public void setFileFactura(ArrayList<Factura> factura){
         String archivo = "facturas.dat";
+        factura.add(this);
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
-            escritura.writeObject(this);
+            escritura.writeObject(factura);
             escritura.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -80,11 +82,11 @@ public class Factura implements Serializable {
         }
     }
     
-    public Factura getFileFactura(){
+    public ArrayList<Factura> getFileFactura(){
         String archivo = "facturas.dat";
         try{
             ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
-            Factura salida = (Factura) lectura.readObject();
+            ArrayList<Factura> salida = (ArrayList<Factura>) lectura.readObject();
             lectura.close();
             return salida;
         }catch(IOException e){

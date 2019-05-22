@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class ElectronicPayment implements Serializable{
     private String provider;
@@ -56,11 +57,12 @@ public class ElectronicPayment implements Serializable{
         this.fondos = fondos;
     }
     
-    public void setFileEPayment(){
+    public void setFileEPayment(ArrayList<ElectronicPayment> electronicPayment){
         String archivo = "electronicos.dat";
+        electronicPayment.add(this);
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
-            escritura.writeObject(this);
+            escritura.writeObject(electronicPayment);
             escritura.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -69,11 +71,11 @@ public class ElectronicPayment implements Serializable{
         }
     }
     
-    public ElectronicPayment getFileEPayment(){
+    public ArrayList<ElectronicPayment> getFileEPayment(){
         String archivo = "electronicos.dat";
         try{
             ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
-            ElectronicPayment salida = (ElectronicPayment) lectura.readObject();
+            ArrayList<ElectronicPayment> salida = (ArrayList<ElectronicPayment>) lectura.readObject();
             lectura.close();
             return salida;
         }catch(IOException e){

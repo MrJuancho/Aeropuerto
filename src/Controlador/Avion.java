@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Avion implements Serializable {
@@ -56,11 +57,12 @@ public class Avion implements Serializable {
         this.lugares = lugares;
     }
     
-    public void setFileAvion(){
+    public void setFileAvion(ArrayList<Avion> avion){
         String archivo = "aviones.dat";
+        avion.add(this);
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
-            escritura.writeObject(this);
+            escritura.writeObject(avion);
             escritura.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -69,11 +71,11 @@ public class Avion implements Serializable {
         }
     }
     
-    public Avion getFileAvion(){
+    public ArrayList<Avion> getFileAvion(){
         String archivo = "aviones.dat";
         try{
             ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
-            Avion salida = (Avion) lectura.readObject();
+            ArrayList<Avion> salida = (ArrayList<Avion>) lectura.readObject();
             lectura.close();
             return salida;
         }catch(IOException e){

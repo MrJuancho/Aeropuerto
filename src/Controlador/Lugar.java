@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Lugar implements Serializable {
     private int ID;
@@ -56,11 +57,12 @@ public class Lugar implements Serializable {
         this.isAvailable = isAvailable;
     }
     
-    public void setFileLugar(){
+    public void setFileLugar(ArrayList<Lugar> lugar){
         String archivo = "lugares.dat";
+        lugar.add(this);
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
-            escritura.writeObject(this);
+            escritura.writeObject(lugar);
             escritura.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -69,11 +71,11 @@ public class Lugar implements Serializable {
         }
     }
     
-    public Lugar getFileLugar(){
+    public ArrayList<Lugar> getFileLugar(){
         String archivo = "lugares.dat";
         try{
             ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
-            Lugar salida = (Lugar) lectura.readObject();
+            ArrayList<Lugar> salida = (ArrayList<Lugar>) lectura.readObject();
             lectura.close();
             return salida;
         }catch(IOException e){

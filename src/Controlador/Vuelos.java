@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Vuelos implements Serializable{
     private int id;
@@ -68,11 +69,12 @@ public class Vuelos implements Serializable{
 
     public int getLugaresDisp(){ return AvionAsignado.getLugares().size(); }
     
-    public void setFileVuelo(){
+    public void setFileVuelo(ArrayList<Vuelos> vuelos){
         String archivo = "vuelos.dat";
+        vuelos.add(this);
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
-            escritura.writeObject(this);
+            escritura.writeObject(vuelos);
             escritura.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -81,11 +83,11 @@ public class Vuelos implements Serializable{
         }
     }
     
-    public Vuelos getFileVuelo(){
+    public ArrayList<Vuelos> getFileVuelo(){
         String archivo = "vuelos.dat";
         try{
             ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
-            Vuelos salida = (Vuelos) lectura.readObject();
+            ArrayList<Vuelos> salida = (ArrayList<Vuelos>) lectura.readObject();
             lectura.close();
             return salida;
         }catch(IOException e){
