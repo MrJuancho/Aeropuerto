@@ -15,6 +15,7 @@ import java.util.Scanner;
 import javax.swing.*;
 
 public class Usuario implements Serializable {
+    private static final long serialVersionUID = 1820253868503326757L;
     private int ID;
     private String nombre;
     private String apellido;
@@ -155,6 +156,20 @@ public class Usuario implements Serializable {
         }catch(ClassNotFoundException ex){
             ex.printStackTrace();
             return null;
+        }
+    }
+    
+    public void editFileUser(ArrayList<Usuario> usuarios){
+        String archivo = "users.dat";
+        try{
+            ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
+            escritura.writeObject(usuarios);
+            escritura.close();
+            System.out.println("Se ha actualizado la informacion");
+        }catch(FileNotFoundException ex){
+            ex.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
         }
     }
 }

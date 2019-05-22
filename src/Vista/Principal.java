@@ -1035,8 +1035,10 @@ public class Principal extends JFrame {
             else
                 g=false;
         }while(g!=true);
-        actual.setNombre(entrada);
+        actual.setUserName(entrada);
         NombreUsuario.setText(entrada);
+        usuarios.get(actual.getID()).setUserName(entrada);
+        master.editFileUser(usuarios);
     }//GEN-LAST:event_lapiznom_userMouseClicked
 
     private void lapiz_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_nomMouseClicked
