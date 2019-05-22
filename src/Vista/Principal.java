@@ -60,6 +60,8 @@ public class Principal extends JFrame {
         PanelLlegadas = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TablaLlegadas = new javax.swing.JTable();
+        PanelSalidas = new javax.swing.JPanel();
+        PanelDestinos = new javax.swing.JPanel();
         PanelOpUser = new javax.swing.JPanel();
         Imagen = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -72,8 +74,6 @@ public class Principal extends JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        PanelSalidas = new javax.swing.JPanel();
-        PanelDestinos = new javax.swing.JPanel();
         PanelLogin = new javax.swing.JPanel();
         PanelRegistro = new javax.swing.JPanel();
         separadorPassR = new javax.swing.JSeparator();
@@ -160,7 +160,7 @@ public class Principal extends JFrame {
 
         EditAviones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         EditAviones.setForeground(new java.awt.Color(255, 255, 255));
-        EditAviones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
+        EditAviones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_local_airport_white_24dp.png"))); // NOI18N
         EditAviones.setToolTipText("Destinos");
         EditAviones.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -168,6 +168,8 @@ public class Principal extends JFrame {
             }
         });
         NavegacionAdmin.add(EditAviones);
+
+        EditUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_assignment_ind_white_24dp.png"))); // NOI18N
         NavegacionAdmin.add(EditUsuarios);
 
         ToolBarAdmin.add(NavegacionAdmin, java.awt.BorderLayout.WEST);
@@ -285,6 +287,12 @@ public class Principal extends JFrame {
 
         UsuarioPanel.add(PanelLlegadas, java.awt.BorderLayout.CENTER);
 
+        PanelSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        UsuarioPanel.add(PanelSalidas, java.awt.BorderLayout.CENTER);
+
+        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.CENTER);
+
         PanelOpUser.setLayout(new java.awt.BorderLayout());
 
         Imagen.setMaximumSize(new java.awt.Dimension(640, 631));
@@ -341,12 +349,6 @@ public class Principal extends JFrame {
         PanelOpUser.add(Opciones, java.awt.BorderLayout.CENTER);
 
         UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
-
-        PanelSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        UsuarioPanel.add(PanelSalidas, java.awt.BorderLayout.CENTER);
-
-        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.LINE_END);
 
         getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
 
@@ -677,17 +679,17 @@ public class Principal extends JFrame {
         
         usuarios = master.getFileUser();
         admins = masterAd.getFileAdmin();
-        for (int i = 0; i < usuarios.size(); i++) {
-            if(usuarios.get(i).getUserName().contains(entrada.getUserName()) && usuarios.get(i).getPassword().contains(entrada.getPassword())){
+         for (int i = 0; i < admins.size(); i++) {
+            if(admins.get(i).getUsername().contains(entrada.getUserName()) && admins.get(i).getPassword().contains(entrada.getPassword())){
                 remove(PanelLogin);
                 repaint();
                 revalidate();
                 
-                add(UsuarioPanel,BorderLayout.CENTER);
+                add(AdminPanel,BorderLayout.CENTER);
                 repaint();
                 revalidate();
-                actual = usuarios.get(i);
-                nombreUser.setText(actual.getNombre());
+                adminactual = admins.get(i);
+                nombreuser.setText(adminactual.getUsername());
             }else{
                if(!usuarios.get(i).getPassword().contains(entrada.getPassword())){
                     separadorPassword.setBackground(new Color(239,83,80));
@@ -701,16 +703,17 @@ public class Principal extends JFrame {
                 }
             }
         }
-        for (int i = 0; i < admins.size(); i++) {
-            if(admins.get(i).getUsername().contains(entrada.getUserName()) && admins.get(i).getPassword().contains(entrada.getPassword())){
+        for (int i = 0; i < usuarios.size(); i++) {
+            if(usuarios.get(i).getUserName().contains(entrada.getUserName()) && usuarios.get(i).getPassword().contains(entrada.getPassword())){
                 remove(PanelLogin);
                 repaint();
                 revalidate();
                 
-                add(AdminPanel,BorderLayout.CENTER);
+                add(UsuarioPanel,BorderLayout.CENTER);
                 repaint();
                 revalidate();
-                adminactual = admins.get(i);
+                actual = usuarios.get(i);
+                nombreUser.setText(actual.getNombre());
             }else{
                if(!usuarios.get(i).getPassword().contains(entrada.getPassword())){
                     separadorPassword.setBackground(new Color(239,83,80));
@@ -812,10 +815,11 @@ public class Principal extends JFrame {
     }//GEN-LAST:event_BotonRegistrarMouseClicked
 
     private void DestinosBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DestinosBMouseClicked
-        UsuarioPanel.remove(PanelOpUser);
+        UsuarioPanel.removeAll();
         UsuarioPanel.repaint();
         UsuarioPanel.revalidate();
         
+        UsuarioPanel.add(ToolBarUser,BorderLayout.NORTH);
         UsuarioPanel.add(PanelDestinos,BorderLayout.CENTER);
         UsuarioPanel.repaint();
         UsuarioPanel.revalidate();
@@ -826,30 +830,33 @@ public class Principal extends JFrame {
     }//GEN-LAST:event_EditAvionesMouseClicked
 
     private void LlegadasBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LlegadasBMouseClicked
-        UsuarioPanel.remove(PanelOpUser);
+        UsuarioPanel.removeAll();
         UsuarioPanel.repaint();
         UsuarioPanel.revalidate();
         
+        UsuarioPanel.add(ToolBarUser,BorderLayout.NORTH);
         UsuarioPanel.add(PanelLlegadas,BorderLayout.CENTER);
         UsuarioPanel.repaint();
         UsuarioPanel.revalidate();
     }//GEN-LAST:event_LlegadasBMouseClicked
 
     private void SalidasBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalidasBMouseClicked
-        UsuarioPanel.remove(PanelOpUser);
+        UsuarioPanel.removeAll();
         UsuarioPanel.repaint();
         UsuarioPanel.revalidate();
         
+        UsuarioPanel.add(ToolBarUser,BorderLayout.NORTH);
         UsuarioPanel.add(PanelSalidas,BorderLayout.CENTER);
         UsuarioPanel.repaint();
         UsuarioPanel.revalidate();
     }//GEN-LAST:event_SalidasBMouseClicked
 
     private void nombreAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nombreAdminMouseClicked
-        UsuarioPanel.remove(PanelDestinos);
+        UsuarioPanel.removeAll();
         UsuarioPanel.repaint();
         UsuarioPanel.revalidate();
         
+        UsuarioPanel.add(ToolBarUser,BorderLayout.NORTH);
         UsuarioPanel.add(PanelOpUser,BorderLayout.CENTER);
         UsuarioPanel.repaint();
         UsuarioPanel.revalidate();
