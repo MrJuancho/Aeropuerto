@@ -14,7 +14,7 @@ public class Avion implements Serializable {
     private String modelo;
     private int NoVuelos;
     private String placa;
-    private List<Lugar> lugares;
+    private ArrayList<Lugar> lugares;
 
     public Avion() {
     }
@@ -49,11 +49,11 @@ public class Avion implements Serializable {
         this.placa = placa;
     }
 
-    public List<Lugar> getLugares() {
+    public ArrayList<Lugar> getLugares() {
         return lugares;
     }
 
-    public void setLugares(List<Lugar> lugares) {
+    public void setLugares(ArrayList<Lugar> lugares) {
         this.lugares = lugares;
     }
     
@@ -84,6 +84,19 @@ public class Avion implements Serializable {
         }catch(ClassNotFoundException ex){
             ex.printStackTrace();
             return null;
+        }
+    }
+    
+    public void editFileAvion(ArrayList<Avion> avion){
+        String archivo = "aviones.dat";
+        try{
+            ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
+            escritura.writeObject(avion);
+            escritura.close();
+        }catch(FileNotFoundException ex){
+            ex.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
         }
     }
 }
