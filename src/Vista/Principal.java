@@ -5,6 +5,7 @@ import Controlador.Avion;
 import Controlador.Usuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Graphics2D;
@@ -16,6 +17,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
 import java.util.ArrayList;
 import java.util.List;
 import javax.imageio.ImageIO;
@@ -369,6 +371,11 @@ public class Principal extends JFrame {
         Opciones.add(lapiz_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, -1));
 
         lapiz_acoins.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_acoins.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_acoinsMouseClicked(evt);
+            }
+        });
         Opciones.add(lapiz_acoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
 
         lapiz_mail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
@@ -1123,6 +1130,8 @@ public class Principal extends JFrame {
         }while(g!=true);
         actual.setNombre(newname);
         Nombre.setText(newname);
+        usuarios.get(actual.getID()).setNombre(newname);
+        master.editFileUser(usuarios);
     }//GEN-LAST:event_lapiz_nomMouseClicked
 
     private void lapiz_apellidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_apellidoMouseClicked
@@ -1137,6 +1146,8 @@ public class Principal extends JFrame {
         }while(g!=true);
         actual.setNombre(newapellido);
         Apellido.setText(newapellido);
+        usuarios.get(actual.getID()).setApellido(newapellido);
+        master.editFileUser(usuarios);
     }//GEN-LAST:event_lapiz_apellidoMouseClicked
 
     private void lapiz_mailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_mailMouseClicked
@@ -1151,6 +1162,8 @@ public class Principal extends JFrame {
         }while(g!=true);
         actual.setNombre(newmail);
         Mail.setText(newmail);
+        usuarios.get(actual.getID()).setMail(newmail);
+        master.editFileUser(usuarios);
     }//GEN-LAST:event_lapiz_mailMouseClicked
 
     private void lapiz_passwMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_passwMouseClicked
@@ -1165,6 +1178,8 @@ public class Principal extends JFrame {
         }while(g!=true);
         actual.setNombre(newpassw);
         Contraseña.setText(newpassw);
+        usuarios.get(actual.getID()).setPassword(newpassw);
+        master.editFileUser(usuarios);
     }//GEN-LAST:event_lapiz_passwMouseClicked
     private void EditSalidasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditSalidasMouseClicked
         AdminPanel.removeAll();
@@ -1210,9 +1225,42 @@ public class Principal extends JFrame {
         AdminPanel.revalidate();
     }//GEN-LAST:event_imguserMouseClicked
 
+
     private void BotonRegistrarAvionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonRegistrarAvionMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonRegistrarAvionMouseClicked
+
+    private void lapiz_acoinsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_acoinsMouseClicked
+            JFrame caja = new JFrame();
+            caja.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            caja.setBounds(200, 100, 400, 200);
+            
+            caja.setTitle("ACoins");
+            
+            Container container = caja.getContentPane();
+            container.setLayout(null);
+            
+            JLabel disponibles = new JLabel("Tus creditos son: ");
+            disponibles.setBounds(20, 30, 250, 30);
+            
+            JLabel code = new JLabel("Ingresa tu codigo: ");
+            code.setBounds(20, 60, 250, 30);
+            
+            JTextPane dis = new JTextPane();
+            dis.setEditable(false);
+            dis.setBounds(120, 30, 250, 30);
+            
+            JTextField codigo = new JTextField();
+            codigo.setBounds(120, 60, 250, 30);
+            
+            container.add(disponibles);
+            container.add(dis);
+            container.add(code);
+            container.add(codigo);
+            caja.setVisible(true);
+            
+    }//GEN-LAST:event_lapiz_acoinsMouseClicked
+
 
 
     private void myComponents(){
