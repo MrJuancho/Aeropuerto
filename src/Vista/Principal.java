@@ -38,15 +38,6 @@ public class Principal extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        AdminPanel = new javax.swing.JPanel();
-        ToolBarAdmin = new javax.swing.JPanel();
-        NavegacionAdmin = new javax.swing.JPanel();
-        SalidasB1 = new javax.swing.JLabel();
-        LlegadasB1 = new javax.swing.JLabel();
-        DestinosB1 = new javax.swing.JLabel();
-        OpcionesUsuarioAdmin = new javax.swing.JPanel();
-        nombreuser = new javax.swing.JLabel();
-        imguser = new javax.swing.JLabel();
         PanelLogin = new javax.swing.JPanel();
         PanelRegistro = new javax.swing.JPanel();
         separadorPassR = new javax.swing.JSeparator();
@@ -96,6 +87,16 @@ public class Principal extends JFrame {
         PanelBotones = new javax.swing.JPanel();
         Minimizar = new javax.swing.JLabel();
         Salir = new javax.swing.JLabel();
+        AdminPanel = new javax.swing.JPanel();
+        ToolBarAdmin = new javax.swing.JPanel();
+        NavegacionAdmin = new javax.swing.JPanel();
+        EditSalidas = new javax.swing.JLabel();
+        EditLlegadas = new javax.swing.JLabel();
+        EditAviones = new javax.swing.JLabel();
+        EditUsuarios = new javax.swing.JLabel();
+        OpcionesUsuarioAdmin = new javax.swing.JPanel();
+        nombreuser = new javax.swing.JLabel();
+        imguser = new javax.swing.JLabel();
         UsuarioPanel = new javax.swing.JPanel();
         ToolBarUser = new javax.swing.JPanel();
         Navegacion = new javax.swing.JPanel();
@@ -129,62 +130,6 @@ public class Principal extends JFrame {
         setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(1280, 720));
-
-        AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
-        AdminPanel.setLayout(new java.awt.BorderLayout());
-
-        ToolBarAdmin.setBackground(new java.awt.Color(33, 150, 243));
-        ToolBarAdmin.setMinimumSize(new java.awt.Dimension(169, 52));
-        ToolBarAdmin.setPreferredSize(new java.awt.Dimension(169, 52));
-        ToolBarAdmin.setLayout(new java.awt.BorderLayout());
-
-        NavegacionAdmin.setOpaque(false);
-        NavegacionAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
-
-        SalidasB1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        SalidasB1.setForeground(new java.awt.Color(255, 255, 255));
-        SalidasB1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SalidasB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
-        SalidasB1.setToolTipText("Salidas");
-        SalidasB1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        NavegacionAdmin.add(SalidasB1);
-
-        LlegadasB1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        LlegadasB1.setForeground(new java.awt.Color(255, 255, 255));
-        LlegadasB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
-        LlegadasB1.setToolTipText("Llegadas");
-        NavegacionAdmin.add(LlegadasB1);
-
-        DestinosB1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        DestinosB1.setForeground(new java.awt.Color(255, 255, 255));
-        DestinosB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
-        DestinosB1.setToolTipText("Destinos");
-        DestinosB1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DestinosB1MouseClicked(evt);
-            }
-        });
-        NavegacionAdmin.add(DestinosB1);
-
-        ToolBarAdmin.add(NavegacionAdmin, java.awt.BorderLayout.WEST);
-
-        OpcionesUsuarioAdmin.setOpaque(false);
-        OpcionesUsuarioAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
-
-        nombreuser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        nombreuser.setForeground(new java.awt.Color(255, 255, 255));
-        OpcionesUsuarioAdmin.add(nombreuser);
-
-        imguser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
-        imguser.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imguser.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        OpcionesUsuarioAdmin.add(imguser);
-
-        ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
-
-        AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
-
-        getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
 
         PanelLogin.setBackground(new java.awt.Color(33, 150, 243));
         PanelLogin.setLayout(new java.awt.BorderLayout());
@@ -481,6 +426,63 @@ public class Principal extends JFrame {
         PanelPrincipal.add(PanelBotones, java.awt.BorderLayout.LINE_END);
 
         getContentPane().add(PanelPrincipal, java.awt.BorderLayout.PAGE_START);
+
+        AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
+        AdminPanel.setLayout(new java.awt.BorderLayout());
+
+        ToolBarAdmin.setBackground(new java.awt.Color(33, 150, 243));
+        ToolBarAdmin.setMinimumSize(new java.awt.Dimension(169, 52));
+        ToolBarAdmin.setPreferredSize(new java.awt.Dimension(169, 52));
+        ToolBarAdmin.setLayout(new java.awt.BorderLayout());
+
+        NavegacionAdmin.setOpaque(false);
+        NavegacionAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
+
+        EditSalidas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EditSalidas.setForeground(new java.awt.Color(255, 255, 255));
+        EditSalidas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EditSalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
+        EditSalidas.setToolTipText("Salidas");
+        EditSalidas.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        NavegacionAdmin.add(EditSalidas);
+
+        EditLlegadas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EditLlegadas.setForeground(new java.awt.Color(255, 255, 255));
+        EditLlegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
+        EditLlegadas.setToolTipText("Llegadas");
+        NavegacionAdmin.add(EditLlegadas);
+
+        EditAviones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EditAviones.setForeground(new java.awt.Color(255, 255, 255));
+        EditAviones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
+        EditAviones.setToolTipText("Destinos");
+        EditAviones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditAvionesMouseClicked(evt);
+            }
+        });
+        NavegacionAdmin.add(EditAviones);
+        NavegacionAdmin.add(EditUsuarios);
+
+        ToolBarAdmin.add(NavegacionAdmin, java.awt.BorderLayout.WEST);
+
+        OpcionesUsuarioAdmin.setOpaque(false);
+        OpcionesUsuarioAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
+
+        nombreuser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        nombreuser.setForeground(new java.awt.Color(255, 255, 255));
+        OpcionesUsuarioAdmin.add(nombreuser);
+
+        imguser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
+        imguser.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imguser.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        OpcionesUsuarioAdmin.add(imguser);
+
+        ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
+
+        AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
+
+        getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
 
         UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
         UsuarioPanel.setLayout(new java.awt.BorderLayout());
@@ -789,9 +791,9 @@ public class Principal extends JFrame {
         UsuarioPanel.revalidate();
     }//GEN-LAST:event_DestinosBMouseClicked
 
-    private void DestinosB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DestinosB1MouseClicked
+    private void EditAvionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditAvionesMouseClicked
         
-    }//GEN-LAST:event_DestinosB1MouseClicked
+    }//GEN-LAST:event_EditAvionesMouseClicked
 
     private void LlegadasBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LlegadasBMouseClicked
         
@@ -834,7 +836,10 @@ public class Principal extends JFrame {
     private javax.swing.JButton BotonRegistrar;
     private javax.swing.JLabel BotonRegresar;
     private javax.swing.JLabel DestinosB;
-    private javax.swing.JLabel DestinosB1;
+    private javax.swing.JLabel EditAviones;
+    private javax.swing.JLabel EditLlegadas;
+    private javax.swing.JLabel EditSalidas;
+    private javax.swing.JLabel EditUsuarios;
     private javax.swing.JLabel ErrorName;
     private javax.swing.JLabel ErrorPass;
     private javax.swing.JLabel ErrorRegA;
@@ -845,7 +850,6 @@ public class Principal extends JFrame {
     private javax.swing.JLabel FondoOpciones;
     private javax.swing.JLabel IconoSuperior;
     private javax.swing.JLabel LlegadasB;
-    private javax.swing.JLabel LlegadasB1;
     private javax.swing.JTextField MailReg;
     private javax.swing.JLabel MarcoUser;
     private javax.swing.JLabel Minimizar;
@@ -868,7 +872,6 @@ public class Principal extends JFrame {
     private javax.swing.JPasswordField PassReg;
     private javax.swing.JLabel Registro;
     private javax.swing.JLabel SalidasB;
-    private javax.swing.JLabel SalidasB1;
     private javax.swing.JLabel Salir;
     private javax.swing.JSeparator SeparadorUsername;
     private javax.swing.JLabel TextoLogin1;
