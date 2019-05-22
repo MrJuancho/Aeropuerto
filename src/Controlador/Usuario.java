@@ -134,6 +134,7 @@ public class Usuario implements Serializable {
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
             escritura.writeObject(usuarios);
             escritura.close();
+            System.out.println("Se ha guardado la informacion");
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
         }catch(IOException e){

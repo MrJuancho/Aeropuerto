@@ -36,11 +36,21 @@ public class Main{
         }
         //</editor-fold>
 
+        Usuario elcrack = new Usuario();
+        ArrayList<Usuario> loscracks = new ArrayList<Usuario>();
+        loscracks = elcrack.getFileUser();
+        
+        
+        Usuario yo = loscracks.get(0);
+        System.out.println(yo.getNombre());
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);
             }
         });
+        
+        
     }
 }

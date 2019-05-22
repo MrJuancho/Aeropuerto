@@ -631,7 +631,10 @@ public class Principal extends JFrame {
             separadorNombreR.setForeground(new Color(239,83,80));
             ErrorRegN.setText("Ingresa un nombre...");
         }else{
-            registrado.setNombre(NombreReg.toString());
+            registrado.setNombre(NombreReg.getText());
+            separadorNombreR.setBackground(new Color(255,255,255));
+            separadorNombreR.setForeground(new Color(255,255,255));
+            ErrorRegN.setText("");
         }
         if(ApellidosReg.getText().equals("")){
             separadorPassR.setBackground(new Color(239,83,80));
@@ -652,10 +655,9 @@ public class Principal extends JFrame {
             separadorNombreR.setForeground(new Color(239,83,80));
             ErrorRegU.setText("Ingresa un nombre...");
         }else{
-            
+           registrado.setUserName(UserReg.getText());
         }
-            
-        
+        registrado.setFileUser(usuarios);
     }//GEN-LAST:event_BotonRegistrarMouseClicked
 
     private void myComponents(){
