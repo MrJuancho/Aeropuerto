@@ -38,6 +38,42 @@ public class Principal extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        AdminPanel = new javax.swing.JPanel();
+        ToolBarAdmin = new javax.swing.JPanel();
+        NavegacionAdmin = new javax.swing.JPanel();
+        EditSalidas = new javax.swing.JLabel();
+        EditLlegadas = new javax.swing.JLabel();
+        EditAviones = new javax.swing.JLabel();
+        EditUsuarios = new javax.swing.JLabel();
+        OpcionesUsuarioAdmin = new javax.swing.JPanel();
+        nombreuser = new javax.swing.JLabel();
+        imguser = new javax.swing.JLabel();
+        UsuarioPanel = new javax.swing.JPanel();
+        ToolBarUser = new javax.swing.JPanel();
+        Navegacion = new javax.swing.JPanel();
+        SalidasB = new javax.swing.JLabel();
+        LlegadasB = new javax.swing.JLabel();
+        DestinosB = new javax.swing.JLabel();
+        OpcionesUsuario = new javax.swing.JPanel();
+        nombreUser = new javax.swing.JLabel();
+        nombreAdmin = new javax.swing.JLabel();
+        PanelLlegadas = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TablaLlegadas = new javax.swing.JTable();
+        PanelOpUser = new javax.swing.JPanel();
+        Imagen = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        FondoOpciones = new javax.swing.JLabel();
+        Opciones = new javax.swing.JPanel();
+        MarcoUser = new javax.swing.JLabel();
+        UserImage = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        PanelSalidas = new javax.swing.JPanel();
+        PanelDestinos = new javax.swing.JPanel();
         PanelLogin = new javax.swing.JPanel();
         PanelRegistro = new javax.swing.JPanel();
         separadorPassR = new javax.swing.JSeparator();
@@ -87,42 +123,6 @@ public class Principal extends JFrame {
         PanelBotones = new javax.swing.JPanel();
         Minimizar = new javax.swing.JLabel();
         Salir = new javax.swing.JLabel();
-        AdminPanel = new javax.swing.JPanel();
-        ToolBarAdmin = new javax.swing.JPanel();
-        NavegacionAdmin = new javax.swing.JPanel();
-        EditSalidas = new javax.swing.JLabel();
-        EditLlegadas = new javax.swing.JLabel();
-        EditAviones = new javax.swing.JLabel();
-        EditUsuarios = new javax.swing.JLabel();
-        OpcionesUsuarioAdmin = new javax.swing.JPanel();
-        nombreuser = new javax.swing.JLabel();
-        imguser = new javax.swing.JLabel();
-        UsuarioPanel = new javax.swing.JPanel();
-        ToolBarUser = new javax.swing.JPanel();
-        Navegacion = new javax.swing.JPanel();
-        SalidasB = new javax.swing.JLabel();
-        LlegadasB = new javax.swing.JLabel();
-        DestinosB = new javax.swing.JLabel();
-        OpcionesUsuario = new javax.swing.JPanel();
-        nombreUser = new javax.swing.JLabel();
-        nombreAdmin = new javax.swing.JLabel();
-        PanelLlegadas = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TablaLlegadas = new javax.swing.JTable();
-        PanelOpUser = new javax.swing.JPanel();
-        Imagen = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        FondoOpciones = new javax.swing.JLabel();
-        Opciones = new javax.swing.JPanel();
-        MarcoUser = new javax.swing.JLabel();
-        UserImage = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        PanelSalidas = new javax.swing.JPanel();
-        PanelDestinos = new javax.swing.JPanel();
 
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("ApexFlights");
@@ -132,6 +132,223 @@ public class Principal extends JFrame {
         setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(1280, 720));
+
+        AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
+        AdminPanel.setLayout(new java.awt.BorderLayout());
+
+        ToolBarAdmin.setBackground(new java.awt.Color(33, 150, 243));
+        ToolBarAdmin.setMinimumSize(new java.awt.Dimension(169, 52));
+        ToolBarAdmin.setPreferredSize(new java.awt.Dimension(169, 52));
+        ToolBarAdmin.setLayout(new java.awt.BorderLayout());
+
+        NavegacionAdmin.setOpaque(false);
+        NavegacionAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
+
+        EditSalidas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EditSalidas.setForeground(new java.awt.Color(255, 255, 255));
+        EditSalidas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EditSalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
+        EditSalidas.setToolTipText("Salidas");
+        EditSalidas.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        NavegacionAdmin.add(EditSalidas);
+
+        EditLlegadas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EditLlegadas.setForeground(new java.awt.Color(255, 255, 255));
+        EditLlegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
+        EditLlegadas.setToolTipText("Llegadas");
+        NavegacionAdmin.add(EditLlegadas);
+
+        EditAviones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EditAviones.setForeground(new java.awt.Color(255, 255, 255));
+        EditAviones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
+        EditAviones.setToolTipText("Destinos");
+        EditAviones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditAvionesMouseClicked(evt);
+            }
+        });
+        NavegacionAdmin.add(EditAviones);
+        NavegacionAdmin.add(EditUsuarios);
+
+        ToolBarAdmin.add(NavegacionAdmin, java.awt.BorderLayout.WEST);
+
+        OpcionesUsuarioAdmin.setOpaque(false);
+        OpcionesUsuarioAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
+
+        nombreuser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        nombreuser.setForeground(new java.awt.Color(255, 255, 255));
+        OpcionesUsuarioAdmin.add(nombreuser);
+
+        imguser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
+        imguser.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imguser.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        OpcionesUsuarioAdmin.add(imguser);
+
+        ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
+
+        AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
+
+        getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
+
+        UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
+        UsuarioPanel.setLayout(new java.awt.BorderLayout());
+
+        ToolBarUser.setBackground(new java.awt.Color(33, 150, 243));
+        ToolBarUser.setMinimumSize(new java.awt.Dimension(169, 52));
+        ToolBarUser.setPreferredSize(new java.awt.Dimension(169, 52));
+        ToolBarUser.setLayout(new java.awt.BorderLayout());
+
+        Navegacion.setOpaque(false);
+        Navegacion.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
+
+        SalidasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        SalidasB.setForeground(new java.awt.Color(255, 255, 255));
+        SalidasB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        SalidasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
+        SalidasB.setToolTipText("Salidas");
+        SalidasB.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        SalidasB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalidasBMouseClicked(evt);
+            }
+        });
+        Navegacion.add(SalidasB);
+
+        LlegadasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        LlegadasB.setForeground(new java.awt.Color(255, 255, 255));
+        LlegadasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
+        LlegadasB.setToolTipText("Llegadas");
+        LlegadasB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LlegadasBMouseClicked(evt);
+            }
+        });
+        Navegacion.add(LlegadasB);
+
+        DestinosB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        DestinosB.setForeground(new java.awt.Color(255, 255, 255));
+        DestinosB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
+        DestinosB.setToolTipText("Destinos");
+        DestinosB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DestinosBMouseClicked(evt);
+            }
+        });
+        Navegacion.add(DestinosB);
+
+        ToolBarUser.add(Navegacion, java.awt.BorderLayout.WEST);
+
+        OpcionesUsuario.setOpaque(false);
+        OpcionesUsuario.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
+
+        nombreUser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        nombreUser.setForeground(new java.awt.Color(255, 255, 255));
+        OpcionesUsuario.add(nombreUser);
+
+        nombreAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
+        nombreAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nombreAdmin.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        nombreAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nombreAdminMouseClicked(evt);
+            }
+        });
+        OpcionesUsuario.add(nombreAdmin);
+
+        ToolBarUser.add(OpcionesUsuario, java.awt.BorderLayout.LINE_END);
+
+        UsuarioPanel.add(ToolBarUser, java.awt.BorderLayout.PAGE_START);
+
+        PanelLlegadas.setBackground(new java.awt.Color(255, 255, 255));
+        PanelLlegadas.setLayout(new java.awt.BorderLayout());
+
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(950, 720));
+
+        TablaLlegadas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"1", "Barcelona", "13:45", "65-RBV"},
+                {"2", "Puerto Vallarta", "15:50", "376-LW"},
+                {"3", "Cancún", "12:30", "78-SDG"},
+                {"4", "Munich", "16:15", "DRG-15"},
+                {"5", "Paris", "19:35", "MKU-32"}
+            },
+            new String [] {
+                "ID", "Procedencia", "Hora de Llegada", "Numero de Vuelo"
+            }
+        ));
+        TablaLlegadas.setMaximumSize(new java.awt.Dimension(950, 720));
+        TablaLlegadas.setMinimumSize(new java.awt.Dimension(950, 720));
+        TablaLlegadas.setPreferredSize(new java.awt.Dimension(950, 720));
+        jScrollPane1.setViewportView(TablaLlegadas);
+
+        PanelLlegadas.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        UsuarioPanel.add(PanelLlegadas, java.awt.BorderLayout.CENTER);
+
+        PanelOpUser.setLayout(new java.awt.BorderLayout());
+
+        Imagen.setMaximumSize(new java.awt.Dimension(640, 631));
+        Imagen.setMinimumSize(new java.awt.Dimension(640, 631));
+        Imagen.setPreferredSize(new java.awt.Dimension(640, 631));
+        Imagen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Modificar Datos");
+        Imagen.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        FondoOpciones.setBackground(new java.awt.Color(153, 51, 255));
+        FondoOpciones.setOpaque(true);
+        FondoOpciones.setPreferredSize(new java.awt.Dimension(640, 631));
+        Imagen.add(FondoOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
+
+        PanelOpUser.add(Imagen, java.awt.BorderLayout.LINE_START);
+
+        Opciones.setBackground(new java.awt.Color(187, 222, 251));
+        Opciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        MarcoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/imagenMarco.png"))); // NOI18N
+        Opciones.add(MarcoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
+
+        UserImage.setMaximumSize(new java.awt.Dimension(100, 100));
+        UserImage.setMinimumSize(new java.awt.Dimension(100, 100));
+        UserImage.setPreferredSize(new java.awt.Dimension(100, 100));
+        Opciones.add(UserImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 100, -1));
+
+        jLabel2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText(" ");
+        Opciones.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, -1, -1));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Nombre");
+        Opciones.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        Opciones.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+
+        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel11.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Nombre Usuario");
+        Opciones.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        Opciones.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, -1, -1));
+
+        PanelOpUser.add(Opciones, java.awt.BorderLayout.CENTER);
+
+        UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
+
+        PanelSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        UsuarioPanel.add(PanelSalidas, java.awt.BorderLayout.CENTER);
+
+        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.LINE_END);
+
+        getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
 
         PanelLogin.setBackground(new java.awt.Color(33, 150, 243));
         PanelLogin.setLayout(new java.awt.BorderLayout());
@@ -428,223 +645,6 @@ public class Principal extends JFrame {
         PanelPrincipal.add(PanelBotones, java.awt.BorderLayout.LINE_END);
 
         getContentPane().add(PanelPrincipal, java.awt.BorderLayout.PAGE_START);
-
-        AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
-        AdminPanel.setLayout(new java.awt.BorderLayout());
-
-        ToolBarAdmin.setBackground(new java.awt.Color(33, 150, 243));
-        ToolBarAdmin.setMinimumSize(new java.awt.Dimension(169, 52));
-        ToolBarAdmin.setPreferredSize(new java.awt.Dimension(169, 52));
-        ToolBarAdmin.setLayout(new java.awt.BorderLayout());
-
-        NavegacionAdmin.setOpaque(false);
-        NavegacionAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
-
-        EditSalidas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        EditSalidas.setForeground(new java.awt.Color(255, 255, 255));
-        EditSalidas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EditSalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
-        EditSalidas.setToolTipText("Salidas");
-        EditSalidas.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        NavegacionAdmin.add(EditSalidas);
-
-        EditLlegadas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        EditLlegadas.setForeground(new java.awt.Color(255, 255, 255));
-        EditLlegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
-        EditLlegadas.setToolTipText("Llegadas");
-        NavegacionAdmin.add(EditLlegadas);
-
-        EditAviones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        EditAviones.setForeground(new java.awt.Color(255, 255, 255));
-        EditAviones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
-        EditAviones.setToolTipText("Destinos");
-        EditAviones.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EditAvionesMouseClicked(evt);
-            }
-        });
-        NavegacionAdmin.add(EditAviones);
-        NavegacionAdmin.add(EditUsuarios);
-
-        ToolBarAdmin.add(NavegacionAdmin, java.awt.BorderLayout.WEST);
-
-        OpcionesUsuarioAdmin.setOpaque(false);
-        OpcionesUsuarioAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
-
-        nombreuser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        nombreuser.setForeground(new java.awt.Color(255, 255, 255));
-        OpcionesUsuarioAdmin.add(nombreuser);
-
-        imguser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
-        imguser.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imguser.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        OpcionesUsuarioAdmin.add(imguser);
-
-        ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
-
-        AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
-
-        getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
-
-        UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
-        UsuarioPanel.setLayout(new java.awt.BorderLayout());
-
-        ToolBarUser.setBackground(new java.awt.Color(33, 150, 243));
-        ToolBarUser.setMinimumSize(new java.awt.Dimension(169, 52));
-        ToolBarUser.setPreferredSize(new java.awt.Dimension(169, 52));
-        ToolBarUser.setLayout(new java.awt.BorderLayout());
-
-        Navegacion.setOpaque(false);
-        Navegacion.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
-
-        SalidasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        SalidasB.setForeground(new java.awt.Color(255, 255, 255));
-        SalidasB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SalidasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
-        SalidasB.setToolTipText("Salidas");
-        SalidasB.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        SalidasB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SalidasBMouseClicked(evt);
-            }
-        });
-        Navegacion.add(SalidasB);
-
-        LlegadasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        LlegadasB.setForeground(new java.awt.Color(255, 255, 255));
-        LlegadasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
-        LlegadasB.setToolTipText("Llegadas");
-        LlegadasB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LlegadasBMouseClicked(evt);
-            }
-        });
-        Navegacion.add(LlegadasB);
-
-        DestinosB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        DestinosB.setForeground(new java.awt.Color(255, 255, 255));
-        DestinosB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
-        DestinosB.setToolTipText("Destinos");
-        DestinosB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DestinosBMouseClicked(evt);
-            }
-        });
-        Navegacion.add(DestinosB);
-
-        ToolBarUser.add(Navegacion, java.awt.BorderLayout.WEST);
-
-        OpcionesUsuario.setOpaque(false);
-        OpcionesUsuario.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
-
-        nombreUser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        nombreUser.setForeground(new java.awt.Color(255, 255, 255));
-        OpcionesUsuario.add(nombreUser);
-
-        nombreAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
-        nombreAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        nombreAdmin.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        nombreAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                nombreAdminMouseClicked(evt);
-            }
-        });
-        OpcionesUsuario.add(nombreAdmin);
-
-        ToolBarUser.add(OpcionesUsuario, java.awt.BorderLayout.LINE_END);
-
-        UsuarioPanel.add(ToolBarUser, java.awt.BorderLayout.PAGE_START);
-
-        PanelLlegadas.setBackground(new java.awt.Color(255, 255, 255));
-        PanelLlegadas.setLayout(new java.awt.BorderLayout());
-
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(950, 720));
-
-        TablaLlegadas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"1", "Barcelona", "13:45", "65-RBV"},
-                {"2", "Puerto Vallarta", "15:50", "376-LW"},
-                {"3", "Cancún", "12:30", "78-SDG"},
-                {"4", "Munich", "16:15", "DRG-15"},
-                {"5", "Paris", "19:35", "MKU-32"}
-            },
-            new String [] {
-                "ID", "Procedencia", "Hora de Llegada", "Numero de Vuelo"
-            }
-        ));
-        TablaLlegadas.setMaximumSize(new java.awt.Dimension(950, 720));
-        TablaLlegadas.setMinimumSize(new java.awt.Dimension(950, 720));
-        TablaLlegadas.setPreferredSize(new java.awt.Dimension(950, 720));
-        jScrollPane1.setViewportView(TablaLlegadas);
-
-        PanelLlegadas.add(jScrollPane1, java.awt.BorderLayout.CENTER);
-
-        UsuarioPanel.add(PanelLlegadas, java.awt.BorderLayout.CENTER);
-
-        PanelOpUser.setLayout(new java.awt.BorderLayout());
-
-        Imagen.setMaximumSize(new java.awt.Dimension(640, 631));
-        Imagen.setMinimumSize(new java.awt.Dimension(640, 631));
-        Imagen.setPreferredSize(new java.awt.Dimension(640, 631));
-        Imagen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Modificar Datos");
-        Imagen.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
-
-        FondoOpciones.setBackground(new java.awt.Color(153, 51, 255));
-        FondoOpciones.setOpaque(true);
-        FondoOpciones.setPreferredSize(new java.awt.Dimension(640, 631));
-        Imagen.add(FondoOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
-
-        PanelOpUser.add(Imagen, java.awt.BorderLayout.LINE_START);
-
-        Opciones.setBackground(new java.awt.Color(187, 222, 251));
-        Opciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        MarcoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/imagenMarco.png"))); // NOI18N
-        Opciones.add(MarcoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
-
-        UserImage.setMaximumSize(new java.awt.Dimension(100, 100));
-        UserImage.setMinimumSize(new java.awt.Dimension(100, 100));
-        UserImage.setPreferredSize(new java.awt.Dimension(100, 100));
-        Opciones.add(UserImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 100, -1));
-
-        jLabel2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText(" ");
-        Opciones.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, -1, -1));
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Nombre");
-        Opciones.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        Opciones.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
-
-        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel11.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Nombre Usuario");
-        Opciones.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        Opciones.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, -1, -1));
-
-        PanelOpUser.add(Opciones, java.awt.BorderLayout.CENTER);
-
-        UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
-
-        PanelSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        UsuarioPanel.add(PanelSalidas, java.awt.BorderLayout.CENTER);
-
-        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.LINE_END);
-
-        getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
