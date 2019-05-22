@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.*;
 
-public class Usuario implements Serializable{
+public class Usuario implements Serializable {
     private int ID;
     private String nombre;
     private String apellido;
@@ -127,11 +127,12 @@ public class Usuario implements Serializable{
         return isAdmin;
     }
     
-    public void setFileUser(){
+    public void setFileUser(ArrayList<Usuario> usuarios){
         String archivo = "users.dat";
+        usuarios.add(this);
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
-            escritura.writeObject(this);
+            escritura.writeObject(usuarios);
             escritura.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -140,12 +141,11 @@ public class Usuario implements Serializable{
         }
     }
     
-    public Usuario getFileUSer(){
+    public ArrayList<Usuario> getFileUser(){
         String archivo = "users.dat";
         try{
             ObjectInputStream lectura = new ObjectInputStream(new FileInputStream(archivo));
-            
-            Usuario salida = (Usuario) lectura.readObject();
+            ArrayList<Usuario> salida = (ArrayList<Usuario>) lectura.readObject();
             lectura.close();
             return salida;
         }catch(IOException e){
