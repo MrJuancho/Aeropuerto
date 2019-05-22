@@ -18,6 +18,16 @@ public class Main{
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
+        Admin juan = new Admin("MrJuancho","131401");
+        Admin cata = new Admin("CarlosKta27","270727");
+        
+        ArrayList<Admin> administradores = new ArrayList<Admin>();
+        
+        juan.setFileAdmin(administradores);
+        cata.setFileAdmin(administradores);
+       
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -35,14 +45,6 @@ public class Main{
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
-        Usuario elcrack = new Usuario();
-        ArrayList<Usuario> loscracks = new ArrayList<Usuario>();
-        loscracks = elcrack.getFileUser();
-        
-        
-        Usuario yo = loscracks.get(0);
-        System.out.println(yo.getNombre());
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -50,7 +52,6 @@ public class Main{
                 new Principal().setVisible(true);
             }
         });
-        
         
     }
 }

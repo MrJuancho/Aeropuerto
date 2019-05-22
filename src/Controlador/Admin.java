@@ -17,10 +17,9 @@ public class Admin implements Serializable {
     public Admin() {
     }
 
-    public Admin(String username, String password, boolean isAdmin) {
+    public Admin(String username, String password) {
            Username = username;
         this.password = password;
-        this.isAdmin = isAdmin;
     }
 
     public String getUsername() {

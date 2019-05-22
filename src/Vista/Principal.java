@@ -611,7 +611,7 @@ public class Principal extends JFrame {
             separadorPassR.setForeground(new Color(239,83,80));
             ErrorRegPass.setText("Ingresa una Contraseña...");
         }else{
-            registrado.setPassword(PassReg.toString());
+            registrado.setPassword(PassReg.getText().toString());
             separadorPassR.setBackground(new Color(255,255,255));
             separadorPassR.setForeground(new Color(255,255,255));
             ErrorRegPass.setText("");
@@ -632,13 +632,23 @@ public class Principal extends JFrame {
             ErrorRegA.setText("Ingresa un apellido...");
         }else{
             registrado.setApellido(ApellidosReg.getText());
+            separadorPassR.setBackground(new Color(255,255,255));
+            separadorPassR.setForeground(new Color(255,255,255));
+            ErrorRegA.setText("");
         }
         if(MailReg.getText().equals("")){
             separadorMail.setBackground(new Color(239,83,80));
             separadorMail.setForeground(new Color(239,83,80));
             ErrorRegC.setText("Ingresa un correo...");
+        }else if(!MailReg.getText().contains("@") && !MailReg.getText().contains(".")){
+            separadorMail.setBackground(new Color(239,83,80));
+            separadorMail.setForeground(new Color(239,83,80));
+            ErrorRegC.setText("Ingresa bien el correo...");
         }else{
             registrado.setMail(MailReg.getText());
+            separadorMail.setBackground(new Color(255,255,255));
+            separadorMail.setForeground(new Color(255,255,255));
+            ErrorRegC.setText("");
         }
         if(UserReg.getText().equals("")){
             separadorNombreR.setBackground(new Color(239,83,80));
@@ -646,8 +656,16 @@ public class Principal extends JFrame {
             ErrorRegU.setText("Ingresa un nombre...");
         }else{
            registrado.setUserName(UserReg.getText());
+           separadorNombreR.setBackground(new Color(255,255,255));
+           separadorNombreR.setForeground(new Color(255,255,255));
+           ErrorRegU.setText("");
         }
-        registrado.setFileUser(usuarios);
+        if(!registrado.getNombre().equals("") && !registrado.getApellido().equals("") && !registrado.getMail().equals("") 
+                && !registrado.getUserName().equals("") && !registrado.getPassword().equals("")){
+            registrado.setFileUser(usuarios);
+        }else{
+            System.out.println("Faltan Datos");
+        }
     }//GEN-LAST:event_BotonRegistrarMouseClicked
 
     private void myComponents(){
