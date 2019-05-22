@@ -26,6 +26,8 @@ public class Principal extends JFrame {
     Admin masterAd = new Admin();
     ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
     ArrayList<Admin> admins = new ArrayList<Admin>();
+    Usuario actual;
+    Admin adminactual;
     
     public Principal() {
         initComponents();
@@ -37,6 +39,38 @@ public class Principal extends JFrame {
     private void initComponents() {
 
         AdminPanel = new javax.swing.JPanel();
+        ToolBarAdmin = new javax.swing.JPanel();
+        NavegacionAdmin = new javax.swing.JPanel();
+        SalidasB1 = new javax.swing.JLabel();
+        LlegadasB1 = new javax.swing.JLabel();
+        DestinosB1 = new javax.swing.JLabel();
+        OpcionesUsuarioAdmin = new javax.swing.JPanel();
+        nombreuser = new javax.swing.JLabel();
+        imguser = new javax.swing.JLabel();
+        UsuarioPanel = new javax.swing.JPanel();
+        ToolBarUser = new javax.swing.JPanel();
+        Navegacion = new javax.swing.JPanel();
+        SalidasB = new javax.swing.JLabel();
+        LlegadasB = new javax.swing.JLabel();
+        DestinosB = new javax.swing.JLabel();
+        OpcionesUsuario = new javax.swing.JPanel();
+        nombreUser = new javax.swing.JLabel();
+        nombreAdmin = new javax.swing.JLabel();
+        PanelLlegadas = new javax.swing.JPanel();
+        PanelOpUser = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        FondoOpciones = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        MarcoUser = new javax.swing.JLabel();
+        UserImage = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        PanelSalidas = new javax.swing.JPanel();
+        PanelDestinos = new javax.swing.JPanel();
         PanelLogin = new javax.swing.JPanel();
         PanelRegistro = new javax.swing.JPanel();
         separadorPassR = new javax.swing.JSeparator();
@@ -86,30 +120,6 @@ public class Principal extends JFrame {
         PanelBotones = new javax.swing.JPanel();
         Minimizar = new javax.swing.JLabel();
         Salir = new javax.swing.JLabel();
-        UsuarioPanel = new javax.swing.JPanel();
-        ToolBarUser = new javax.swing.JPanel();
-        Navegacion = new javax.swing.JPanel();
-        SalidasB = new javax.swing.JLabel();
-        LlegadasB = new javax.swing.JLabel();
-        DestinosB = new javax.swing.JLabel();
-        OpcionesUsuario = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        PanelDestinos = new javax.swing.JPanel();
-        PanelLlegadas = new javax.swing.JPanel();
-        PanelSalidas = new javax.swing.JPanel();
-        PanelOpUser = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        FondoOpciones = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        MarcoUser = new javax.swing.JLabel();
-        UserImage = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("ApexFlights");
@@ -121,7 +131,182 @@ public class Principal extends JFrame {
         setSize(new java.awt.Dimension(1280, 720));
 
         AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
+        AdminPanel.setLayout(new java.awt.BorderLayout());
+
+        ToolBarAdmin.setBackground(new java.awt.Color(33, 150, 243));
+        ToolBarAdmin.setMinimumSize(new java.awt.Dimension(169, 52));
+        ToolBarAdmin.setPreferredSize(new java.awt.Dimension(169, 52));
+        ToolBarAdmin.setLayout(new java.awt.BorderLayout());
+
+        NavegacionAdmin.setOpaque(false);
+        NavegacionAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
+
+        SalidasB1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        SalidasB1.setForeground(new java.awt.Color(255, 255, 255));
+        SalidasB1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        SalidasB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
+        SalidasB1.setToolTipText("Salidas");
+        SalidasB1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        NavegacionAdmin.add(SalidasB1);
+
+        LlegadasB1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        LlegadasB1.setForeground(new java.awt.Color(255, 255, 255));
+        LlegadasB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
+        LlegadasB1.setToolTipText("Llegadas");
+        NavegacionAdmin.add(LlegadasB1);
+
+        DestinosB1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        DestinosB1.setForeground(new java.awt.Color(255, 255, 255));
+        DestinosB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
+        DestinosB1.setToolTipText("Destinos");
+        DestinosB1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DestinosB1MouseClicked(evt);
+            }
+        });
+        NavegacionAdmin.add(DestinosB1);
+
+        ToolBarAdmin.add(NavegacionAdmin, java.awt.BorderLayout.WEST);
+
+        OpcionesUsuarioAdmin.setOpaque(false);
+        OpcionesUsuarioAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
+
+        nombreuser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        nombreuser.setForeground(new java.awt.Color(255, 255, 255));
+        OpcionesUsuarioAdmin.add(nombreuser);
+
+        imguser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
+        imguser.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imguser.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        OpcionesUsuarioAdmin.add(imguser);
+
+        ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
+
+        AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
+
         getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
+
+        UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
+        UsuarioPanel.setLayout(new java.awt.BorderLayout());
+
+        ToolBarUser.setBackground(new java.awt.Color(33, 150, 243));
+        ToolBarUser.setMinimumSize(new java.awt.Dimension(169, 52));
+        ToolBarUser.setPreferredSize(new java.awt.Dimension(169, 52));
+        ToolBarUser.setLayout(new java.awt.BorderLayout());
+
+        Navegacion.setOpaque(false);
+        Navegacion.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
+
+        SalidasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        SalidasB.setForeground(new java.awt.Color(255, 255, 255));
+        SalidasB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        SalidasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
+        SalidasB.setToolTipText("Salidas");
+        SalidasB.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        Navegacion.add(SalidasB);
+
+        LlegadasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        LlegadasB.setForeground(new java.awt.Color(255, 255, 255));
+        LlegadasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
+        LlegadasB.setToolTipText("Llegadas");
+        Navegacion.add(LlegadasB);
+
+        DestinosB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        DestinosB.setForeground(new java.awt.Color(255, 255, 255));
+        DestinosB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
+        DestinosB.setToolTipText("Destinos");
+        DestinosB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DestinosBMouseClicked(evt);
+            }
+        });
+        Navegacion.add(DestinosB);
+
+        ToolBarUser.add(Navegacion, java.awt.BorderLayout.WEST);
+
+        OpcionesUsuario.setOpaque(false);
+        OpcionesUsuario.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
+
+        nombreUser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        nombreUser.setForeground(new java.awt.Color(255, 255, 255));
+        OpcionesUsuario.add(nombreUser);
+
+        nombreAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
+        nombreAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nombreAdmin.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        OpcionesUsuario.add(nombreAdmin);
+
+        ToolBarUser.add(OpcionesUsuario, java.awt.BorderLayout.LINE_END);
+
+        UsuarioPanel.add(ToolBarUser, java.awt.BorderLayout.PAGE_START);
+
+        PanelLlegadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        UsuarioPanel.add(PanelLlegadas, java.awt.BorderLayout.CENTER);
+
+        PanelOpUser.setLayout(new java.awt.BorderLayout());
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(640, 631));
+        jPanel1.setMinimumSize(new java.awt.Dimension(640, 631));
+        jPanel1.setPreferredSize(new java.awt.Dimension(640, 631));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Modificar Datos");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        FondoOpciones.setBackground(new java.awt.Color(153, 51, 255));
+        FondoOpciones.setOpaque(true);
+        FondoOpciones.setPreferredSize(new java.awt.Dimension(640, 631));
+        jPanel1.add(FondoOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
+
+        PanelOpUser.add(jPanel1, java.awt.BorderLayout.LINE_START);
+
+        jPanel3.setBackground(new java.awt.Color(187, 222, 251));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        MarcoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/imagenMarco.png"))); // NOI18N
+        jPanel3.add(MarcoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
+
+        UserImage.setMaximumSize(new java.awt.Dimension(100, 100));
+        UserImage.setMinimumSize(new java.awt.Dimension(100, 100));
+        UserImage.setPreferredSize(new java.awt.Dimension(100, 100));
+        jPanel3.add(UserImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 100, -1));
+
+        jLabel2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText(" ");
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, -1, -1));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Nombre");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+
+        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel11.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Nombre Usuario");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, -1, -1));
+
+        PanelOpUser.add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
+
+        PanelSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        UsuarioPanel.add(PanelSalidas, java.awt.BorderLayout.CENTER);
+
+        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
 
         PanelLogin.setBackground(new java.awt.Color(33, 150, 243));
         PanelLogin.setLayout(new java.awt.BorderLayout());
@@ -419,128 +604,6 @@ public class Principal extends JFrame {
 
         getContentPane().add(PanelPrincipal, java.awt.BorderLayout.PAGE_START);
 
-        UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
-        UsuarioPanel.setLayout(new java.awt.BorderLayout());
-
-        ToolBarUser.setBackground(new java.awt.Color(33, 150, 243));
-        ToolBarUser.setMinimumSize(new java.awt.Dimension(169, 52));
-        ToolBarUser.setPreferredSize(new java.awt.Dimension(169, 52));
-        ToolBarUser.setLayout(new java.awt.BorderLayout());
-
-        Navegacion.setOpaque(false);
-        Navegacion.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
-
-        SalidasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        SalidasB.setForeground(new java.awt.Color(255, 255, 255));
-        SalidasB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SalidasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
-        SalidasB.setToolTipText("Salidas");
-        SalidasB.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        Navegacion.add(SalidasB);
-
-        LlegadasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        LlegadasB.setForeground(new java.awt.Color(255, 255, 255));
-        LlegadasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
-        LlegadasB.setToolTipText("Llegadas");
-        Navegacion.add(LlegadasB);
-
-        DestinosB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        DestinosB.setForeground(new java.awt.Color(255, 255, 255));
-        DestinosB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
-        DestinosB.setToolTipText("Destinos");
-        DestinosB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DestinosBMouseClicked(evt);
-            }
-        });
-        Navegacion.add(DestinosB);
-
-        ToolBarUser.add(Navegacion, java.awt.BorderLayout.WEST);
-
-        OpcionesUsuario.setOpaque(false);
-        OpcionesUsuario.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
-
-        jLabel9.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        OpcionesUsuario.add(jLabel9);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel7.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        OpcionesUsuario.add(jLabel7);
-
-        ToolBarUser.add(OpcionesUsuario, java.awt.BorderLayout.LINE_END);
-
-        UsuarioPanel.add(ToolBarUser, java.awt.BorderLayout.PAGE_START);
-
-        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.CENTER);
-
-        PanelLlegadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        UsuarioPanel.add(PanelLlegadas, java.awt.BorderLayout.CENTER);
-
-        PanelSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        UsuarioPanel.add(PanelSalidas, java.awt.BorderLayout.CENTER);
-
-        PanelOpUser.setLayout(new java.awt.BorderLayout());
-
-        jPanel1.setMaximumSize(new java.awt.Dimension(640, 631));
-        jPanel1.setMinimumSize(new java.awt.Dimension(640, 631));
-        jPanel1.setPreferredSize(new java.awt.Dimension(640, 631));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Modificar Datos");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
-
-        FondoOpciones.setBackground(new java.awt.Color(153, 51, 255));
-        FondoOpciones.setOpaque(true);
-        FondoOpciones.setPreferredSize(new java.awt.Dimension(640, 631));
-        jPanel1.add(FondoOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
-
-        PanelOpUser.add(jPanel1, java.awt.BorderLayout.LINE_START);
-
-        jPanel3.setBackground(new java.awt.Color(187, 222, 251));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        MarcoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/imagenMarco.png"))); // NOI18N
-        jPanel3.add(MarcoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
-
-        UserImage.setMaximumSize(new java.awt.Dimension(100, 100));
-        UserImage.setMinimumSize(new java.awt.Dimension(100, 100));
-        UserImage.setPreferredSize(new java.awt.Dimension(100, 100));
-        jPanel3.add(UserImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 100, -1));
-
-        jLabel2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText(" ");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, -1, -1));
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Nombre");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
-
-        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel11.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Nombre Usuario");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, -1, -1));
-
-        PanelOpUser.add(jPanel3, java.awt.BorderLayout.CENTER);
-
-        UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
-
-        getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -581,6 +644,8 @@ public class Principal extends JFrame {
                 add(UsuarioPanel,BorderLayout.CENTER);
                 repaint();
                 revalidate();
+                actual = usuarios.get(i);
+                nombreUser.setText(actual.getNombre());
             }else{
                if(!usuarios.get(i).getPassword().contains(entrada.getPassword())){
                     separadorPassword.setBackground(new Color(239,83,80));
@@ -603,6 +668,7 @@ public class Principal extends JFrame {
                 add(AdminPanel,BorderLayout.CENTER);
                 repaint();
                 revalidate();
+                adminactual = admins.get(i);
             }else{
                if(!usuarios.get(i).getPassword().contains(entrada.getPassword())){
                     separadorPassword.setBackground(new Color(239,83,80));
@@ -713,6 +779,10 @@ public class Principal extends JFrame {
         UsuarioPanel.revalidate();
     }//GEN-LAST:event_DestinosBMouseClicked
 
+    private void DestinosB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DestinosB1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DestinosB1MouseClicked
+
     private void myComponents(){
             BufferedImage img = null;
             try{
@@ -746,6 +816,7 @@ public class Principal extends JFrame {
     private javax.swing.JButton BotonRegistrar;
     private javax.swing.JLabel BotonRegresar;
     private javax.swing.JLabel DestinosB;
+    private javax.swing.JLabel DestinosB1;
     private javax.swing.JLabel ErrorName;
     private javax.swing.JLabel ErrorPass;
     private javax.swing.JLabel ErrorRegA;
@@ -756,12 +827,15 @@ public class Principal extends JFrame {
     private javax.swing.JLabel FondoOpciones;
     private javax.swing.JLabel IconoSuperior;
     private javax.swing.JLabel LlegadasB;
+    private javax.swing.JLabel LlegadasB1;
     private javax.swing.JTextField MailReg;
     private javax.swing.JLabel MarcoUser;
     private javax.swing.JLabel Minimizar;
     private javax.swing.JPanel Navegacion;
+    private javax.swing.JPanel NavegacionAdmin;
     private javax.swing.JTextField NombreReg;
     private javax.swing.JPanel OpcionesUsuario;
+    private javax.swing.JPanel OpcionesUsuarioAdmin;
     private javax.swing.JPanel PanelBotones;
     private javax.swing.JPanel PanelDestinos;
     private javax.swing.JPanel PanelEntrada;
@@ -776,6 +850,7 @@ public class Principal extends JFrame {
     private javax.swing.JPasswordField PassReg;
     private javax.swing.JLabel Registro;
     private javax.swing.JLabel SalidasB;
+    private javax.swing.JLabel SalidasB1;
     private javax.swing.JLabel Salir;
     private javax.swing.JSeparator SeparadorUsername;
     private javax.swing.JLabel TextoLogin1;
@@ -788,11 +863,13 @@ public class Principal extends JFrame {
     private javax.swing.JLabel TextoPass5;
     private javax.swing.JLabel TextoRegistro;
     private javax.swing.JLabel TextoUser;
+    private javax.swing.JPanel ToolBarAdmin;
     private javax.swing.JPanel ToolBarUser;
     private javax.swing.JTextField UserField;
     private javax.swing.JLabel UserImage;
     private javax.swing.JTextField UserReg;
     private javax.swing.JPanel UsuarioPanel;
+    private javax.swing.JLabel imguser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -802,12 +879,13 @@ public class Principal extends JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel nombreAdmin;
+    private javax.swing.JLabel nombreUser;
+    private javax.swing.JLabel nombreuser;
     private javax.swing.JSeparator separadorApellidosR;
     private javax.swing.JSeparator separadorMail;
     private javax.swing.JSeparator separadorNombre;
