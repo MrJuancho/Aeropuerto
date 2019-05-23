@@ -1703,9 +1703,9 @@ public class Principal extends JFrame {
         PanelEntrada.add(TextoLogin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, -1, -1));
 
         UserField.setBackground(new java.awt.Color(33, 150, 243));
-        UserField.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        UserField.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         UserField.setForeground(new java.awt.Color(255, 255, 255));
-        UserField.setToolTipText("");
+        UserField.setToolTipText(null);
         UserField.setActionCommand("<Not Set>");
         UserField.setBorder(null);
         UserField.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -1714,7 +1714,7 @@ public class Principal extends JFrame {
         PanelEntrada.add(UserField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 420, 30));
 
         PassField.setBackground(new java.awt.Color(33, 150, 243));
-        PassField.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
+        PassField.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         PassField.setForeground(new java.awt.Color(255, 255, 255));
         PassField.setBorder(null);
         PassField.setCaretColor(new java.awt.Color(255, 255, 255));
