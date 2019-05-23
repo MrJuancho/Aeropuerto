@@ -28,6 +28,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
 
 public class Principal extends JFrame {
     Usuario master = new Usuario();
@@ -100,47 +101,6 @@ public class Principal extends JFrame {
         PanelBotones = new javax.swing.JPanel();
         Minimizar = new javax.swing.JLabel();
         Salir = new javax.swing.JLabel();
-        AdminPanel = new javax.swing.JPanel();
-        ToolBarAdmin = new javax.swing.JPanel();
-        NavegacionAdmin = new javax.swing.JPanel();
-        EditSalidas = new javax.swing.JLabel();
-        EditLlegadas = new javax.swing.JLabel();
-        EditAviones = new javax.swing.JLabel();
-        EditUsuarios = new javax.swing.JLabel();
-        OpcionesUsuarioAdmin = new javax.swing.JPanel();
-        nombreuser = new javax.swing.JLabel();
-        imguser = new javax.swing.JLabel();
-        Inicio = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        AdminName2 = new javax.swing.JLabel();
-        ImagenBienvenidaAdmin = new javax.swing.JLabel();
-        EditarSalidas = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        BotonRegistrarSalidas = new javax.swing.JButton();
-        ScrollSalidas = new javax.swing.JScrollPane();
-        TablaSalidas = new javax.swing.JTable();
-        LabelNoSalidas = new javax.swing.JLabel();
-        fodoESalidas = new javax.swing.JLabel();
-        EditarLlegadas = new javax.swing.JPanel();
-        labelLLegadas = new javax.swing.JLabel();
-        BotonRegistrarLLegada = new javax.swing.JButton();
-        ScrollLLegadas = new javax.swing.JScrollPane();
-        TablaLLegadas = new javax.swing.JTable();
-        noLLegadas = new javax.swing.JLabel();
-        fondoELlegadas = new javax.swing.JLabel();
-        EditarUsuarios = new javax.swing.JPanel();
-        LabelEUsuarios = new javax.swing.JLabel();
-        ScrollUsuarios = new javax.swing.JScrollPane();
-        TablaUsuarios = new javax.swing.JTable();
-        textoNoUsers = new javax.swing.JLabel();
-        fondoEditA1 = new javax.swing.JLabel();
-        EditarAviones = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        BotonRegistrarAvion = new javax.swing.JButton();
-        ScrollAviones = new javax.swing.JScrollPane();
-        TablaAviones = new javax.swing.JTable();
-        jLabel3 = new javax.swing.JLabel();
-        fondoEditA = new javax.swing.JLabel();
         UsuarioPanel = new javax.swing.JPanel();
         ToolBarUser = new javax.swing.JPanel();
         Navegacion = new javax.swing.JPanel();
@@ -271,6 +231,48 @@ public class Principal extends JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        AdminPanel = new javax.swing.JPanel();
+        ToolBarAdmin = new javax.swing.JPanel();
+        NavegacionAdmin = new javax.swing.JPanel();
+        EditSalidas = new javax.swing.JLabel();
+        EditLlegadas = new javax.swing.JLabel();
+        EditAviones = new javax.swing.JLabel();
+        EditUsuarios = new javax.swing.JLabel();
+        OpcionesUsuarioAdmin = new javax.swing.JPanel();
+        nombreuser = new javax.swing.JLabel();
+        imguser = new javax.swing.JLabel();
+        EditarSalidas = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        BotonRegistrarSalidas = new javax.swing.JButton();
+        ScrollSalidas = new javax.swing.JScrollPane();
+        TablaSalidas = new javax.swing.JTable();
+        LabelNoSalidas = new javax.swing.JLabel();
+        fodoESalidas = new javax.swing.JLabel();
+        EditarLlegadas = new javax.swing.JPanel();
+        labelLLegadas = new javax.swing.JLabel();
+        BotonRegistrarLLegada = new javax.swing.JButton();
+        ScrollLLegadas = new javax.swing.JScrollPane();
+        TablaLLegadas = new javax.swing.JTable();
+        noLLegadas = new javax.swing.JLabel();
+        fondoELlegadas = new javax.swing.JLabel();
+        EditarAviones = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        BotonRegistrarAvion = new javax.swing.JButton();
+        ScrollAviones = new javax.swing.JScrollPane();
+        TablaAviones = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        fondoEditA = new javax.swing.JLabel();
+        Inicio = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        AdminName2 = new javax.swing.JLabel();
+        ImagenBienvenidaAdmin = new javax.swing.JLabel();
+        EditarUsuarios = new javax.swing.JPanel();
+        LabelEUsuarios = new javax.swing.JLabel();
+        BotonActualizarUsers = new javax.swing.JButton();
+        ScrollUsuarios = new javax.swing.JScrollPane();
+        TablaUsuarios = new javax.swing.JTable();
+        textoNoUsers = new javax.swing.JLabel();
+        fondoEditA1 = new javax.swing.JLabel();
 
         ACoins.setUndecorated(true);
 
@@ -579,376 +581,6 @@ public class Principal extends JFrame {
         PanelPrincipal.add(PanelBotones, java.awt.BorderLayout.LINE_END);
 
         getContentPane().add(PanelPrincipal, java.awt.BorderLayout.PAGE_START);
-
-        AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
-        AdminPanel.setLayout(new java.awt.BorderLayout());
-
-        ToolBarAdmin.setBackground(new java.awt.Color(33, 150, 243));
-        ToolBarAdmin.setMinimumSize(new java.awt.Dimension(169, 52));
-        ToolBarAdmin.setPreferredSize(new java.awt.Dimension(169, 52));
-        ToolBarAdmin.setLayout(new java.awt.BorderLayout());
-
-        NavegacionAdmin.setOpaque(false);
-        NavegacionAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
-
-        EditSalidas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        EditSalidas.setForeground(new java.awt.Color(255, 255, 255));
-        EditSalidas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EditSalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
-        EditSalidas.setToolTipText("Salidas");
-        EditSalidas.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        EditSalidas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EditSalidasMouseClicked(evt);
-            }
-        });
-        NavegacionAdmin.add(EditSalidas);
-
-        EditLlegadas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        EditLlegadas.setForeground(new java.awt.Color(255, 255, 255));
-        EditLlegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
-        EditLlegadas.setToolTipText("Llegadas");
-        EditLlegadas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EditLlegadasMouseClicked(evt);
-            }
-        });
-        NavegacionAdmin.add(EditLlegadas);
-
-        EditAviones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        EditAviones.setForeground(new java.awt.Color(255, 255, 255));
-        EditAviones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_local_airport_white_24dp.png"))); // NOI18N
-        EditAviones.setToolTipText("Destinos");
-        EditAviones.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EditAvionesMouseClicked(evt);
-            }
-        });
-        NavegacionAdmin.add(EditAviones);
-
-        EditUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_assignment_ind_white_24dp.png"))); // NOI18N
-        EditUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EditUsuariosMouseClicked(evt);
-            }
-        });
-        NavegacionAdmin.add(EditUsuarios);
-
-        ToolBarAdmin.add(NavegacionAdmin, java.awt.BorderLayout.WEST);
-
-        OpcionesUsuarioAdmin.setOpaque(false);
-        OpcionesUsuarioAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
-
-        nombreuser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        nombreuser.setForeground(new java.awt.Color(255, 255, 255));
-        OpcionesUsuarioAdmin.add(nombreuser);
-
-        imguser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
-        imguser.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imguser.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        imguser.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                imguserMouseClicked(evt);
-            }
-        });
-        OpcionesUsuarioAdmin.add(imguser);
-
-        ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
-
-        AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
-
-        Inicio.setBackground(new java.awt.Color(255, 255, 255));
-        Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Bienvenido de Vuelta");
-        Inicio.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 540, -1));
-
-        AdminName2.setFont(new java.awt.Font("Montserrat Alternates Light", 1, 70)); // NOI18N
-        AdminName2.setForeground(new java.awt.Color(255, 255, 255));
-        AdminName2.setToolTipText("");
-        AdminName2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Inicio.add(AdminName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 460, 80));
-        Inicio.add(ImagenBienvenidaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 633));
-
-        AdminPanel.add(Inicio, java.awt.BorderLayout.CENTER);
-
-        EditarSalidas.setBackground(new java.awt.Color(255, 255, 255));
-        EditarSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel13.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Editar Vuelos de Salida");
-        EditarSalidas.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
-
-        BotonRegistrarSalidas.setBackground(new java.awt.Color(124, 77, 255));
-        BotonRegistrarSalidas.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
-        BotonRegistrarSalidas.setForeground(new java.awt.Color(255, 255, 255));
-        BotonRegistrarSalidas.setText("Agregar un vuelo de Salida");
-        BotonRegistrarSalidas.setBorder(null);
-        BotonRegistrarSalidas.setBorderPainted(false);
-        BotonRegistrarSalidas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonRegistrarSalidas.setFocusable(false);
-        BotonRegistrarSalidas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonRegistrarSalidasMouseClicked(evt);
-            }
-        });
-        EditarSalidas.add(BotonRegistrarSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 530, 420, 40));
-
-        ScrollSalidas.setBackground(new java.awt.Color(255, 255, 255));
-        ScrollSalidas.setForeground(new java.awt.Color(255, 255, 255));
-
-        TablaSalidas.setBackground(new java.awt.Color(33, 150, 243));
-        TablaSalidas.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        TablaSalidas.setForeground(new java.awt.Color(255, 255, 255));
-        TablaSalidas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Flight Code", "Avion", "Lugares", "Destino", "Hora de Abordaje"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        TablaSalidas.setToolTipText("");
-        TablaSalidas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        TablaSalidas.setGridColor(new java.awt.Color(255, 255, 255));
-        TablaSalidas.setRowHeight(20);
-        ScrollSalidas.setViewportView(TablaSalidas);
-        if (TablaSalidas.getColumnModel().getColumnCount() > 0) {
-            TablaSalidas.getColumnModel().getColumn(0).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(1).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(2).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(3).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(4).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(5).setResizable(false);
-        }
-
-        EditarSalidas.add(ScrollSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, -1, 440));
-
-        LabelNoSalidas.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        LabelNoSalidas.setText("No hay salidas registrados");
-        LabelNoSalidas.setFocusTraversalPolicyProvider(true);
-        EditarSalidas.add(LabelNoSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
-
-        fodoESalidas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        fodoESalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/llegadas_edit.jpg"))); // NOI18N
-        fodoESalidas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        EditarSalidas.add(fodoESalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        AdminPanel.add(EditarSalidas, java.awt.BorderLayout.CENTER);
-
-        EditarLlegadas.setBackground(new java.awt.Color(255, 255, 255));
-        EditarLlegadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        labelLLegadas.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        labelLLegadas.setForeground(new java.awt.Color(255, 255, 255));
-        labelLLegadas.setText("Editar Vuelos de Vuelta");
-        EditarLlegadas.add(labelLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
-
-        BotonRegistrarLLegada.setBackground(new java.awt.Color(124, 77, 255));
-        BotonRegistrarLLegada.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
-        BotonRegistrarLLegada.setForeground(new java.awt.Color(255, 255, 255));
-        BotonRegistrarLLegada.setText("Agregar Avion");
-        BotonRegistrarLLegada.setBorder(null);
-        BotonRegistrarLLegada.setBorderPainted(false);
-        BotonRegistrarLLegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonRegistrarLLegada.setFocusable(false);
-        BotonRegistrarLLegada.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonRegistrarLLegadaMouseClicked(evt);
-            }
-        });
-        EditarLlegadas.add(BotonRegistrarLLegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 540, 420, 40));
-
-        ScrollLLegadas.setBackground(new java.awt.Color(255, 255, 255));
-        ScrollLLegadas.setForeground(new java.awt.Color(255, 255, 255));
-
-        TablaLLegadas.setBackground(new java.awt.Color(33, 150, 243));
-        TablaLLegadas.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        TablaLLegadas.setForeground(new java.awt.Color(255, 255, 255));
-        TablaLLegadas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Hora de llegada", "Avion Asignado", "Procedencia"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        TablaLLegadas.setToolTipText("");
-        TablaLLegadas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        TablaLLegadas.setGridColor(new java.awt.Color(255, 255, 255));
-        TablaLLegadas.setRowHeight(20);
-        ScrollLLegadas.setViewportView(TablaLLegadas);
-        if (TablaLLegadas.getColumnModel().getColumnCount() > 0) {
-            TablaLLegadas.getColumnModel().getColumn(0).setResizable(false);
-            TablaLLegadas.getColumnModel().getColumn(1).setResizable(false);
-            TablaLLegadas.getColumnModel().getColumn(2).setResizable(false);
-            TablaLLegadas.getColumnModel().getColumn(3).setResizable(false);
-        }
-
-        EditarLlegadas.add(ScrollLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, -1, 440));
-
-        noLLegadas.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        noLLegadas.setText("No hay llegadas registradas");
-        noLLegadas.setFocusTraversalPolicyProvider(true);
-        EditarLlegadas.add(noLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
-
-        fondoELlegadas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        fondoELlegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/salidas.jpg"))); // NOI18N
-        fondoELlegadas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        EditarLlegadas.add(fondoELlegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        AdminPanel.add(EditarLlegadas, java.awt.BorderLayout.CENTER);
-
-        EditarUsuarios.setBackground(new java.awt.Color(255, 255, 255));
-        EditarUsuarios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        LabelEUsuarios.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        LabelEUsuarios.setForeground(new java.awt.Color(255, 255, 255));
-        LabelEUsuarios.setText("Editar Usuarios");
-        EditarUsuarios.add(LabelEUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, -1));
-
-        ScrollUsuarios.setBackground(new java.awt.Color(255, 255, 255));
-        ScrollUsuarios.setForeground(new java.awt.Color(255, 255, 255));
-
-        TablaUsuarios.setBackground(new java.awt.Color(33, 150, 243));
-        TablaUsuarios.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        TablaUsuarios.setForeground(new java.awt.Color(255, 255, 255));
-        TablaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Nombre", "Apellido", "Correo", "N_Usuario", "Password", "ApexCoins"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        TablaUsuarios.setToolTipText("");
-        TablaUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        TablaUsuarios.setGridColor(new java.awt.Color(255, 255, 255));
-        TablaUsuarios.setRowHeight(20);
-        ScrollUsuarios.setViewportView(TablaUsuarios);
-        if (TablaUsuarios.getColumnModel().getColumnCount() > 0) {
-            TablaUsuarios.getColumnModel().getColumn(0).setResizable(false);
-            TablaUsuarios.getColumnModel().getColumn(1).setResizable(false);
-            TablaUsuarios.getColumnModel().getColumn(2).setResizable(false);
-            TablaUsuarios.getColumnModel().getColumn(3).setResizable(false);
-            TablaUsuarios.getColumnModel().getColumn(4).setResizable(false);
-            TablaUsuarios.getColumnModel().getColumn(6).setResizable(false);
-        }
-
-        EditarUsuarios.add(ScrollUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 80, 590, 480));
-
-        textoNoUsers.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        textoNoUsers.setText("No hay usuarios registrados");
-        textoNoUsers.setFocusTraversalPolicyProvider(true);
-        EditarUsuarios.add(textoNoUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
-
-        fondoEditA1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        fondoEditA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/persona_editar.jpg"))); // NOI18N
-        fondoEditA1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        fondoEditA1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        EditarUsuarios.add(fondoEditA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        AdminPanel.add(EditarUsuarios, java.awt.BorderLayout.CENTER);
-
-        EditarAviones.setBackground(new java.awt.Color(255, 255, 255));
-        EditarAviones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Editar Aviones");
-        EditarAviones.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, -1, -1));
-
-        BotonRegistrarAvion.setBackground(new java.awt.Color(124, 77, 255));
-        BotonRegistrarAvion.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
-        BotonRegistrarAvion.setForeground(new java.awt.Color(255, 255, 255));
-        BotonRegistrarAvion.setText("Agregar Avion");
-        BotonRegistrarAvion.setBorder(null);
-        BotonRegistrarAvion.setBorderPainted(false);
-        BotonRegistrarAvion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonRegistrarAvion.setFocusable(false);
-        BotonRegistrarAvion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonRegistrarAvionMouseClicked(evt);
-            }
-        });
-        EditarAviones.add(BotonRegistrarAvion, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 540, 420, 40));
-
-        ScrollAviones.setBackground(new java.awt.Color(255, 255, 255));
-        ScrollAviones.setForeground(new java.awt.Color(255, 255, 255));
-
-        TablaAviones.setBackground(new java.awt.Color(33, 150, 243));
-        TablaAviones.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        TablaAviones.setForeground(new java.awt.Color(255, 255, 255));
-        TablaAviones.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Placa", "Modelo", "Lugares", "No Vuelos"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        TablaAviones.setToolTipText("");
-        TablaAviones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        TablaAviones.setGridColor(new java.awt.Color(255, 255, 255));
-        TablaAviones.setRowHeight(20);
-        ScrollAviones.setViewportView(TablaAviones);
-        if (TablaAviones.getColumnModel().getColumnCount() > 0) {
-            TablaAviones.getColumnModel().getColumn(0).setResizable(false);
-            TablaAviones.getColumnModel().getColumn(1).setResizable(false);
-            TablaAviones.getColumnModel().getColumn(2).setResizable(false);
-            TablaAviones.getColumnModel().getColumn(3).setResizable(false);
-        }
-
-        EditarAviones.add(ScrollAviones, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 80, -1, 440));
-
-        jLabel3.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        jLabel3.setText("No hay aviones registrados");
-        jLabel3.setFocusTraversalPolicyProvider(true);
-        EditarAviones.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
-
-        fondoEditA.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        fondoEditA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/plane_Edit.jpg"))); // NOI18N
-        fondoEditA.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        EditarAviones.add(fondoEditA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        AdminPanel.add(EditarAviones, java.awt.BorderLayout.CENTER);
-
-        getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
 
         UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
         UsuarioPanel.setLayout(new java.awt.BorderLayout());
@@ -1760,6 +1392,383 @@ public class Principal extends JFrame {
 
         getContentPane().add(PanelLogin, java.awt.BorderLayout.CENTER);
 
+        AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
+        AdminPanel.setLayout(new java.awt.BorderLayout());
+
+        ToolBarAdmin.setBackground(new java.awt.Color(33, 150, 243));
+        ToolBarAdmin.setMinimumSize(new java.awt.Dimension(169, 52));
+        ToolBarAdmin.setPreferredSize(new java.awt.Dimension(169, 52));
+        ToolBarAdmin.setLayout(new java.awt.BorderLayout());
+
+        NavegacionAdmin.setOpaque(false);
+        NavegacionAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
+
+        EditSalidas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EditSalidas.setForeground(new java.awt.Color(255, 255, 255));
+        EditSalidas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EditSalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
+        EditSalidas.setToolTipText("Salidas");
+        EditSalidas.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        EditSalidas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditSalidasMouseClicked(evt);
+            }
+        });
+        NavegacionAdmin.add(EditSalidas);
+
+        EditLlegadas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EditLlegadas.setForeground(new java.awt.Color(255, 255, 255));
+        EditLlegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
+        EditLlegadas.setToolTipText("Llegadas");
+        EditLlegadas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditLlegadasMouseClicked(evt);
+            }
+        });
+        NavegacionAdmin.add(EditLlegadas);
+
+        EditAviones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EditAviones.setForeground(new java.awt.Color(255, 255, 255));
+        EditAviones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_local_airport_white_24dp.png"))); // NOI18N
+        EditAviones.setToolTipText("Destinos");
+        EditAviones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditAvionesMouseClicked(evt);
+            }
+        });
+        NavegacionAdmin.add(EditAviones);
+
+        EditUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_assignment_ind_white_24dp.png"))); // NOI18N
+        EditUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EditUsuariosMouseClicked(evt);
+            }
+        });
+        NavegacionAdmin.add(EditUsuarios);
+
+        ToolBarAdmin.add(NavegacionAdmin, java.awt.BorderLayout.WEST);
+
+        OpcionesUsuarioAdmin.setOpaque(false);
+        OpcionesUsuarioAdmin.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
+
+        nombreuser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        nombreuser.setForeground(new java.awt.Color(255, 255, 255));
+        OpcionesUsuarioAdmin.add(nombreuser);
+
+        imguser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
+        imguser.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imguser.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        imguser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imguserMouseClicked(evt);
+            }
+        });
+        OpcionesUsuarioAdmin.add(imguser);
+
+        ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
+
+        AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
+
+        EditarSalidas.setBackground(new java.awt.Color(255, 255, 255));
+        EditarSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Editar Vuelos de Salida");
+        EditarSalidas.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+
+        BotonRegistrarSalidas.setBackground(new java.awt.Color(124, 77, 255));
+        BotonRegistrarSalidas.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonRegistrarSalidas.setForeground(new java.awt.Color(255, 255, 255));
+        BotonRegistrarSalidas.setText("Agregar un vuelo de Salida");
+        BotonRegistrarSalidas.setBorder(null);
+        BotonRegistrarSalidas.setBorderPainted(false);
+        BotonRegistrarSalidas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonRegistrarSalidas.setFocusable(false);
+        BotonRegistrarSalidas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonRegistrarSalidasMouseClicked(evt);
+            }
+        });
+        EditarSalidas.add(BotonRegistrarSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 530, 420, 40));
+
+        ScrollSalidas.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollSalidas.setForeground(new java.awt.Color(255, 255, 255));
+
+        TablaSalidas.setBackground(new java.awt.Color(33, 150, 243));
+        TablaSalidas.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        TablaSalidas.setForeground(new java.awt.Color(255, 255, 255));
+        TablaSalidas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Flight Code", "Avion", "Lugares", "Destino", "Hora de Abordaje"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        TablaSalidas.setToolTipText("");
+        TablaSalidas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        TablaSalidas.setGridColor(new java.awt.Color(255, 255, 255));
+        TablaSalidas.setRowHeight(20);
+        ScrollSalidas.setViewportView(TablaSalidas);
+        if (TablaSalidas.getColumnModel().getColumnCount() > 0) {
+            TablaSalidas.getColumnModel().getColumn(0).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(1).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(2).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(3).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(4).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(5).setResizable(false);
+        }
+
+        EditarSalidas.add(ScrollSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, -1, 440));
+
+        LabelNoSalidas.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        LabelNoSalidas.setText("No hay salidas registrados");
+        LabelNoSalidas.setFocusTraversalPolicyProvider(true);
+        EditarSalidas.add(LabelNoSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
+
+        fodoESalidas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        fodoESalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/llegadas_edit.jpg"))); // NOI18N
+        fodoESalidas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        EditarSalidas.add(fodoESalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        AdminPanel.add(EditarSalidas, java.awt.BorderLayout.CENTER);
+
+        EditarLlegadas.setBackground(new java.awt.Color(255, 255, 255));
+        EditarLlegadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        labelLLegadas.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        labelLLegadas.setForeground(new java.awt.Color(255, 255, 255));
+        labelLLegadas.setText("Editar Vuelos de Vuelta");
+        EditarLlegadas.add(labelLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
+
+        BotonRegistrarLLegada.setBackground(new java.awt.Color(124, 77, 255));
+        BotonRegistrarLLegada.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonRegistrarLLegada.setForeground(new java.awt.Color(255, 255, 255));
+        BotonRegistrarLLegada.setText("Agregar Avion");
+        BotonRegistrarLLegada.setBorder(null);
+        BotonRegistrarLLegada.setBorderPainted(false);
+        BotonRegistrarLLegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonRegistrarLLegada.setFocusable(false);
+        BotonRegistrarLLegada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonRegistrarLLegadaMouseClicked(evt);
+            }
+        });
+        EditarLlegadas.add(BotonRegistrarLLegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 540, 420, 40));
+
+        ScrollLLegadas.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollLLegadas.setForeground(new java.awt.Color(255, 255, 255));
+
+        TablaLLegadas.setBackground(new java.awt.Color(33, 150, 243));
+        TablaLLegadas.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        TablaLLegadas.setForeground(new java.awt.Color(255, 255, 255));
+        TablaLLegadas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Hora de llegada", "Avion Asignado", "Procedencia"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        TablaLLegadas.setToolTipText("");
+        TablaLLegadas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        TablaLLegadas.setGridColor(new java.awt.Color(255, 255, 255));
+        TablaLLegadas.setRowHeight(20);
+        ScrollLLegadas.setViewportView(TablaLLegadas);
+        if (TablaLLegadas.getColumnModel().getColumnCount() > 0) {
+            TablaLLegadas.getColumnModel().getColumn(0).setResizable(false);
+            TablaLLegadas.getColumnModel().getColumn(1).setResizable(false);
+            TablaLLegadas.getColumnModel().getColumn(2).setResizable(false);
+            TablaLLegadas.getColumnModel().getColumn(3).setResizable(false);
+        }
+
+        EditarLlegadas.add(ScrollLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, -1, 440));
+
+        noLLegadas.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        noLLegadas.setText("No hay llegadas registradas");
+        noLLegadas.setFocusTraversalPolicyProvider(true);
+        EditarLlegadas.add(noLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
+
+        fondoELlegadas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fondoELlegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/salidas.jpg"))); // NOI18N
+        fondoELlegadas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        EditarLlegadas.add(fondoELlegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        AdminPanel.add(EditarLlegadas, java.awt.BorderLayout.CENTER);
+
+        EditarAviones.setBackground(new java.awt.Color(255, 255, 255));
+        EditarAviones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Editar Aviones");
+        EditarAviones.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, -1, -1));
+
+        BotonRegistrarAvion.setBackground(new java.awt.Color(124, 77, 255));
+        BotonRegistrarAvion.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonRegistrarAvion.setForeground(new java.awt.Color(255, 255, 255));
+        BotonRegistrarAvion.setText("Agregar Avion");
+        BotonRegistrarAvion.setBorder(null);
+        BotonRegistrarAvion.setBorderPainted(false);
+        BotonRegistrarAvion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonRegistrarAvion.setFocusable(false);
+        BotonRegistrarAvion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonRegistrarAvionMouseClicked(evt);
+            }
+        });
+        EditarAviones.add(BotonRegistrarAvion, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 540, 420, 40));
+
+        ScrollAviones.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollAviones.setForeground(new java.awt.Color(255, 255, 255));
+
+        TablaAviones.setBackground(new java.awt.Color(33, 150, 243));
+        TablaAviones.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        TablaAviones.setForeground(new java.awt.Color(255, 255, 255));
+        TablaAviones.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Placa", "Modelo", "Lugares", "No Vuelos"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        TablaAviones.setToolTipText("");
+        TablaAviones.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        TablaAviones.setGridColor(new java.awt.Color(255, 255, 255));
+        TablaAviones.setRowHeight(20);
+        ScrollAviones.setViewportView(TablaAviones);
+        if (TablaAviones.getColumnModel().getColumnCount() > 0) {
+            TablaAviones.getColumnModel().getColumn(0).setResizable(false);
+            TablaAviones.getColumnModel().getColumn(1).setResizable(false);
+            TablaAviones.getColumnModel().getColumn(2).setResizable(false);
+            TablaAviones.getColumnModel().getColumn(3).setResizable(false);
+        }
+
+        EditarAviones.add(ScrollAviones, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 80, -1, 440));
+
+        jLabel3.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel3.setText("No hay aviones registrados");
+        jLabel3.setFocusTraversalPolicyProvider(true);
+        EditarAviones.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
+
+        fondoEditA.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        fondoEditA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/plane_Edit.jpg"))); // NOI18N
+        fondoEditA.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        EditarAviones.add(fondoEditA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        AdminPanel.add(EditarAviones, java.awt.BorderLayout.CENTER);
+
+        Inicio.setBackground(new java.awt.Color(255, 255, 255));
+        Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Bienvenido de Vuelta");
+        Inicio.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 540, -1));
+
+        AdminName2.setFont(new java.awt.Font("Montserrat Alternates Light", 1, 70)); // NOI18N
+        AdminName2.setForeground(new java.awt.Color(255, 255, 255));
+        AdminName2.setToolTipText("");
+        AdminName2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Inicio.add(AdminName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 460, 80));
+
+        ImagenBienvenidaAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ImagenBienvenidaAdmin.setToolTipText("");
+        Inicio.add(ImagenBienvenidaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 633));
+
+        AdminPanel.add(Inicio, java.awt.BorderLayout.CENTER);
+
+        EditarUsuarios.setBackground(new java.awt.Color(255, 255, 255));
+        EditarUsuarios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LabelEUsuarios.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        LabelEUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+        LabelEUsuarios.setText("Editar Usuarios");
+        EditarUsuarios.add(LabelEUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, -1));
+
+        BotonActualizarUsers.setBackground(new java.awt.Color(124, 77, 255));
+        BotonActualizarUsers.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonActualizarUsers.setForeground(new java.awt.Color(255, 255, 255));
+        BotonActualizarUsers.setText("Guardar Info usuarios");
+        BotonActualizarUsers.setBorder(null);
+        BotonActualizarUsers.setBorderPainted(false);
+        BotonActualizarUsers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonActualizarUsers.setFocusable(false);
+        BotonActualizarUsers.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonActualizarUsersMouseClicked(evt);
+            }
+        });
+        BotonActualizarUsers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonActualizarUsersActionPerformed(evt);
+            }
+        });
+        EditarUsuarios.add(BotonActualizarUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 540, 420, 40));
+
+        ScrollUsuarios.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+
+        TablaUsuarios.setBackground(new java.awt.Color(25, 118, 210));
+        TablaUsuarios.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        TablaUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+        TablaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nombre", "Apellido", "Correo", "N_Usuario", "Password", "ApexCoins"
+            }
+        ));
+        TablaUsuarios.setToolTipText("");
+        TablaUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        TablaUsuarios.setGridColor(new java.awt.Color(255, 255, 255));
+        TablaUsuarios.setRowHeight(20);
+        ScrollUsuarios.setViewportView(TablaUsuarios);
+
+        EditarUsuarios.add(ScrollUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(603, 80, 650, 440));
+
+        textoNoUsers.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        textoNoUsers.setText("No hay usuarios registrados");
+        textoNoUsers.setFocusTraversalPolicyProvider(true);
+        EditarUsuarios.add(textoNoUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
+
+        fondoEditA1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        fondoEditA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/persona_editar.jpg"))); // NOI18N
+        fondoEditA1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        fondoEditA1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        EditarUsuarios.add(fondoEditA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        AdminPanel.add(EditarUsuarios, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -2270,6 +2279,38 @@ public class Principal extends JFrame {
         InfoTarjeta.setLocationRelativeTo(null);
     }//GEN-LAST:event_lapiz_inforcard1MouseClicked
 
+    private void BotonActualizarUsersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonActualizarUsersMouseClicked
+        DefaultTableModel tabla = (DefaultTableModel) TablaUsuarios.getModel();
+        int nRow = tabla.getRowCount();
+        ArrayList<Usuario> update = new ArrayList<Usuario>();
+        Object rows[] = new Object[7];
+        for (int i = 0; i < nRow; i++) {
+            rows[0] = tabla.getValueAt(i,0);
+            rows[1] = tabla.getValueAt(i,1);
+            rows[2] = tabla.getValueAt(i,2);
+            rows[3] = tabla.getValueAt(i,3);
+            rows[4] = tabla.getValueAt(i,4);
+            rows[5] = tabla.getValueAt(i,5);
+            rows[6] = tabla.getValueAt(i,6);
+            Usuario temp = new Usuario();
+            temp.setID((int)rows[0]);
+            System.out.println((int)rows[0]);
+            temp.setNombre((String)rows[1]);
+            temp.setApellido((String)rows[2]);
+            temp.setMail((String)rows[3]);
+            temp.setUserName((String)rows[4]);
+            temp.setPassword((String)rows[5]);
+            temp.setACoins((int)rows[6]);
+            update.add(temp);
+        }
+        master.editFileUser(update);
+        JOptionPane.showMessageDialog(null,"Se han guardado los objetos");
+    }//GEN-LAST:event_BotonActualizarUsersMouseClicked
+
+    private void BotonActualizarUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarUsersActionPerformed
+        
+    }//GEN-LAST:event_BotonActualizarUsersActionPerformed
+
 
     public ImageIcon ResizeImage(String ImagePath)
     {
@@ -2293,6 +2334,7 @@ public class Principal extends JFrame {
              cambiarsize(jLabel4,"/Images/_recortado.png");
              cambiarsize(ImagenBienvenidaAdmin,"/Images/Cielo1.jpg");
              cambiarsize(ApexCoinsImg,"/Images/ApexCoins.png");
+             usuarios = master.getFileUser();
              
              if(aviones.size() == 0){
                  EditarAviones.remove(ScrollAviones);
@@ -2318,7 +2360,18 @@ public class Principal extends JFrame {
                  EditarUsuarios.revalidate();
                  System.out.println("No Usuarios");
              }else{
-                 
+                 DefaultTableModel model = (DefaultTableModel) TablaUsuarios.getModel();
+                 Object rows[] = new Object[7];
+                 for (int i = 0; i < usuarios.size(); i++) {
+                    rows[0] = usuarios.get(i).getID();
+                    rows[1] = usuarios.get(i).getNombre();
+                    rows[2] = usuarios.get(i).getApellido();
+                    rows[3] = usuarios.get(i).getMail();
+                    rows[4] = usuarios.get(i).getUserName();
+                    rows[5] = usuarios.get(i).getPassword();
+                    rows[6] = usuarios.get(i).getACoins();
+                    model.addRow(rows);
+                 }
              }
              
              if(llegadas.size() == 0){
@@ -2354,6 +2407,7 @@ public class Principal extends JFrame {
     private javax.swing.JTextField ApellidosReg;
     private javax.swing.JLabel ApexCoins;
     private javax.swing.JLabel ApexCoinsImg;
+    private javax.swing.JButton BotonActualizarUsers;
     private javax.swing.JButton BotonCanjearACoins;
     private javax.swing.JButton BotonComprarVuelo;
     private javax.swing.JButton BotonLogin;
