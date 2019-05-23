@@ -1,4 +1,4 @@
-﻿package Vista;
+package Vista;
 
 import Controlador.Admin;
 import Controlador.Avion;
