@@ -2,6 +2,7 @@ package Vista;
 
 import Controlador.Admin;
 import Controlador.Avion;
+import Controlador.CardInformation;
 import Controlador.ElectronicPayment;
 import Controlador.Usuario;
 import Controlador.Vuelos;
@@ -79,6 +80,20 @@ public class Principal extends JFrame {
         ObtenerPassw = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        InfoTarjeta = new javax.swing.JDialog();
+        PanelPrincipal3 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        IconoSuperior3 = new javax.swing.JLabel();
+        PanelBotones3 = new javax.swing.JPanel();
+        SalirCI = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        ObtenerTarjeta = new javax.swing.JTextField();
+        ActualizarInfoCI = new javax.swing.JButton();
+        ObtenerExpDate = new javax.swing.JTextField();
+        ObtenerCCV = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
         PanelPrincipal = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         IconoSuperior = new javax.swing.JLabel();
@@ -212,6 +227,7 @@ public class Principal extends JFrame {
         NombreUsuario1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         lapizImgUser = new javax.swing.JLabel();
+        lapiz_inforcard1 = new javax.swing.JLabel();
         PanelLogin = new javax.swing.JPanel();
         PanelRegistro = new javax.swing.JPanel();
         separadorPassR = new javax.swing.JSeparator();
@@ -425,6 +441,93 @@ public class Principal extends JFrame {
         jPanel6.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 80, -1));
 
         PagoEl.getContentPane().add(jPanel6, java.awt.BorderLayout.CENTER);
+
+        InfoTarjeta.setUndecorated(true);
+
+        PanelPrincipal3.setBackground(new java.awt.Color(25, 118, 210));
+        PanelPrincipal3.setLayout(new java.awt.BorderLayout(40, 15));
+
+        jPanel7.setOpaque(false);
+        jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 7, 5));
+
+        IconoSuperior3.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        IconoSuperior3.setForeground(new java.awt.Color(255, 255, 255));
+        IconoSuperior3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/apexFlightsIcon.png"))); // NOI18N
+        IconoSuperior3.setText("Informacion de Tarjeta");
+        IconoSuperior3.setAlignmentX(3.0F);
+        IconoSuperior3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        IconoSuperior3.setFocusable(false);
+        IconoSuperior3.setIconTextGap(3);
+        jPanel7.add(IconoSuperior3);
+
+        PanelPrincipal3.add(jPanel7, java.awt.BorderLayout.WEST);
+
+        PanelBotones3.setBackground(new java.awt.Color(25, 118, 210));
+
+        SalirCI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_clear_white_24dp.png"))); // NOI18N
+        SalirCI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SalirCI.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalirCIMouseClicked(evt);
+            }
+        });
+        PanelBotones3.add(SalirCI);
+
+        PanelPrincipal3.add(PanelBotones3, java.awt.BorderLayout.LINE_END);
+
+        InfoTarjeta.getContentPane().add(PanelPrincipal3, java.awt.BorderLayout.PAGE_START);
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel48.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel48.setText("Numero de Tarjeta:");
+        jPanel8.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 160, -1));
+
+        ObtenerTarjeta.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerTarjeta.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel8.add(ObtenerTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 180, -1));
+
+        ActualizarInfoCI.setBackground(new java.awt.Color(124, 77, 255));
+        ActualizarInfoCI.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        ActualizarInfoCI.setForeground(new java.awt.Color(255, 255, 255));
+        ActualizarInfoCI.setText("Actualizar Informacion");
+        ActualizarInfoCI.setBorder(null);
+        ActualizarInfoCI.setBorderPainted(false);
+        ActualizarInfoCI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ActualizarInfoCI.setFocusable(false);
+        ActualizarInfoCI.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ActualizarInfoCIMouseClicked(evt);
+            }
+        });
+        ActualizarInfoCI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActualizarInfoCIActionPerformed(evt);
+            }
+        });
+        jPanel8.add(ActualizarInfoCI, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 270, -1));
+
+        ObtenerExpDate.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerExpDate.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel8.add(ObtenerExpDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 180, -1));
+
+        ObtenerCCV.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerCCV.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel8.add(ObtenerCCV, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 180, -1));
+
+        jLabel49.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel49.setText("CCV:");
+        jPanel8.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 110, -1));
+
+        jLabel50.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel50.setText("Fecha de expiracion:");
+        jPanel8.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 170, -1));
+
+        InfoTarjeta.getContentPane().add(jPanel8, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("ApexFlights");
@@ -1389,6 +1492,14 @@ public class Principal extends JFrame {
         });
         Opciones.add(lapizImgUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
 
+        lapiz_inforcard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_inforcard1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_inforcard1MouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_inforcard1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 550, -1, -1));
+
         PanelOpUser.add(Opciones, java.awt.BorderLayout.CENTER);
 
         UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
@@ -2127,6 +2238,38 @@ public class Principal extends JFrame {
         PagoEl.setLocationRelativeTo(null);
     }//GEN-LAST:event_lapiz_pagoelecMouseClicked
 
+    private void SalirCIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirCIMouseClicked
+        InfoTarjeta.setVisible(false);
+        InfoTarjeta.dispose();
+    }//GEN-LAST:event_SalirCIMouseClicked
+
+    private void ActualizarInfoCIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarInfoCIMouseClicked
+        CardInformation card = new CardInformation();
+        String number = ObtenerTarjeta.getText().toString();
+        String ccv = ObtenerCCV.getText().toString();
+        String expd = ObtenerExpDate.getText().toString();
+        int fondos = 1000;
+
+        card.setCCV(ccv);
+        card.setCardNumber(number);
+        card.setFondos(fondos);
+        card.setExpDate(expd);
+
+        usuarios.get(actual.getID()).setCardInformation(card);
+        master.editFileUser(usuarios);
+        JOptionPane .showMessageDialog(null, "La informacion de tu tarjeta se ha actualizado correctamente");
+    }//GEN-LAST:event_ActualizarInfoCIMouseClicked
+
+    private void ActualizarInfoCIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarInfoCIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ActualizarInfoCIActionPerformed
+
+    private void lapiz_inforcard1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_inforcard1MouseClicked
+        InfoTarjeta.setVisible(true);
+        InfoTarjeta.setBounds(0, 0, 425, 300);
+        InfoTarjeta.setLocationRelativeTo(null);
+    }//GEN-LAST:event_lapiz_inforcard1MouseClicked
+
 
     public ImageIcon ResizeImage(String ImagePath)
     {
@@ -2203,6 +2346,7 @@ public class Principal extends JFrame {
     private javax.swing.JDialog ACoins;
     private javax.swing.JLabel ACoinsdisp;
     private javax.swing.JLabel Acoins1;
+    private javax.swing.JButton ActualizarInfoCI;
     private javax.swing.JButton ActualizarInfoEP;
     private javax.swing.JLabel AdminName2;
     private javax.swing.JPanel AdminPanel;
@@ -2243,8 +2387,10 @@ public class Principal extends JFrame {
     private javax.swing.JLabel IconoSuperior;
     private javax.swing.JLabel IconoSuperior1;
     private javax.swing.JLabel IconoSuperior2;
+    private javax.swing.JLabel IconoSuperior3;
     private javax.swing.JPanel Imagen;
     private javax.swing.JLabel ImagenBienvenidaAdmin;
+    private javax.swing.JDialog InfoTarjeta;
     private javax.swing.JLabel Informaciondetarjeta;
     private javax.swing.JPanel Inicio;
     private javax.swing.JLabel LabelEUsuarios;
@@ -2262,9 +2408,12 @@ public class Principal extends JFrame {
     private javax.swing.JTextField NombreReg;
     private javax.swing.JLabel NombreUsuario;
     private javax.swing.JLabel NombreUsuario1;
+    private javax.swing.JTextField ObtenerCCV;
     private javax.swing.JTextField ObtenerCorreo;
+    private javax.swing.JTextField ObtenerExpDate;
     private javax.swing.JTextField ObtenerFondos;
     private javax.swing.JTextField ObtenerPassw;
+    private javax.swing.JTextField ObtenerTarjeta;
     private javax.swing.JTextField Obteneracoins;
     private javax.swing.JPanel Opciones;
     private javax.swing.JPanel OpcionesUsuario;
@@ -2274,6 +2423,7 @@ public class Principal extends JFrame {
     private javax.swing.JPanel PanelBotones;
     private javax.swing.JPanel PanelBotones1;
     private javax.swing.JPanel PanelBotones2;
+    private javax.swing.JPanel PanelBotones3;
     private javax.swing.JPanel PanelDestinos;
     private javax.swing.JPanel PanelEntrada;
     private javax.swing.JPanel PanelLlegadas;
@@ -2284,6 +2434,7 @@ public class Principal extends JFrame {
     private javax.swing.JPanel PanelPrincipal;
     private javax.swing.JPanel PanelPrincipal1;
     private javax.swing.JPanel PanelPrincipal2;
+    private javax.swing.JPanel PanelPrincipal3;
     private javax.swing.JPanel PanelRegistro;
     private javax.swing.JPanel PanelSalidas;
     private javax.swing.JPasswordField PassField;
@@ -2292,6 +2443,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel SalidasB;
     private javax.swing.JLabel Salir;
     private javax.swing.JLabel SalirACoins;
+    private javax.swing.JLabel SalirCI;
     private javax.swing.JLabel SalirPE;
     private javax.swing.JScrollPane ScrollAviones;
     private javax.swing.JScrollPane ScrollLLegadas;
@@ -2366,7 +2518,10 @@ public class Principal extends JFrame {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -2377,6 +2532,8 @@ public class Principal extends JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
@@ -2386,6 +2543,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel lapiz_acoins;
     private javax.swing.JLabel lapiz_apellido;
     private javax.swing.JLabel lapiz_inforcard;
+    private javax.swing.JLabel lapiz_inforcard1;
     private javax.swing.JLabel lapiz_mail;
     private javax.swing.JLabel lapiz_mail1;
     private javax.swing.JLabel lapiz_nom;
