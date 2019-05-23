@@ -67,7 +67,7 @@ public class Usuario implements Serializable {
         this.apellido = apellido;
     }
 
-    public double getACoins() {
+    public int getACoins() {
         return ACoins;
     }
 
