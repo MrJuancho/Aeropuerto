@@ -2,6 +2,7 @@ package Vista;
 
 import Controlador.Admin;
 import Controlador.Avion;
+import Controlador.ElectronicPayment;
 import Controlador.Usuario;
 import Controlador.Vuelos;
 import Controlador.VuelosVuelta;
@@ -62,6 +63,21 @@ public class Principal extends JFrame {
         ACoinsdisp = new javax.swing.JLabel();
         Obteneracoins = new javax.swing.JTextField();
         BotonCanjearACoins = new javax.swing.JButton();
+        PagoEl = new javax.swing.JDialog();
+        PanelPrincipal2 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        IconoSuperior2 = new javax.swing.JLabel();
+        PanelBotones2 = new javax.swing.JPanel();
+        SalirPE = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        ObtenerCorreo = new javax.swing.JTextField();
+        ActualizarInfoEP = new javax.swing.JButton();
+        ObtenerFondos = new javax.swing.JTextField();
+        ObtenerPassw = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
         PanelPrincipal = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         IconoSuperior = new javax.swing.JLabel();
@@ -78,10 +94,6 @@ public class Principal extends JFrame {
         OpcionesUsuarioAdmin = new javax.swing.JPanel();
         nombreuser = new javax.swing.JLabel();
         imguser = new javax.swing.JLabel();
-        Inicio = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        AdminName2 = new javax.swing.JLabel();
-        ImagenBienvenidaAdmin = new javax.swing.JLabel();
         EditarSalidas = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         BotonRegistrarSalidas = new javax.swing.JButton();
@@ -109,6 +121,53 @@ public class Principal extends JFrame {
         TablaAviones = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         fondoEditA = new javax.swing.JLabel();
+        Inicio = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        AdminName2 = new javax.swing.JLabel();
+        ImagenBienvenidaAdmin = new javax.swing.JLabel();
+        PanelLogin = new javax.swing.JPanel();
+        PanelRegistro = new javax.swing.JPanel();
+        separadorPassR = new javax.swing.JSeparator();
+        separadorNombreR = new javax.swing.JSeparator();
+        separadorApellidosR = new javax.swing.JSeparator();
+        separadorMail = new javax.swing.JSeparator();
+        SeparadorUsername = new javax.swing.JSeparator();
+        TextoPass2 = new javax.swing.JLabel();
+        TextoPass1 = new javax.swing.JLabel();
+        TextoRegistro = new javax.swing.JLabel();
+        BotonRegresar = new javax.swing.JLabel();
+        TextoPass3 = new javax.swing.JLabel();
+        TextoPass4 = new javax.swing.JLabel();
+        TextoPass5 = new javax.swing.JLabel();
+        PassReg = new javax.swing.JPasswordField();
+        UserReg = new javax.swing.JTextField();
+        NombreReg = new javax.swing.JTextField();
+        ApellidosReg = new javax.swing.JTextField();
+        MailReg = new javax.swing.JTextField();
+        BotonRegistrar = new javax.swing.JButton();
+        ErrorRegN = new javax.swing.JLabel();
+        ErrorRegPass = new javax.swing.JLabel();
+        ErrorRegU = new javax.swing.JLabel();
+        ErrorRegC = new javax.swing.JLabel();
+        ErrorRegA = new javax.swing.JLabel();
+        PanelEntrada = new javax.swing.JPanel();
+        TextoLogin1 = new javax.swing.JLabel();
+        TextoPass = new javax.swing.JLabel();
+        separadorPassword = new javax.swing.JSeparator();
+        TextoUser = new javax.swing.JLabel();
+        separadorNombre = new javax.swing.JSeparator();
+        BotonLogin = new javax.swing.JButton();
+        Registro = new javax.swing.JLabel();
+        TextoLogin2 = new javax.swing.JLabel();
+        UserField = new javax.swing.JTextField();
+        PassField = new javax.swing.JPasswordField();
+        ErrorPass = new javax.swing.JLabel();
+        ErrorName = new javax.swing.JLabel();
+        PanelPresentacion = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         UsuarioPanel = new javax.swing.JPanel();
         ToolBarUser = new javax.swing.JPanel();
         Navegacion = new javax.swing.JPanel();
@@ -165,54 +224,19 @@ public class Principal extends JFrame {
         jTable1 = new javax.swing.JTable();
         FondouserSalidas = new javax.swing.JLabel();
         PanelDestinos = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        PanelPortrait = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        PanelLogin = new javax.swing.JPanel();
-        PanelRegistro = new javax.swing.JPanel();
-        separadorPassR = new javax.swing.JSeparator();
-        separadorNombreR = new javax.swing.JSeparator();
-        separadorApellidosR = new javax.swing.JSeparator();
-        separadorMail = new javax.swing.JSeparator();
-        SeparadorUsername = new javax.swing.JSeparator();
-        TextoPass2 = new javax.swing.JLabel();
-        TextoPass1 = new javax.swing.JLabel();
-        TextoRegistro = new javax.swing.JLabel();
-        BotonRegresar = new javax.swing.JLabel();
-        TextoPass3 = new javax.swing.JLabel();
-        TextoPass4 = new javax.swing.JLabel();
-        TextoPass5 = new javax.swing.JLabel();
-        PassReg = new javax.swing.JPasswordField();
-        UserReg = new javax.swing.JTextField();
-        NombreReg = new javax.swing.JTextField();
-        ApellidosReg = new javax.swing.JTextField();
-        MailReg = new javax.swing.JTextField();
-        BotonRegistrar = new javax.swing.JButton();
-        ErrorRegN = new javax.swing.JLabel();
-        ErrorRegPass = new javax.swing.JLabel();
-        ErrorRegU = new javax.swing.JLabel();
-        ErrorRegC = new javax.swing.JLabel();
-        ErrorRegA = new javax.swing.JLabel();
-        PanelEntrada = new javax.swing.JPanel();
-        TextoLogin1 = new javax.swing.JLabel();
-        TextoPass = new javax.swing.JLabel();
-        separadorPassword = new javax.swing.JSeparator();
-        TextoUser = new javax.swing.JLabel();
-        separadorNombre = new javax.swing.JSeparator();
-        BotonLogin = new javax.swing.JButton();
-        Registro = new javax.swing.JLabel();
-        TextoLogin2 = new javax.swing.JLabel();
-        UserField = new javax.swing.JTextField();
-        PassField = new javax.swing.JPasswordField();
-        ErrorPass = new javax.swing.JLabel();
-        ErrorName = new javax.swing.JLabel();
-        PanelPresentacion = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
         ACoins.setUndecorated(true);
-        ACoins.setPreferredSize(new java.awt.Dimension(500, 300));
 
         PanelPrincipal1.setBackground(new java.awt.Color(25, 118, 210));
         PanelPrincipal1.setLayout(new java.awt.BorderLayout(40, 15));
@@ -289,6 +313,99 @@ public class Principal extends JFrame {
         jPanel4.add(BotonCanjearACoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 130, -1));
 
         ACoins.getContentPane().add(jPanel4, java.awt.BorderLayout.CENTER);
+
+        PagoEl.setUndecorated(true);
+        PagoEl.setPreferredSize(new java.awt.Dimension(500, 300));
+
+        PanelPrincipal2.setBackground(new java.awt.Color(25, 118, 210));
+        PanelPrincipal2.setLayout(new java.awt.BorderLayout(40, 15));
+
+        jPanel5.setOpaque(false);
+        jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 7, 5));
+
+        IconoSuperior2.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        IconoSuperior2.setForeground(new java.awt.Color(255, 255, 255));
+        IconoSuperior2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/apexFlightsIcon.png"))); // NOI18N
+        IconoSuperior2.setText("Pago Electronico");
+        IconoSuperior2.setAlignmentX(3.0F);
+        IconoSuperior2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        IconoSuperior2.setFocusable(false);
+        IconoSuperior2.setIconTextGap(3);
+        jPanel5.add(IconoSuperior2);
+
+        PanelPrincipal2.add(jPanel5, java.awt.BorderLayout.WEST);
+
+        PanelBotones2.setBackground(new java.awt.Color(25, 118, 210));
+
+        SalirPE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_clear_white_24dp.png"))); // NOI18N
+        SalirPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SalirPE.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalirPEMouseClicked(evt);
+            }
+        });
+        PanelBotones2.add(SalirPE);
+
+        PanelPrincipal2.add(PanelBotones2, java.awt.BorderLayout.LINE_END);
+
+        PagoEl.getContentPane().add(PanelPrincipal2, java.awt.BorderLayout.PAGE_START);
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel17.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel17.setText("Proovedor");
+        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 160, -1));
+
+        jLabel18.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel18.setText("Correo:");
+        jPanel6.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, -1));
+
+        ObtenerCorreo.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerCorreo.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel6.add(ObtenerCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 180, -1));
+
+        ActualizarInfoEP.setBackground(new java.awt.Color(124, 77, 255));
+        ActualizarInfoEP.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        ActualizarInfoEP.setForeground(new java.awt.Color(255, 255, 255));
+        ActualizarInfoEP.setText("Actualizar Informacion");
+        ActualizarInfoEP.setBorder(null);
+        ActualizarInfoEP.setBorderPainted(false);
+        ActualizarInfoEP.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ActualizarInfoEP.setFocusable(false);
+        ActualizarInfoEP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ActualizarInfoEPMouseClicked(evt);
+            }
+        });
+        ActualizarInfoEP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActualizarInfoEPActionPerformed(evt);
+            }
+        });
+        jPanel6.add(ActualizarInfoEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 270, -1));
+
+        ObtenerFondos.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerFondos.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel6.add(ObtenerFondos, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 180, -1));
+
+        ObtenerPassw.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerPassw.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel6.add(ObtenerPassw, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 180, -1));
+
+        jLabel19.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel19.setText("Contraseña:");
+        jPanel6.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 110, -1));
+
+        jLabel20.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel20.setText("Fondos: ");
+        jPanel6.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 80, -1));
+
+        PagoEl.getContentPane().add(jPanel6, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("ApexFlights");
@@ -417,23 +534,6 @@ public class Principal extends JFrame {
         ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
 
         AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
-
-        Inicio.setBackground(new java.awt.Color(255, 255, 255));
-        Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Bienvenido de Vuelta");
-        Inicio.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 540, -1));
-
-        AdminName2.setFont(new java.awt.Font("Montserrat Alternates Light", 1, 70)); // NOI18N
-        AdminName2.setForeground(new java.awt.Color(255, 255, 255));
-        AdminName2.setToolTipText("");
-        AdminName2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Inicio.add(AdminName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 460, 80));
-        Inicio.add(ImagenBienvenidaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 633));
-
-        AdminPanel.add(Inicio, java.awt.BorderLayout.CENTER);
 
         EditarSalidas.setBackground(new java.awt.Color(255, 255, 255));
         EditarSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -709,393 +809,24 @@ public class Principal extends JFrame {
 
         AdminPanel.add(EditarAviones, java.awt.BorderLayout.CENTER);
 
+        Inicio.setBackground(new java.awt.Color(255, 255, 255));
+        Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Bienvenido de Vuelta");
+        Inicio.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 540, -1));
+
+        AdminName2.setFont(new java.awt.Font("Montserrat Alternates Light", 1, 70)); // NOI18N
+        AdminName2.setForeground(new java.awt.Color(255, 255, 255));
+        AdminName2.setToolTipText("");
+        AdminName2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Inicio.add(AdminName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 460, 80));
+        Inicio.add(ImagenBienvenidaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 633));
+
+        AdminPanel.add(Inicio, java.awt.BorderLayout.CENTER);
+
         getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
-
-        UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
-        UsuarioPanel.setLayout(new java.awt.BorderLayout());
-
-        ToolBarUser.setBackground(new java.awt.Color(33, 150, 243));
-        ToolBarUser.setMinimumSize(new java.awt.Dimension(169, 52));
-        ToolBarUser.setPreferredSize(new java.awt.Dimension(169, 52));
-        ToolBarUser.setLayout(new java.awt.BorderLayout());
-
-        Navegacion.setOpaque(false);
-        Navegacion.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
-
-        SalidasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        SalidasB.setForeground(new java.awt.Color(255, 255, 255));
-        SalidasB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SalidasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
-        SalidasB.setToolTipText("Salidas");
-        SalidasB.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        SalidasB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SalidasBMouseClicked(evt);
-            }
-        });
-        Navegacion.add(SalidasB);
-
-        LlegadasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        LlegadasB.setForeground(new java.awt.Color(255, 255, 255));
-        LlegadasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
-        LlegadasB.setToolTipText("Llegadas");
-        LlegadasB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LlegadasBMouseClicked(evt);
-            }
-        });
-        Navegacion.add(LlegadasB);
-
-        DestinosB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        DestinosB.setForeground(new java.awt.Color(255, 255, 255));
-        DestinosB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
-        DestinosB.setToolTipText("Destinos");
-        DestinosB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DestinosBMouseClicked(evt);
-            }
-        });
-        Navegacion.add(DestinosB);
-
-        ToolBarUser.add(Navegacion, java.awt.BorderLayout.WEST);
-
-        OpcionesUsuario.setOpaque(false);
-        OpcionesUsuario.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
-
-        ApexCoins.setFont(new java.awt.Font("Montserrat", 3, 18)); // NOI18N
-        ApexCoins.setForeground(new java.awt.Color(255, 255, 255));
-        OpcionesUsuario.add(ApexCoins);
-
-        ApexCoinsImg.setBackground(new java.awt.Color(255, 153, 153));
-        ApexCoinsImg.setPreferredSize(new java.awt.Dimension(25, 25));
-        OpcionesUsuario.add(ApexCoinsImg);
-
-        nombreUser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        nombreUser.setForeground(new java.awt.Color(255, 255, 255));
-        OpcionesUsuario.add(nombreUser);
-
-        nombreAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
-        nombreAdmin.setToolTipText("Opciones");
-        nombreAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        nombreAdmin.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        nombreAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                nombreAdminMouseClicked(evt);
-            }
-        });
-        OpcionesUsuario.add(nombreAdmin);
-
-        CerrarSesionUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_exit_to_app_white_24dp.png"))); // NOI18N
-        CerrarSesionUser.setToolTipText("Cerrar Sesion");
-        CerrarSesionUser.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CerrarSesionUserMouseClicked(evt);
-            }
-        });
-        OpcionesUsuario.add(CerrarSesionUser);
-
-        ToolBarUser.add(OpcionesUsuario, java.awt.BorderLayout.LINE_END);
-
-        UsuarioPanel.add(ToolBarUser, java.awt.BorderLayout.PAGE_START);
-
-        PanelOpUser.setLayout(new java.awt.BorderLayout());
-
-        Imagen.setMaximumSize(new java.awt.Dimension(640, 631));
-        Imagen.setMinimumSize(new java.awt.Dimension(640, 631));
-        Imagen.setPreferredSize(new java.awt.Dimension(640, 631));
-        Imagen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Modificar Datos");
-        Imagen.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
-
-        FondoOpciones.setBackground(new java.awt.Color(153, 51, 255));
-        FondoOpciones.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        FondoOpciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/persona_editar.jpg"))); // NOI18N
-        FondoOpciones.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        FondoOpciones.setOpaque(true);
-        FondoOpciones.setPreferredSize(new java.awt.Dimension(640, 631));
-        Imagen.add(FondoOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
-
-        PanelOpUser.add(Imagen, java.awt.BorderLayout.LINE_START);
-
-        Opciones.setBackground(new java.awt.Color(187, 222, 251));
-        Opciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        MarcoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/imagenMarco.png"))); // NOI18N
-        Opciones.add(MarcoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
-
-        UserImage.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        UserImage.setForeground(new java.awt.Color(0, 0, 0));
-        UserImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        UserImage.setText("SIn Imagen");
-        UserImage.setMaximumSize(new java.awt.Dimension(100, 100));
-        UserImage.setMinimumSize(new java.awt.Dimension(100, 100));
-        UserImage.setPreferredSize(new java.awt.Dimension(100, 100));
-        Opciones.add(UserImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 100, -1));
-
-        PagoElectronico.setBackground(new java.awt.Color(0, 0, 0));
-        PagoElectronico.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        PagoElectronico.setForeground(new java.awt.Color(0, 0, 0));
-        PagoElectronico.setText("Pago Electronico");
-        Opciones.add(PagoElectronico, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 170, -1));
-
-        NombreUsuario.setBackground(new java.awt.Color(124, 77, 255));
-        NombreUsuario.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
-        NombreUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        NombreUsuario.setOpaque(true);
-        Opciones.add(NombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 270, 30));
-
-        Apellido.setBackground(new java.awt.Color(124, 77, 255));
-        Apellido.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
-        Apellido.setForeground(new java.awt.Color(255, 255, 255));
-        Apellido.setOpaque(true);
-        Opciones.add(Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 270, 30));
-
-        Mail.setBackground(new java.awt.Color(124, 77, 255));
-        Mail.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
-        Mail.setForeground(new java.awt.Color(255, 255, 255));
-        Mail.setOpaque(true);
-        Opciones.add(Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 270, 30));
-
-        Informaciondetarjeta.setBackground(new java.awt.Color(0, 0, 0));
-        Informaciondetarjeta.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        Informaciondetarjeta.setForeground(new java.awt.Color(0, 0, 0));
-        Informaciondetarjeta.setText("Informacion de Tarjeta");
-        Opciones.add(Informaciondetarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 550, 220, -1));
-
-        Contraseña.setBackground(new java.awt.Color(124, 77, 255));
-        Contraseña.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
-        Contraseña.setForeground(new java.awt.Color(255, 255, 255));
-        Contraseña.setOpaque(true);
-        Opciones.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 270, 30));
-
-        Nombre.setBackground(new java.awt.Color(124, 77, 255));
-        Nombre.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
-        Nombre.setForeground(new java.awt.Color(255, 255, 255));
-        Nombre.setOpaque(true);
-        Opciones.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 270, 30));
-
-        lapiznom_user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        lapiznom_user.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lapiznom_userMouseClicked(evt);
-            }
-        });
-        Opciones.add(lapiznom_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, -1, -1));
-
-        lapiz_pagoelec.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        Opciones.add(lapiz_pagoelec, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, -1, -1));
-
-        lapiz_nom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        lapiz_nom.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lapiz_nomMouseClicked(evt);
-            }
-        });
-        Opciones.add(lapiz_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, -1, -1));
-
-        lapiz_apellido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        lapiz_apellido.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lapiz_apellidoMouseClicked(evt);
-            }
-        });
-        Opciones.add(lapiz_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, -1, -1));
-
-        lapiz_acoins.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        lapiz_acoins.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lapiz_acoinsMouseClicked(evt);
-            }
-        });
-        Opciones.add(lapiz_acoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, -1, -1));
-
-        lapiz_mail.setBackground(new java.awt.Color(0, 0, 0));
-        lapiz_mail.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        lapiz_mail.setForeground(new java.awt.Color(0, 0, 0));
-        lapiz_mail.setText("Apellidos:");
-        Opciones.add(lapiz_mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, -1));
-
-        Acoins1.setBackground(new java.awt.Color(0, 0, 0));
-        Acoins1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        Acoins1.setForeground(new java.awt.Color(0, 0, 0));
-        Acoins1.setText("ACoins");
-        Opciones.add(Acoins1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 70, -1));
-
-        Mail1.setBackground(new java.awt.Color(0, 0, 0));
-        Mail1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        Mail1.setForeground(new java.awt.Color(0, 0, 0));
-        Mail1.setText("E-Mail:");
-        Opciones.add(Mail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 260, -1));
-
-        Contraseña1.setBackground(new java.awt.Color(0, 0, 0));
-        Contraseña1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        Contraseña1.setForeground(new java.awt.Color(0, 0, 0));
-        Contraseña1.setText("Contraseña:");
-        Opciones.add(Contraseña1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 250, -1));
-
-        Nombre1.setBackground(new java.awt.Color(0, 0, 0));
-        Nombre1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        Nombre1.setForeground(new java.awt.Color(0, 0, 0));
-        Nombre1.setText("Nombre:");
-        Opciones.add(Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 250, -1));
-
-        lapiz_mail1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        lapiz_mail1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lapiz_mailMouseClicked(evt);
-            }
-        });
-        Opciones.add(lapiz_mail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, -1, -1));
-
-        lapiz_passw.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        lapiz_passw.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lapiz_passwMouseClicked(evt);
-            }
-        });
-        Opciones.add(lapiz_passw, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, -1));
-
-        lapiz_inforcard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        Opciones.add(lapiz_inforcard, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 550, -1, -1));
-
-        TituloEditar.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        TituloEditar.setForeground(new java.awt.Color(51, 51, 51));
-        TituloEditar.setText("Editar mis Datos");
-        Opciones.add(TituloEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
-
-        NombreUsuario1.setBackground(new java.awt.Color(0, 0, 0));
-        NombreUsuario1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        NombreUsuario1.setForeground(new java.awt.Color(0, 0, 0));
-        NombreUsuario1.setText("Nombre Usuario:");
-        Opciones.add(NombreUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 270, -1));
-
-        jLabel9.setFont(new java.awt.Font("Montserrat", 1, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel9.setText("Informacion Avanzada:");
-        Opciones.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        lapiz_passw1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        lapiz_passw1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lapiz_passw1MouseClicked(evt);
-            }
-        });
-        Opciones.add(lapiz_passw1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
-
-        PanelOpUser.add(Opciones, java.awt.BorderLayout.CENTER);
-
-        UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
-
-        PanelLlegadas.setBackground(new java.awt.Color(255, 255, 255));
-        PanelLlegadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel10.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Proximas llegadas al aeropuerto");
-        PanelLlegadas.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, -1, -1));
-
-        TablaConsultaLLegadas.setPreferredSize(new java.awt.Dimension(950, 720));
-
-        TablaLlegadas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Procedencia", "Hora de Llegada", "Numero de Vuelo"
-            }
-        ));
-        TablaLlegadas.setMaximumSize(new java.awt.Dimension(950, 720));
-        TablaLlegadas.setMinimumSize(new java.awt.Dimension(950, 720));
-        TablaLlegadas.setPreferredSize(new java.awt.Dimension(950, 720));
-        TablaConsultaLLegadas.setViewportView(TablaLlegadas);
-
-        PanelLlegadas.add(TablaConsultaLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 770, 400));
-
-        FondoLLegadas.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        FondoLLegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/llegadas_edit.jpg"))); // NOI18N
-        PanelLlegadas.add(FondoLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        UsuarioPanel.add(PanelLlegadas, java.awt.BorderLayout.CENTER);
-
-        PanelSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel11.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Proxima Salidas");
-        PanelSalidas.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, -1, -1));
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Para comprar un vuelo,\nSeleccionalo en la tabla y presiona\ncomprar.");
-        jTextArea1.setBorder(null);
-        jTextArea1.setOpaque(false);
-        PanelSalidas.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 220, 60));
-
-        BotonComprarVuelo.setBackground(new java.awt.Color(124, 77, 255));
-        BotonComprarVuelo.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
-        BotonComprarVuelo.setForeground(new java.awt.Color(255, 255, 255));
-        BotonComprarVuelo.setText("Comprar Vuelo");
-        BotonComprarVuelo.setBorder(null);
-        BotonComprarVuelo.setBorderPainted(false);
-        BotonComprarVuelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonComprarVuelo.setFocusable(false);
-        BotonComprarVuelo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonComprarVueloMouseClicked(evt);
-            }
-        });
-        PanelSalidas.add(BotonComprarVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 560, 420, 40));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "FlightCorde", "Destino", "Lugares", "Avion", "Hora de Salida"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
-            jTable1.getColumnModel().getColumn(3).setResizable(false);
-            jTable1.getColumnModel().getColumn(4).setResizable(false);
-            jTable1.getColumnModel().getColumn(5).setResizable(false);
-        }
-
-        PanelSalidas.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, 740, 450));
-
-        FondouserSalidas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        FondouserSalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/salidas.jpg"))); // NOI18N
-        PanelSalidas.add(FondouserSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        UsuarioPanel.add(PanelSalidas, java.awt.BorderLayout.CENTER);
-
-        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cielo_cool2.jpg"))); // NOI18N
-        jScrollPane2.setViewportView(jLabel12);
-
-        PanelDestinos.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.CENTER);
-
-        getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
 
         PanelLogin.setBackground(new java.awt.Color(33, 150, 243));
         PanelLogin.setLayout(new java.awt.BorderLayout());
@@ -1350,6 +1081,455 @@ public class Principal extends JFrame {
         PanelLogin.add(PanelPresentacion, java.awt.BorderLayout.LINE_START);
 
         getContentPane().add(PanelLogin, java.awt.BorderLayout.CENTER);
+
+        UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
+        UsuarioPanel.setLayout(new java.awt.BorderLayout());
+
+        ToolBarUser.setBackground(new java.awt.Color(33, 150, 243));
+        ToolBarUser.setMinimumSize(new java.awt.Dimension(169, 52));
+        ToolBarUser.setPreferredSize(new java.awt.Dimension(169, 52));
+        ToolBarUser.setLayout(new java.awt.BorderLayout());
+
+        Navegacion.setOpaque(false);
+        Navegacion.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 2));
+
+        SalidasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        SalidasB.setForeground(new java.awt.Color(255, 255, 255));
+        SalidasB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        SalidasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_takeoff_white_24dp.png"))); // NOI18N
+        SalidasB.setToolTipText("Salidas");
+        SalidasB.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        SalidasB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalidasBMouseClicked(evt);
+            }
+        });
+        Navegacion.add(SalidasB);
+
+        LlegadasB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        LlegadasB.setForeground(new java.awt.Color(255, 255, 255));
+        LlegadasB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_flight_land_white_24dp.png"))); // NOI18N
+        LlegadasB.setToolTipText("Llegadas");
+        LlegadasB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LlegadasBMouseClicked(evt);
+            }
+        });
+        Navegacion.add(LlegadasB);
+
+        DestinosB.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        DestinosB.setForeground(new java.awt.Color(255, 255, 255));
+        DestinosB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_terrain_white_24dp.png"))); // NOI18N
+        DestinosB.setToolTipText("Destinos");
+        DestinosB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DestinosBMouseClicked(evt);
+            }
+        });
+        Navegacion.add(DestinosB);
+
+        ToolBarUser.add(Navegacion, java.awt.BorderLayout.WEST);
+
+        OpcionesUsuario.setOpaque(false);
+        OpcionesUsuario.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 3));
+
+        ApexCoins.setFont(new java.awt.Font("Montserrat", 3, 18)); // NOI18N
+        ApexCoins.setForeground(new java.awt.Color(255, 255, 255));
+        OpcionesUsuario.add(ApexCoins);
+
+        ApexCoinsImg.setBackground(new java.awt.Color(255, 153, 153));
+        ApexCoinsImg.setPreferredSize(new java.awt.Dimension(25, 25));
+        OpcionesUsuario.add(ApexCoinsImg);
+
+        nombreUser.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        nombreUser.setForeground(new java.awt.Color(255, 255, 255));
+        OpcionesUsuario.add(nombreUser);
+
+        nombreAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
+        nombreAdmin.setToolTipText("Opciones");
+        nombreAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nombreAdmin.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        nombreAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nombreAdminMouseClicked(evt);
+            }
+        });
+        OpcionesUsuario.add(nombreAdmin);
+
+        CerrarSesionUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_exit_to_app_white_24dp.png"))); // NOI18N
+        CerrarSesionUser.setToolTipText("Cerrar Sesion");
+        CerrarSesionUser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CerrarSesionUserMouseClicked(evt);
+            }
+        });
+        OpcionesUsuario.add(CerrarSesionUser);
+
+        ToolBarUser.add(OpcionesUsuario, java.awt.BorderLayout.LINE_END);
+
+        UsuarioPanel.add(ToolBarUser, java.awt.BorderLayout.PAGE_START);
+
+        PanelOpUser.setLayout(new java.awt.BorderLayout());
+
+        Imagen.setMaximumSize(new java.awt.Dimension(640, 631));
+        Imagen.setMinimumSize(new java.awt.Dimension(640, 631));
+        Imagen.setPreferredSize(new java.awt.Dimension(640, 631));
+        Imagen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Modificar Datos");
+        Imagen.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        FondoOpciones.setBackground(new java.awt.Color(153, 51, 255));
+        FondoOpciones.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        FondoOpciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/persona_editar.jpg"))); // NOI18N
+        FondoOpciones.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        FondoOpciones.setOpaque(true);
+        FondoOpciones.setPreferredSize(new java.awt.Dimension(640, 631));
+        Imagen.add(FondoOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
+
+        PanelOpUser.add(Imagen, java.awt.BorderLayout.LINE_START);
+
+        Opciones.setBackground(new java.awt.Color(187, 222, 251));
+        Opciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        MarcoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/imagenMarco.png"))); // NOI18N
+        Opciones.add(MarcoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
+
+        UserImage.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        UserImage.setForeground(new java.awt.Color(0, 0, 0));
+        UserImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        UserImage.setText("SIn Imagen");
+        UserImage.setMaximumSize(new java.awt.Dimension(100, 100));
+        UserImage.setMinimumSize(new java.awt.Dimension(100, 100));
+        UserImage.setPreferredSize(new java.awt.Dimension(100, 100));
+        Opciones.add(UserImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 100, -1));
+
+        PagoElectronico.setBackground(new java.awt.Color(0, 0, 0));
+        PagoElectronico.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        PagoElectronico.setForeground(new java.awt.Color(0, 0, 0));
+        PagoElectronico.setText("Pago Electronico");
+        Opciones.add(PagoElectronico, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 170, -1));
+
+        NombreUsuario.setBackground(new java.awt.Color(124, 77, 255));
+        NombreUsuario.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
+        NombreUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        NombreUsuario.setOpaque(true);
+        Opciones.add(NombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 270, 30));
+
+        Apellido.setBackground(new java.awt.Color(124, 77, 255));
+        Apellido.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
+        Apellido.setForeground(new java.awt.Color(255, 255, 255));
+        Apellido.setOpaque(true);
+        Opciones.add(Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 270, 30));
+
+        Mail.setBackground(new java.awt.Color(124, 77, 255));
+        Mail.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
+        Mail.setForeground(new java.awt.Color(255, 255, 255));
+        Mail.setOpaque(true);
+        Opciones.add(Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 270, 30));
+
+        Informaciondetarjeta.setBackground(new java.awt.Color(0, 0, 0));
+        Informaciondetarjeta.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Informaciondetarjeta.setForeground(new java.awt.Color(0, 0, 0));
+        Informaciondetarjeta.setText("Informacion de Tarjeta");
+        Opciones.add(Informaciondetarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 550, 220, -1));
+
+        Contraseña.setBackground(new java.awt.Color(124, 77, 255));
+        Contraseña.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
+        Contraseña.setForeground(new java.awt.Color(255, 255, 255));
+        Contraseña.setOpaque(true);
+        Opciones.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 270, 30));
+
+        Nombre.setBackground(new java.awt.Color(124, 77, 255));
+        Nombre.setFont(new java.awt.Font("Montserrat Alternates ExLight", 1, 18)); // NOI18N
+        Nombre.setForeground(new java.awt.Color(255, 255, 255));
+        Nombre.setOpaque(true);
+        Opciones.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 270, 30));
+
+        lapiznom_user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiznom_user.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiznom_userMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiznom_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, -1, -1));
+
+        lapiz_pagoelec.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_pagoelec.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_pagoelecMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_pagoelec, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, -1, -1));
+
+        lapiz_nom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_nom.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_nomMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, -1, -1));
+
+        lapiz_apellido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_apellido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_apellidoMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, -1, -1));
+
+        lapiz_acoins.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_acoins.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_acoinsMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_acoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, -1, -1));
+
+        lapiz_mail.setBackground(new java.awt.Color(0, 0, 0));
+        lapiz_mail.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        lapiz_mail.setForeground(new java.awt.Color(0, 0, 0));
+        lapiz_mail.setText("Apellidos:");
+        Opciones.add(lapiz_mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, -1));
+
+        Acoins1.setBackground(new java.awt.Color(0, 0, 0));
+        Acoins1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Acoins1.setForeground(new java.awt.Color(0, 0, 0));
+        Acoins1.setText("ACoins");
+        Opciones.add(Acoins1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 70, -1));
+
+        Mail1.setBackground(new java.awt.Color(0, 0, 0));
+        Mail1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Mail1.setForeground(new java.awt.Color(0, 0, 0));
+        Mail1.setText("E-Mail:");
+        Opciones.add(Mail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 260, -1));
+
+        Contraseña1.setBackground(new java.awt.Color(0, 0, 0));
+        Contraseña1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Contraseña1.setForeground(new java.awt.Color(0, 0, 0));
+        Contraseña1.setText("Contraseña:");
+        Opciones.add(Contraseña1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 250, -1));
+
+        Nombre1.setBackground(new java.awt.Color(0, 0, 0));
+        Nombre1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        Nombre1.setForeground(new java.awt.Color(0, 0, 0));
+        Nombre1.setText("Nombre:");
+        Opciones.add(Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 250, -1));
+
+        lapiz_mail1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_mail1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_mailMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_mail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, -1, -1));
+
+        lapiz_passw.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_passw.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_passwMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_passw, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, -1));
+
+        lapiz_inforcard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        Opciones.add(lapiz_inforcard, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 550, -1, -1));
+
+        TituloEditar.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        TituloEditar.setForeground(new java.awt.Color(51, 51, 51));
+        TituloEditar.setText("Editar mis Datos");
+        Opciones.add(TituloEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+
+        NombreUsuario1.setBackground(new java.awt.Color(0, 0, 0));
+        NombreUsuario1.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        NombreUsuario1.setForeground(new java.awt.Color(0, 0, 0));
+        NombreUsuario1.setText("Nombre Usuario:");
+        Opciones.add(NombreUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 270, -1));
+
+        jLabel9.setFont(new java.awt.Font("Montserrat", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel9.setText("Informacion Avanzada:");
+        Opciones.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
+
+        lapiz_passw1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
+        lapiz_passw1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_passw1MouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_passw1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
+
+        PanelOpUser.add(Opciones, java.awt.BorderLayout.CENTER);
+
+        UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
+
+        PanelLlegadas.setBackground(new java.awt.Color(255, 255, 255));
+        PanelLlegadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Proximas llegadas al aeropuerto");
+        PanelLlegadas.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, -1, -1));
+
+        TablaConsultaLLegadas.setPreferredSize(new java.awt.Dimension(950, 720));
+
+        TablaLlegadas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Procedencia", "Hora de Llegada", "Numero de Vuelo"
+            }
+        ));
+        TablaLlegadas.setMaximumSize(new java.awt.Dimension(950, 720));
+        TablaLlegadas.setMinimumSize(new java.awt.Dimension(950, 720));
+        TablaLlegadas.setPreferredSize(new java.awt.Dimension(950, 720));
+        TablaConsultaLLegadas.setViewportView(TablaLlegadas);
+
+        PanelLlegadas.add(TablaConsultaLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 770, 400));
+
+        FondoLLegadas.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        FondoLLegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/llegadas_edit.jpg"))); // NOI18N
+        PanelLlegadas.add(FondoLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        UsuarioPanel.add(PanelLlegadas, java.awt.BorderLayout.CENTER);
+
+        PanelSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Proxima Salidas");
+        PanelSalidas.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, -1, -1));
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Para comprar un vuelo,\nSeleccionalo en la tabla y presiona\ncomprar.");
+        jTextArea1.setBorder(null);
+        jTextArea1.setOpaque(false);
+        PanelSalidas.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 220, 60));
+
+        BotonComprarVuelo.setBackground(new java.awt.Color(124, 77, 255));
+        BotonComprarVuelo.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonComprarVuelo.setForeground(new java.awt.Color(255, 255, 255));
+        BotonComprarVuelo.setText("Comprar Vuelo");
+        BotonComprarVuelo.setBorder(null);
+        BotonComprarVuelo.setBorderPainted(false);
+        BotonComprarVuelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonComprarVuelo.setFocusable(false);
+        BotonComprarVuelo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonComprarVueloMouseClicked(evt);
+            }
+        });
+        PanelSalidas.add(BotonComprarVuelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 560, 420, 40));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "FlightCorde", "Destino", "Lugares", "Avion", "Hora de Salida"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setResizable(false);
+            jTable1.getColumnModel().getColumn(1).setResizable(false);
+            jTable1.getColumnModel().getColumn(2).setResizable(false);
+            jTable1.getColumnModel().getColumn(3).setResizable(false);
+            jTable1.getColumnModel().getColumn(4).setResizable(false);
+            jTable1.getColumnModel().getColumn(5).setResizable(false);
+        }
+
+        PanelSalidas.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, 740, 450));
+
+        FondouserSalidas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        FondouserSalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/salidas.jpg"))); // NOI18N
+        PanelSalidas.add(FondouserSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        UsuarioPanel.add(PanelSalidas, java.awt.BorderLayout.CENTER);
+
+        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PanelPortrait.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea2.setRows(5);
+        jTextArea2.setText("En Apex Flights nos encargamos de que tengas las mejores experiencias\nde vuelo, con los mejores destinos, las mejores ofertas, ofreciendo desde\n los voletos mas accesibles hasta la maxima calidad de Vuelos.\n\nCon el apoyo de las mejores aerolineas, con los mejores Aviones.");
+        jTextArea2.setOpaque(false);
+        jPanel1.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 600, 120));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l2.jpg"))); // NOI18N
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 320, 220));
+
+        jLabel22.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l1.jpg"))); // NOI18N
+        jLabel22.setMaximumSize(new java.awt.Dimension(45, 16));
+        jLabel22.setOpaque(true);
+        jLabel22.setPreferredSize(new java.awt.Dimension(45, 12));
+        jLabel22.setRequestFocusEnabled(false);
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, 320, 220));
+
+        jLabel19.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel19.setMaximumSize(new java.awt.Dimension(45, 16));
+        jLabel19.setOpaque(true);
+        jLabel19.setPreferredSize(new java.awt.Dimension(45, 12));
+        jLabel19.setRequestFocusEnabled(false);
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 500, 340, 240));
+
+        jLabel14.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Bienvenido a Apex Flights");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, -1));
+
+        jLabel17.setFont(new java.awt.Font("Montserrat", 3, 36)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("\"Feel top of Sky\"");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, -1, -1));
+
+        jLabel21.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel21.setMaximumSize(new java.awt.Dimension(45, 16));
+        jLabel21.setOpaque(true);
+        jLabel21.setPreferredSize(new java.awt.Dimension(45, 12));
+        jLabel21.setRequestFocusEnabled(false);
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 340, 240));
+
+        jLabel20.setFont(new java.awt.Font("Roboto Thin", 3, 36)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("No nos crees, te invitamos a verlo...");
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, -1, -1));
+
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/portrait.png"))); // NOI18N
+        jLabel12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        PanelPortrait.setViewportView(jPanel1);
+
+        PanelDestinos.add(PanelPortrait, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1781,6 +1961,39 @@ public class Principal extends JFrame {
         }
     }//GEN-LAST:event_CerrarSesionUserMouseClicked
 
+    private void SalirPEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirPEMouseClicked
+        PagoEl.setVisible(false);
+        PagoEl.dispose();
+    }//GEN-LAST:event_SalirPEMouseClicked
+
+    private void ActualizarInfoEPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarInfoEPMouseClicked
+        ElectronicPayment tempo = new ElectronicPayment();
+        String correo = ObtenerCorreo.getText().toString();
+        String contraseña = ObtenerPassw.getText().toString();
+        int fondos = Integer.parseInt(ObtenerFondos.getText().toString());
+        String proveedor = "PayPal";
+        
+        tempo.setProvider(proveedor);
+        tempo.setFondos(fondos);
+        tempo.setMail(correo);
+        tempo.setPassword(contraseña);
+        
+        usuarios.get(actual.getID()).setElectronicPayment(tempo);
+        master.editFileUser(usuarios);
+        
+        JOptionPane.showMessageDialog(null,"Tu información se ha actualizado");
+    }//GEN-LAST:event_ActualizarInfoEPMouseClicked
+
+    private void ActualizarInfoEPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarInfoEPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ActualizarInfoEPActionPerformed
+
+    private void lapiz_pagoelecMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_pagoelecMouseClicked
+        PagoEl.setVisible(true);
+        PagoEl.setBounds(0, 0, 425, 300);
+        PagoEl.setLocationRelativeTo(null);
+    }//GEN-LAST:event_lapiz_pagoelecMouseClicked
+
 
 
 
@@ -1850,6 +2063,7 @@ public class Principal extends JFrame {
     private javax.swing.JDialog ACoins;
     private javax.swing.JLabel ACoinsdisp;
     private javax.swing.JLabel Acoins1;
+    private javax.swing.JButton ActualizarInfoEP;
     private javax.swing.JLabel AdminName2;
     private javax.swing.JPanel AdminPanel;
     private javax.swing.JLabel Apellido;
@@ -1888,6 +2102,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel FondouserSalidas;
     private javax.swing.JLabel IconoSuperior;
     private javax.swing.JLabel IconoSuperior1;
+    private javax.swing.JLabel IconoSuperior2;
     private javax.swing.JPanel Imagen;
     private javax.swing.JLabel ImagenBienvenidaAdmin;
     private javax.swing.JLabel Informaciondetarjeta;
@@ -1907,21 +2122,28 @@ public class Principal extends JFrame {
     private javax.swing.JTextField NombreReg;
     private javax.swing.JLabel NombreUsuario;
     private javax.swing.JLabel NombreUsuario1;
+    private javax.swing.JTextField ObtenerCorreo;
+    private javax.swing.JTextField ObtenerFondos;
+    private javax.swing.JTextField ObtenerPassw;
     private javax.swing.JTextField Obteneracoins;
     private javax.swing.JPanel Opciones;
     private javax.swing.JPanel OpcionesUsuario;
     private javax.swing.JPanel OpcionesUsuarioAdmin;
+    private javax.swing.JDialog PagoEl;
     private javax.swing.JLabel PagoElectronico;
     private javax.swing.JPanel PanelBotones;
     private javax.swing.JPanel PanelBotones1;
+    private javax.swing.JPanel PanelBotones2;
     private javax.swing.JPanel PanelDestinos;
     private javax.swing.JPanel PanelEntrada;
     private javax.swing.JPanel PanelLlegadas;
     private javax.swing.JPanel PanelLogin;
     private javax.swing.JPanel PanelOpUser;
+    private javax.swing.JScrollPane PanelPortrait;
     private javax.swing.JPanel PanelPresentacion;
     private javax.swing.JPanel PanelPrincipal;
     private javax.swing.JPanel PanelPrincipal1;
+    private javax.swing.JPanel PanelPrincipal2;
     private javax.swing.JPanel PanelRegistro;
     private javax.swing.JPanel PanelSalidas;
     private javax.swing.JPasswordField PassField;
@@ -1930,6 +2152,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel SalidasB;
     private javax.swing.JLabel Salir;
     private javax.swing.JLabel SalirACoins;
+    private javax.swing.JLabel SalirPE;
     private javax.swing.JScrollPane ScrollAviones;
     private javax.swing.JScrollPane ScrollLLegadas;
     private javax.swing.JScrollPane ScrollSalidas;
@@ -1968,9 +2191,19 @@ public class Principal extends JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+<<<<<<< HEAD
+=======
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+>>>>>>> f42ac7f0fb6c2502c818428a6d458a4aaeab3a54
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1978,13 +2211,16 @@ public class Principal extends JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel labelLLegadas;
     private javax.swing.JLabel lapiz_acoins;
     private javax.swing.JLabel lapiz_apellido;
