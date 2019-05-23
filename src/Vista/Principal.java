@@ -1,4 +1,4 @@
-package Vista;
+﻿package Vista;
 
 import Controlador.Admin;
 import Controlador.Avion;
@@ -2606,8 +2606,6 @@ public class Principal extends JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
