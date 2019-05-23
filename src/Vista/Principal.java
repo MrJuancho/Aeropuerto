@@ -1480,7 +1480,7 @@ public class Principal extends JFrame {
         boolean g;
         do
         {
-            entrada = JOptionPane.showInputDialog("Ingresa tu nuevo nombre: ");
+            entrada = JOptionPane.showInputDialog("Ingresa tu nuevo nombre de usuario: ");
             if(entrada.length() >0)
                 g = true;
             else
@@ -1496,7 +1496,7 @@ public class Principal extends JFrame {
         boolean g;
         do
         {
-            newname = JOptionPane.showInputDialog("Ingresa tu nuevo nombre: ");
+            newname = JOptionPane.showInputDialog("Ingresa tu Nombre: ");
             if(newname.length() >0)
                 g = true;
             else
@@ -1512,7 +1512,7 @@ public class Principal extends JFrame {
         boolean g;
         do
         {
-            newapellido = JOptionPane.showInputDialog("Ingresa tu nuevo nombre: ");
+            newapellido = JOptionPane.showInputDialog("Ingresa tu Apellido: ");
             if(newapellido.length() >0)
                 g = true;
             else
@@ -1528,7 +1528,7 @@ public class Principal extends JFrame {
         boolean g;
         do
         {
-            newpassw = JOptionPane.showInputDialog("Ingresa tu nuevo nombre: ");
+            newpassw = JOptionPane.showInputDialog("Ingresa tu nuevo password: ");
             if(newpassw.length() >0)
                 g = true;
             else
