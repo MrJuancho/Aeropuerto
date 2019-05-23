@@ -50,6 +50,18 @@ public class Principal extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        ACoins = new javax.swing.JDialog();
+        PanelPrincipal1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        IconoSuperior1 = new javax.swing.JLabel();
+        PanelBotones1 = new javax.swing.JPanel();
+        SalirACoins = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        ACoinsdisp = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        BotonRegistrarACoins = new javax.swing.JButton();
         PanelPrincipal = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         IconoSuperior = new javax.swing.JLabel();
@@ -197,6 +209,85 @@ public class Principal extends JFrame {
         PanelDestinos = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jLabel12 = new javax.swing.JLabel();
+
+        ACoins.setUndecorated(true);
+        ACoins.setPreferredSize(new java.awt.Dimension(500, 300));
+
+        PanelPrincipal1.setBackground(new java.awt.Color(25, 118, 210));
+        PanelPrincipal1.setLayout(new java.awt.BorderLayout(40, 15));
+
+        jPanel3.setOpaque(false);
+        jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 7, 5));
+
+        IconoSuperior1.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        IconoSuperior1.setForeground(new java.awt.Color(255, 255, 255));
+        IconoSuperior1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/apexFlightsIcon.png"))); // NOI18N
+        IconoSuperior1.setText("Agregar ACoins");
+        IconoSuperior1.setAlignmentX(3.0F);
+        IconoSuperior1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        IconoSuperior1.setFocusable(false);
+        IconoSuperior1.setIconTextGap(3);
+        jPanel3.add(IconoSuperior1);
+
+        PanelPrincipal1.add(jPanel3, java.awt.BorderLayout.WEST);
+
+        PanelBotones1.setBackground(new java.awt.Color(25, 118, 210));
+
+        SalirACoins.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_clear_white_24dp.png"))); // NOI18N
+        SalirACoins.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SalirACoins.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalirACoinsMouseClicked(evt);
+            }
+        });
+        PanelBotones1.add(SalirACoins);
+
+        PanelPrincipal1.add(PanelBotones1, java.awt.BorderLayout.LINE_END);
+
+        ACoins.getContentPane().add(PanelPrincipal1, java.awt.BorderLayout.PAGE_START);
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel15.setText("Ingresa tu codigo: ");
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 160, -1));
+
+        jLabel16.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel16.setText("Tus ACoins actuales");
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 190, -1));
+
+        ACoinsdisp.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        ACoinsdisp.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel4.add(ACoinsdisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 100, 20));
+
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 180, -1));
+
+        BotonRegistrarACoins.setBackground(new java.awt.Color(124, 77, 255));
+        BotonRegistrarACoins.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonRegistrarACoins.setForeground(new java.awt.Color(255, 255, 255));
+        BotonRegistrarACoins.setText("Canjear");
+        BotonRegistrarACoins.setBorder(null);
+        BotonRegistrarACoins.setBorderPainted(false);
+        BotonRegistrarACoins.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonRegistrarACoins.setFocusable(false);
+        BotonRegistrarACoins.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonRegistrarACoinsMouseClicked(evt);
+            }
+        });
+        BotonRegistrarACoins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRegistrarACoinsActionPerformed(evt);
+            }
+        });
+        jPanel4.add(BotonRegistrarACoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 130, -1));
+
+        ACoins.getContentPane().add(jPanel4, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("ApexFlights");
@@ -1058,7 +1149,12 @@ public class Principal extends JFrame {
         Opciones.add(lapiz_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, -1, -1));
 
         lapiz_acoins.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        Opciones.add(lapiz_acoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 550, -1, -1));
+        lapiz_acoins.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lapiz_acoinsMouseClicked(evt);
+            }
+        });
+        Opciones.add(lapiz_acoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, -1, -1));
 
         lapiz_mail.setBackground(new java.awt.Color(0, 0, 0));
         lapiz_mail.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
@@ -1107,7 +1203,7 @@ public class Principal extends JFrame {
         Opciones.add(lapiz_passw, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, -1));
 
         lapiz_inforcard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_mode_edit_black_24dp.png"))); // NOI18N
-        Opciones.add(lapiz_inforcard, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, -1, -1));
+        Opciones.add(lapiz_inforcard, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 550, -1, -1));
 
         TituloEditar.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
         TituloEditar.setForeground(new java.awt.Color(51, 51, 51));
@@ -1620,6 +1716,27 @@ public class Principal extends JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonComprarVueloMouseClicked
 
+    private void SalirACoinsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirACoinsMouseClicked
+        ACoins.setVisible(false);
+        ACoins.dispose();
+    }//GEN-LAST:event_SalirACoinsMouseClicked
+
+    private void lapiz_acoinsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_acoinsMouseClicked
+        ACoins.setVisible(true);
+        ACoins.setBounds(0, 0, 400, 200);
+        ACoins.setLocationRelativeTo(null);
+        ACoinsdisp.setText(String.valueOf(actual.getACoins()));
+    }//GEN-LAST:event_lapiz_acoinsMouseClicked
+
+    private void BotonRegistrarACoinsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonRegistrarACoinsMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonRegistrarACoinsMouseClicked
+
+    private void BotonRegistrarACoinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistrarACoinsActionPerformed
+        
+        
+    }//GEN-LAST:event_BotonRegistrarACoinsActionPerformed
+
 
 
     private void myComponents(){
@@ -1685,6 +1802,8 @@ public class Principal extends JFrame {
              jl.setIcon(new ImageIcon(dimg));
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog ACoins;
+    private javax.swing.JLabel ACoinsdisp;
     private javax.swing.JLabel Acoins1;
     private javax.swing.JLabel AdminName2;
     private javax.swing.JPanel AdminPanel;
@@ -1695,6 +1814,7 @@ public class Principal extends JFrame {
     private javax.swing.JButton BotonComprarVuelo;
     private javax.swing.JButton BotonLogin;
     private javax.swing.JButton BotonRegistrar;
+    private javax.swing.JButton BotonRegistrarACoins;
     private javax.swing.JButton BotonRegistrarAvion;
     private javax.swing.JButton BotonRegistrarLLegada;
     private javax.swing.JButton BotonRegistrarSalidas;
@@ -1721,6 +1841,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel FondoOpciones;
     private javax.swing.JLabel FondouserSalidas;
     private javax.swing.JLabel IconoSuperior;
+    private javax.swing.JLabel IconoSuperior1;
     private javax.swing.JPanel Imagen;
     private javax.swing.JLabel ImagenBienvenidaAdmin;
     private javax.swing.JLabel Informaciondetarjeta;
@@ -1745,6 +1866,7 @@ public class Principal extends JFrame {
     private javax.swing.JPanel OpcionesUsuarioAdmin;
     private javax.swing.JLabel PagoElectronico;
     private javax.swing.JPanel PanelBotones;
+    private javax.swing.JPanel PanelBotones1;
     private javax.swing.JPanel PanelDestinos;
     private javax.swing.JPanel PanelEntrada;
     private javax.swing.JPanel PanelLlegadas;
@@ -1752,6 +1874,7 @@ public class Principal extends JFrame {
     private javax.swing.JPanel PanelOpUser;
     private javax.swing.JPanel PanelPresentacion;
     private javax.swing.JPanel PanelPrincipal;
+    private javax.swing.JPanel PanelPrincipal1;
     private javax.swing.JPanel PanelRegistro;
     private javax.swing.JPanel PanelSalidas;
     private javax.swing.JPasswordField PassField;
@@ -1759,6 +1882,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel Registro;
     private javax.swing.JLabel SalidasB;
     private javax.swing.JLabel Salir;
+    private javax.swing.JLabel SalirACoins;
     private javax.swing.JScrollPane ScrollAviones;
     private javax.swing.JScrollPane ScrollLLegadas;
     private javax.swing.JScrollPane ScrollSalidas;
@@ -1797,6 +1921,8 @@ public class Principal extends JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1806,10 +1932,13 @@ public class Principal extends JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel labelLLegadas;
     private javax.swing.JLabel lapiz_acoins;
     private javax.swing.JLabel lapiz_apellido;
