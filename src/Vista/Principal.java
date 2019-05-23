@@ -109,49 +109,6 @@ public class Principal extends JFrame {
         TablaAviones = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         fondoEditA = new javax.swing.JLabel();
-        PanelLogin = new javax.swing.JPanel();
-        PanelRegistro = new javax.swing.JPanel();
-        separadorPassR = new javax.swing.JSeparator();
-        separadorNombreR = new javax.swing.JSeparator();
-        separadorApellidosR = new javax.swing.JSeparator();
-        separadorMail = new javax.swing.JSeparator();
-        SeparadorUsername = new javax.swing.JSeparator();
-        TextoPass2 = new javax.swing.JLabel();
-        TextoPass1 = new javax.swing.JLabel();
-        TextoRegistro = new javax.swing.JLabel();
-        BotonRegresar = new javax.swing.JLabel();
-        TextoPass3 = new javax.swing.JLabel();
-        TextoPass4 = new javax.swing.JLabel();
-        TextoPass5 = new javax.swing.JLabel();
-        PassReg = new javax.swing.JPasswordField();
-        UserReg = new javax.swing.JTextField();
-        NombreReg = new javax.swing.JTextField();
-        ApellidosReg = new javax.swing.JTextField();
-        MailReg = new javax.swing.JTextField();
-        BotonRegistrar = new javax.swing.JButton();
-        ErrorRegN = new javax.swing.JLabel();
-        ErrorRegPass = new javax.swing.JLabel();
-        ErrorRegU = new javax.swing.JLabel();
-        ErrorRegC = new javax.swing.JLabel();
-        ErrorRegA = new javax.swing.JLabel();
-        PanelEntrada = new javax.swing.JPanel();
-        TextoLogin1 = new javax.swing.JLabel();
-        TextoPass = new javax.swing.JLabel();
-        separadorPassword = new javax.swing.JSeparator();
-        TextoUser = new javax.swing.JLabel();
-        separadorNombre = new javax.swing.JSeparator();
-        BotonLogin = new javax.swing.JButton();
-        Registro = new javax.swing.JLabel();
-        TextoLogin2 = new javax.swing.JLabel();
-        UserField = new javax.swing.JTextField();
-        PassField = new javax.swing.JPasswordField();
-        ErrorPass = new javax.swing.JLabel();
-        ErrorName = new javax.swing.JLabel();
-        PanelPresentacion = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         UsuarioPanel = new javax.swing.JPanel();
         ToolBarUser = new javax.swing.JPanel();
         Navegacion = new javax.swing.JPanel();
@@ -163,6 +120,7 @@ public class Principal extends JFrame {
         ApexCoinsImg = new javax.swing.JLabel();
         nombreUser = new javax.swing.JLabel();
         nombreAdmin = new javax.swing.JLabel();
+        CerrarSesionUser = new javax.swing.JLabel();
         PanelOpUser = new javax.swing.JPanel();
         Imagen = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -209,6 +167,49 @@ public class Principal extends JFrame {
         PanelDestinos = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jLabel12 = new javax.swing.JLabel();
+        PanelLogin = new javax.swing.JPanel();
+        PanelRegistro = new javax.swing.JPanel();
+        separadorPassR = new javax.swing.JSeparator();
+        separadorNombreR = new javax.swing.JSeparator();
+        separadorApellidosR = new javax.swing.JSeparator();
+        separadorMail = new javax.swing.JSeparator();
+        SeparadorUsername = new javax.swing.JSeparator();
+        TextoPass2 = new javax.swing.JLabel();
+        TextoPass1 = new javax.swing.JLabel();
+        TextoRegistro = new javax.swing.JLabel();
+        BotonRegresar = new javax.swing.JLabel();
+        TextoPass3 = new javax.swing.JLabel();
+        TextoPass4 = new javax.swing.JLabel();
+        TextoPass5 = new javax.swing.JLabel();
+        PassReg = new javax.swing.JPasswordField();
+        UserReg = new javax.swing.JTextField();
+        NombreReg = new javax.swing.JTextField();
+        ApellidosReg = new javax.swing.JTextField();
+        MailReg = new javax.swing.JTextField();
+        BotonRegistrar = new javax.swing.JButton();
+        ErrorRegN = new javax.swing.JLabel();
+        ErrorRegPass = new javax.swing.JLabel();
+        ErrorRegU = new javax.swing.JLabel();
+        ErrorRegC = new javax.swing.JLabel();
+        ErrorRegA = new javax.swing.JLabel();
+        PanelEntrada = new javax.swing.JPanel();
+        TextoLogin1 = new javax.swing.JLabel();
+        TextoPass = new javax.swing.JLabel();
+        separadorPassword = new javax.swing.JSeparator();
+        TextoUser = new javax.swing.JLabel();
+        separadorNombre = new javax.swing.JSeparator();
+        BotonLogin = new javax.swing.JButton();
+        Registro = new javax.swing.JLabel();
+        TextoLogin2 = new javax.swing.JLabel();
+        UserField = new javax.swing.JTextField();
+        PassField = new javax.swing.JPasswordField();
+        ErrorPass = new javax.swing.JLabel();
+        ErrorName = new javax.swing.JLabel();
+        PanelPresentacion = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         ACoins.setUndecorated(true);
         ACoins.setPreferredSize(new java.awt.Dimension(500, 300));
@@ -710,260 +711,6 @@ public class Principal extends JFrame {
 
         getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
 
-        PanelLogin.setBackground(new java.awt.Color(33, 150, 243));
-        PanelLogin.setLayout(new java.awt.BorderLayout());
-
-        PanelRegistro.setBackground(new java.awt.Color(33, 150, 243));
-        PanelRegistro.setForeground(new java.awt.Color(33, 150, 243));
-        PanelRegistro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        separadorPassR.setBackground(new java.awt.Color(33, 150, 243));
-        separadorPassR.setForeground(new java.awt.Color(255, 255, 255));
-        PanelRegistro.add(separadorPassR, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 420, 10));
-
-        separadorNombreR.setBackground(new java.awt.Color(33, 150, 243));
-        separadorNombreR.setForeground(new java.awt.Color(255, 255, 255));
-        PanelRegistro.add(separadorNombreR, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 420, 10));
-
-        separadorApellidosR.setBackground(new java.awt.Color(33, 150, 243));
-        separadorApellidosR.setForeground(new java.awt.Color(255, 255, 255));
-        PanelRegistro.add(separadorApellidosR, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 420, 10));
-
-        separadorMail.setBackground(new java.awt.Color(33, 150, 243));
-        separadorMail.setForeground(new java.awt.Color(255, 255, 255));
-        PanelRegistro.add(separadorMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 420, 10));
-
-        SeparadorUsername.setBackground(new java.awt.Color(33, 150, 243));
-        SeparadorUsername.setForeground(new java.awt.Color(255, 255, 255));
-        PanelRegistro.add(SeparadorUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 420, 10));
-
-        TextoPass2.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
-        TextoPass2.setForeground(new java.awt.Color(255, 255, 255));
-        TextoPass2.setText("Nombre:");
-        PanelRegistro.add(TextoPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
-
-        TextoPass1.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
-        TextoPass1.setForeground(new java.awt.Color(255, 255, 255));
-        TextoPass1.setText("Contraseña:");
-        PanelRegistro.add(TextoPass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, -1, -1));
-
-        TextoRegistro.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
-        TextoRegistro.setForeground(new java.awt.Color(255, 255, 255));
-        TextoRegistro.setText("Registrate");
-        PanelRegistro.add(TextoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
-
-        BotonRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_label_white_24dp.png"))); // NOI18N
-        BotonRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonRegresarMouseClicked(evt);
-            }
-        });
-        PanelRegistro.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, -1, -1));
-
-        TextoPass3.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
-        TextoPass3.setForeground(new java.awt.Color(255, 255, 255));
-        TextoPass3.setText("Apellidos:");
-        PanelRegistro.add(TextoPass3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
-
-        TextoPass4.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
-        TextoPass4.setForeground(new java.awt.Color(255, 255, 255));
-        TextoPass4.setText("Correo:");
-        PanelRegistro.add(TextoPass4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
-
-        TextoPass5.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
-        TextoPass5.setForeground(new java.awt.Color(255, 255, 255));
-        TextoPass5.setText("Nombre de usuario:");
-        PanelRegistro.add(TextoPass5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
-
-        PassReg.setBackground(new java.awt.Color(33, 150, 243));
-        PassReg.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
-        PassReg.setForeground(new java.awt.Color(255, 255, 255));
-        PassReg.setBorder(null);
-        PassReg.setCaretColor(new java.awt.Color(255, 255, 255));
-        PassReg.setOpaque(false);
-        PanelRegistro.add(PassReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 420, 30));
-
-        UserReg.setBackground(new java.awt.Color(33, 150, 243));
-        UserReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
-        UserReg.setForeground(new java.awt.Color(255, 255, 255));
-        UserReg.setBorder(null);
-        UserReg.setCaretColor(new java.awt.Color(255, 255, 255));
-        UserReg.setOpaque(false);
-        PanelRegistro.add(UserReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 420, 30));
-
-        NombreReg.setBackground(new java.awt.Color(33, 150, 243));
-        NombreReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
-        NombreReg.setForeground(new java.awt.Color(255, 255, 255));
-        NombreReg.setBorder(null);
-        NombreReg.setCaretColor(new java.awt.Color(255, 255, 255));
-        NombreReg.setOpaque(false);
-        PanelRegistro.add(NombreReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 420, 30));
-
-        ApellidosReg.setBackground(new java.awt.Color(33, 150, 243));
-        ApellidosReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
-        ApellidosReg.setForeground(new java.awt.Color(255, 255, 255));
-        ApellidosReg.setBorder(null);
-        ApellidosReg.setCaretColor(new java.awt.Color(255, 255, 255));
-        ApellidosReg.setOpaque(false);
-        PanelRegistro.add(ApellidosReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 420, 30));
-
-        MailReg.setBackground(new java.awt.Color(33, 150, 243));
-        MailReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
-        MailReg.setForeground(new java.awt.Color(255, 255, 255));
-        MailReg.setBorder(null);
-        MailReg.setCaretColor(new java.awt.Color(255, 255, 255));
-        MailReg.setOpaque(false);
-        PanelRegistro.add(MailReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 420, 30));
-
-        BotonRegistrar.setBackground(new java.awt.Color(124, 77, 255));
-        BotonRegistrar.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
-        BotonRegistrar.setForeground(new java.awt.Color(255, 255, 255));
-        BotonRegistrar.setText("Registrar");
-        BotonRegistrar.setBorder(null);
-        BotonRegistrar.setBorderPainted(false);
-        BotonRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonRegistrar.setFocusable(false);
-        BotonRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonRegistrarMouseClicked(evt);
-            }
-        });
-        PanelRegistro.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 590, 420, 40));
-
-        ErrorRegN.setForeground(new java.awt.Color(239, 83, 80));
-        PanelRegistro.add(ErrorRegN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 140, -1));
-
-        ErrorRegPass.setForeground(new java.awt.Color(239, 83, 80));
-        PanelRegistro.add(ErrorRegPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 160, 10));
-
-        ErrorRegU.setForeground(new java.awt.Color(239, 83, 80));
-        PanelRegistro.add(ErrorRegU, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, 160, -1));
-
-        ErrorRegC.setForeground(new java.awt.Color(239, 83, 80));
-        PanelRegistro.add(ErrorRegC, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 190, -1));
-
-        ErrorRegA.setForeground(new java.awt.Color(239, 83, 80));
-        PanelRegistro.add(ErrorRegA, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 170, -1));
-
-        PanelLogin.add(PanelRegistro, java.awt.BorderLayout.CENTER);
-
-        PanelEntrada.setBackground(new java.awt.Color(255, 255, 255));
-        PanelEntrada.setOpaque(false);
-        PanelEntrada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        TextoLogin1.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
-        TextoLogin1.setForeground(new java.awt.Color(255, 255, 255));
-        TextoLogin1.setText("Inicia Sesion");
-        PanelEntrada.add(TextoLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
-
-        TextoPass.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
-        TextoPass.setForeground(new java.awt.Color(255, 255, 255));
-        TextoPass.setText("Contraseña:");
-        PanelEntrada.add(TextoPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, -1, -1));
-
-        separadorPassword.setBackground(new java.awt.Color(255, 255, 255));
-        separadorPassword.setForeground(new java.awt.Color(255, 255, 255));
-        separadorPassword.setOpaque(true);
-        PanelEntrada.add(separadorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 388, 420, -1));
-
-        TextoUser.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
-        TextoUser.setForeground(new java.awt.Color(255, 255, 255));
-        TextoUser.setText("Nombre de Usuario:");
-        PanelEntrada.add(TextoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
-
-        separadorNombre.setBackground(new java.awt.Color(255, 255, 255));
-        separadorNombre.setForeground(new java.awt.Color(255, 255, 255));
-        separadorNombre.setOpaque(true);
-        PanelEntrada.add(separadorNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 288, 420, -1));
-
-        BotonLogin.setBackground(new java.awt.Color(124, 77, 255));
-        BotonLogin.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
-        BotonLogin.setForeground(new java.awt.Color(255, 255, 255));
-        BotonLogin.setText("Acceder");
-        BotonLogin.setBorder(null);
-        BotonLogin.setBorderPainted(false);
-        BotonLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonLogin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonLoginMouseClicked(evt);
-            }
-        });
-        PanelEntrada.add(BotonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 420, 40));
-
-        Registro.setFont(new java.awt.Font("Montserrat", 3, 24)); // NOI18N
-        Registro.setForeground(new java.awt.Color(124, 77, 255));
-        Registro.setText("Regitrate ahora");
-        Registro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Registro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RegistroMouseClicked(evt);
-            }
-        });
-        PanelEntrada.add(Registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 510, -1, -1));
-
-        TextoLogin2.setFont(new java.awt.Font("Montserrat Alternates", 2, 18)); // NOI18N
-        TextoLogin2.setForeground(new java.awt.Color(255, 255, 255));
-        TextoLogin2.setText("¿No tienes una cuenta?");
-        PanelEntrada.add(TextoLogin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, -1, -1));
-
-        UserField.setBackground(new java.awt.Color(33, 150, 243));
-        UserField.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
-        UserField.setForeground(new java.awt.Color(255, 255, 255));
-        UserField.setToolTipText("");
-        UserField.setActionCommand("<Not Set>");
-        UserField.setBorder(null);
-        UserField.setCaretColor(new java.awt.Color(255, 255, 255));
-        UserField.setOpaque(false);
-        UserField.setSelectedTextColor(new java.awt.Color(255, 255, 255));
-        PanelEntrada.add(UserField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 420, 30));
-
-        PassField.setBackground(new java.awt.Color(33, 150, 243));
-        PassField.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
-        PassField.setForeground(new java.awt.Color(255, 255, 255));
-        PassField.setBorder(null);
-        PassField.setCaretColor(new java.awt.Color(255, 255, 255));
-        PassField.setOpaque(false);
-        PanelEntrada.add(PassField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 420, 30));
-
-        ErrorPass.setBackground(new java.awt.Color(239, 83, 80));
-        ErrorPass.setFont(new java.awt.Font("Noto Sans", 1, 12)); // NOI18N
-        ErrorPass.setForeground(new java.awt.Color(239, 83, 80));
-        PanelEntrada.add(ErrorPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
-
-        ErrorName.setBackground(new java.awt.Color(239, 83, 80));
-        ErrorName.setFont(new java.awt.Font("Noto Sans", 1, 12)); // NOI18N
-        ErrorName.setForeground(new java.awt.Color(239, 83, 80));
-        PanelEntrada.add(ErrorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
-
-        PanelLogin.add(PanelEntrada, java.awt.BorderLayout.CENTER);
-
-        PanelPresentacion.setOpaque(false);
-        PanelPresentacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/apexFlights2.png"))); // NOI18N
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        PanelPresentacion.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Apex Flights");
-        PanelPresentacion.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
-
-        jLabel8.setFont(new java.awt.Font("Montserrat", 3, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("\"Feel top of the Sky\"");
-        PanelPresentacion.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
-
-        jLabel4.setMaximumSize(new java.awt.Dimension(640, 688));
-        jLabel4.setMinimumSize(new java.awt.Dimension(640, 688));
-        jLabel4.setPreferredSize(new java.awt.Dimension(640, 688));
-        PanelPresentacion.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 686));
-
-        PanelLogin.add(PanelPresentacion, java.awt.BorderLayout.LINE_START);
-
-        getContentPane().add(PanelLogin, java.awt.BorderLayout.CENTER);
-
         UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
         UsuarioPanel.setLayout(new java.awt.BorderLayout());
 
@@ -1017,7 +764,6 @@ public class Principal extends JFrame {
 
         ApexCoins.setFont(new java.awt.Font("Montserrat", 3, 18)); // NOI18N
         ApexCoins.setForeground(new java.awt.Color(255, 255, 255));
-        ApexCoins.setText("0");
         OpcionesUsuario.add(ApexCoins);
 
         ApexCoinsImg.setBackground(new java.awt.Color(255, 153, 153));
@@ -1029,6 +775,7 @@ public class Principal extends JFrame {
         OpcionesUsuario.add(nombreUser);
 
         nombreAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_account_circle_white_24dp.png"))); // NOI18N
+        nombreAdmin.setToolTipText("Opciones");
         nombreAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nombreAdmin.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         nombreAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1037,6 +784,15 @@ public class Principal extends JFrame {
             }
         });
         OpcionesUsuario.add(nombreAdmin);
+
+        CerrarSesionUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_exit_to_app_white_24dp.png"))); // NOI18N
+        CerrarSesionUser.setToolTipText("Cerrar Sesion");
+        CerrarSesionUser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CerrarSesionUserMouseClicked(evt);
+            }
+        });
+        OpcionesUsuario.add(CerrarSesionUser);
 
         ToolBarUser.add(OpcionesUsuario, java.awt.BorderLayout.LINE_END);
 
@@ -1341,6 +1097,260 @@ public class Principal extends JFrame {
 
         getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
 
+        PanelLogin.setBackground(new java.awt.Color(33, 150, 243));
+        PanelLogin.setLayout(new java.awt.BorderLayout());
+
+        PanelRegistro.setBackground(new java.awt.Color(33, 150, 243));
+        PanelRegistro.setForeground(new java.awt.Color(33, 150, 243));
+        PanelRegistro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        separadorPassR.setBackground(new java.awt.Color(33, 150, 243));
+        separadorPassR.setForeground(new java.awt.Color(255, 255, 255));
+        PanelRegistro.add(separadorPassR, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 420, 10));
+
+        separadorNombreR.setBackground(new java.awt.Color(33, 150, 243));
+        separadorNombreR.setForeground(new java.awt.Color(255, 255, 255));
+        PanelRegistro.add(separadorNombreR, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 420, 10));
+
+        separadorApellidosR.setBackground(new java.awt.Color(33, 150, 243));
+        separadorApellidosR.setForeground(new java.awt.Color(255, 255, 255));
+        PanelRegistro.add(separadorApellidosR, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 420, 10));
+
+        separadorMail.setBackground(new java.awt.Color(33, 150, 243));
+        separadorMail.setForeground(new java.awt.Color(255, 255, 255));
+        PanelRegistro.add(separadorMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 420, 10));
+
+        SeparadorUsername.setBackground(new java.awt.Color(33, 150, 243));
+        SeparadorUsername.setForeground(new java.awt.Color(255, 255, 255));
+        PanelRegistro.add(SeparadorUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 420, 10));
+
+        TextoPass2.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
+        TextoPass2.setForeground(new java.awt.Color(255, 255, 255));
+        TextoPass2.setText("Nombre:");
+        PanelRegistro.add(TextoPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
+
+        TextoPass1.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
+        TextoPass1.setForeground(new java.awt.Color(255, 255, 255));
+        TextoPass1.setText("Contraseña:");
+        PanelRegistro.add(TextoPass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, -1, -1));
+
+        TextoRegistro.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
+        TextoRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        TextoRegistro.setText("Registrate");
+        PanelRegistro.add(TextoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
+
+        BotonRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-xhdpi/ic_label_white_24dp.png"))); // NOI18N
+        BotonRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonRegresarMouseClicked(evt);
+            }
+        });
+        PanelRegistro.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, -1, -1));
+
+        TextoPass3.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
+        TextoPass3.setForeground(new java.awt.Color(255, 255, 255));
+        TextoPass3.setText("Apellidos:");
+        PanelRegistro.add(TextoPass3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
+
+        TextoPass4.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
+        TextoPass4.setForeground(new java.awt.Color(255, 255, 255));
+        TextoPass4.setText("Correo:");
+        PanelRegistro.add(TextoPass4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
+
+        TextoPass5.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
+        TextoPass5.setForeground(new java.awt.Color(255, 255, 255));
+        TextoPass5.setText("Nombre de usuario:");
+        PanelRegistro.add(TextoPass5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
+
+        PassReg.setBackground(new java.awt.Color(33, 150, 243));
+        PassReg.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
+        PassReg.setForeground(new java.awt.Color(255, 255, 255));
+        PassReg.setBorder(null);
+        PassReg.setCaretColor(new java.awt.Color(255, 255, 255));
+        PassReg.setOpaque(false);
+        PanelRegistro.add(PassReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 420, 30));
+
+        UserReg.setBackground(new java.awt.Color(33, 150, 243));
+        UserReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        UserReg.setForeground(new java.awt.Color(255, 255, 255));
+        UserReg.setBorder(null);
+        UserReg.setCaretColor(new java.awt.Color(255, 255, 255));
+        UserReg.setOpaque(false);
+        PanelRegistro.add(UserReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 420, 30));
+
+        NombreReg.setBackground(new java.awt.Color(33, 150, 243));
+        NombreReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        NombreReg.setForeground(new java.awt.Color(255, 255, 255));
+        NombreReg.setBorder(null);
+        NombreReg.setCaretColor(new java.awt.Color(255, 255, 255));
+        NombreReg.setOpaque(false);
+        PanelRegistro.add(NombreReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 420, 30));
+
+        ApellidosReg.setBackground(new java.awt.Color(33, 150, 243));
+        ApellidosReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        ApellidosReg.setForeground(new java.awt.Color(255, 255, 255));
+        ApellidosReg.setBorder(null);
+        ApellidosReg.setCaretColor(new java.awt.Color(255, 255, 255));
+        ApellidosReg.setOpaque(false);
+        PanelRegistro.add(ApellidosReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 420, 30));
+
+        MailReg.setBackground(new java.awt.Color(33, 150, 243));
+        MailReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        MailReg.setForeground(new java.awt.Color(255, 255, 255));
+        MailReg.setBorder(null);
+        MailReg.setCaretColor(new java.awt.Color(255, 255, 255));
+        MailReg.setOpaque(false);
+        PanelRegistro.add(MailReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 420, 30));
+
+        BotonRegistrar.setBackground(new java.awt.Color(124, 77, 255));
+        BotonRegistrar.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        BotonRegistrar.setText("Registrar");
+        BotonRegistrar.setBorder(null);
+        BotonRegistrar.setBorderPainted(false);
+        BotonRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonRegistrar.setFocusable(false);
+        BotonRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonRegistrarMouseClicked(evt);
+            }
+        });
+        PanelRegistro.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 590, 420, 40));
+
+        ErrorRegN.setForeground(new java.awt.Color(239, 83, 80));
+        PanelRegistro.add(ErrorRegN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 140, -1));
+
+        ErrorRegPass.setForeground(new java.awt.Color(239, 83, 80));
+        PanelRegistro.add(ErrorRegPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 160, 10));
+
+        ErrorRegU.setForeground(new java.awt.Color(239, 83, 80));
+        PanelRegistro.add(ErrorRegU, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, 160, -1));
+
+        ErrorRegC.setForeground(new java.awt.Color(239, 83, 80));
+        PanelRegistro.add(ErrorRegC, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 190, -1));
+
+        ErrorRegA.setForeground(new java.awt.Color(239, 83, 80));
+        PanelRegistro.add(ErrorRegA, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 170, -1));
+
+        PanelLogin.add(PanelRegistro, java.awt.BorderLayout.CENTER);
+
+        PanelEntrada.setBackground(new java.awt.Color(255, 255, 255));
+        PanelEntrada.setOpaque(false);
+        PanelEntrada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TextoLogin1.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
+        TextoLogin1.setForeground(new java.awt.Color(255, 255, 255));
+        TextoLogin1.setText("Inicia Sesion");
+        PanelEntrada.add(TextoLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
+
+        TextoPass.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
+        TextoPass.setForeground(new java.awt.Color(255, 255, 255));
+        TextoPass.setText("Contraseña:");
+        PanelEntrada.add(TextoPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, -1, -1));
+
+        separadorPassword.setBackground(new java.awt.Color(255, 255, 255));
+        separadorPassword.setForeground(new java.awt.Color(255, 255, 255));
+        separadorPassword.setOpaque(true);
+        PanelEntrada.add(separadorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 388, 420, -1));
+
+        TextoUser.setFont(new java.awt.Font("Montserrat", 0, 28)); // NOI18N
+        TextoUser.setForeground(new java.awt.Color(255, 255, 255));
+        TextoUser.setText("Nombre de Usuario:");
+        PanelEntrada.add(TextoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
+
+        separadorNombre.setBackground(new java.awt.Color(255, 255, 255));
+        separadorNombre.setForeground(new java.awt.Color(255, 255, 255));
+        separadorNombre.setOpaque(true);
+        PanelEntrada.add(separadorNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 288, 420, -1));
+
+        BotonLogin.setBackground(new java.awt.Color(124, 77, 255));
+        BotonLogin.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonLogin.setForeground(new java.awt.Color(255, 255, 255));
+        BotonLogin.setText("Acceder");
+        BotonLogin.setBorder(null);
+        BotonLogin.setBorderPainted(false);
+        BotonLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonLoginMouseClicked(evt);
+            }
+        });
+        PanelEntrada.add(BotonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 420, 40));
+
+        Registro.setFont(new java.awt.Font("Montserrat", 3, 24)); // NOI18N
+        Registro.setForeground(new java.awt.Color(124, 77, 255));
+        Registro.setText("Regitrate ahora");
+        Registro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Registro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegistroMouseClicked(evt);
+            }
+        });
+        PanelEntrada.add(Registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 510, -1, -1));
+
+        TextoLogin2.setFont(new java.awt.Font("Montserrat Alternates", 2, 18)); // NOI18N
+        TextoLogin2.setForeground(new java.awt.Color(255, 255, 255));
+        TextoLogin2.setText("¿No tienes una cuenta?");
+        PanelEntrada.add(TextoLogin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, -1, -1));
+
+        UserField.setBackground(new java.awt.Color(33, 150, 243));
+        UserField.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        UserField.setForeground(new java.awt.Color(255, 255, 255));
+        UserField.setToolTipText("");
+        UserField.setActionCommand("<Not Set>");
+        UserField.setBorder(null);
+        UserField.setCaretColor(new java.awt.Color(255, 255, 255));
+        UserField.setOpaque(false);
+        UserField.setSelectedTextColor(new java.awt.Color(255, 255, 255));
+        PanelEntrada.add(UserField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 420, 30));
+
+        PassField.setBackground(new java.awt.Color(33, 150, 243));
+        PassField.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
+        PassField.setForeground(new java.awt.Color(255, 255, 255));
+        PassField.setBorder(null);
+        PassField.setCaretColor(new java.awt.Color(255, 255, 255));
+        PassField.setOpaque(false);
+        PanelEntrada.add(PassField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 420, 30));
+
+        ErrorPass.setBackground(new java.awt.Color(239, 83, 80));
+        ErrorPass.setFont(new java.awt.Font("Noto Sans", 1, 12)); // NOI18N
+        ErrorPass.setForeground(new java.awt.Color(239, 83, 80));
+        PanelEntrada.add(ErrorPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
+
+        ErrorName.setBackground(new java.awt.Color(239, 83, 80));
+        ErrorName.setFont(new java.awt.Font("Noto Sans", 1, 12)); // NOI18N
+        ErrorName.setForeground(new java.awt.Color(239, 83, 80));
+        PanelEntrada.add(ErrorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
+
+        PanelLogin.add(PanelEntrada, java.awt.BorderLayout.CENTER);
+
+        PanelPresentacion.setOpaque(false);
+        PanelPresentacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/apexFlights2.png"))); // NOI18N
+        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        PanelPresentacion.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Apex Flights");
+        PanelPresentacion.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Montserrat", 3, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("\"Feel top of the Sky\"");
+        PanelPresentacion.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
+
+        jLabel4.setMaximumSize(new java.awt.Dimension(640, 688));
+        jLabel4.setMinimumSize(new java.awt.Dimension(640, 688));
+        jLabel4.setPreferredSize(new java.awt.Dimension(640, 688));
+        PanelPresentacion.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 686));
+
+        PanelLogin.add(PanelPresentacion, java.awt.BorderLayout.LINE_START);
+
+        getContentPane().add(PanelLogin, java.awt.BorderLayout.CENTER);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1512,6 +1522,14 @@ public class Principal extends JFrame {
         if(!registrado.getNombre().equals("") && !registrado.getApellido().equals("") && !registrado.getMail().equals("") 
                 && !registrado.getUserName().equals("") && !registrado.getPassword().equals("")){
             registrado.setFileUser(usuarios);
+            JOptionPane.showMessageDialog(null,"El Usuario se ha registrado con Exito");
+            PanelLogin.remove(PanelRegistro);
+            PanelLogin.repaint();
+            PanelLogin.revalidate();
+
+            PanelLogin.add(PanelEntrada,BorderLayout.CENTER);
+            PanelLogin.repaint();
+            PanelLogin.revalidate();
         }else{
             System.out.println("Faltan Datos");
         }
@@ -1737,6 +1755,23 @@ public class Principal extends JFrame {
         
     }//GEN-LAST:event_BotonRegistrarACoinsActionPerformed
 
+    private void CerrarSesionUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionUserMouseClicked
+        int opcion = JOptionPane.showConfirmDialog(null, "Estas a punto de Cerrar Sesion...","Saliendo?",JOptionPane.YES_NO_OPTION);
+        if(opcion == JOptionPane.YES_OPTION){
+        actual = null;
+        remove(UsuarioPanel);
+        repaint();
+        revalidate();
+
+        add(PanelLogin,BorderLayout.CENTER);
+        repaint();
+        revalidate();
+        }else{
+            JOptionPane.showMessageDialog(null,"Perfecto Decidiste Quedarte");
+        }
+    }//GEN-LAST:event_CerrarSesionUserMouseClicked
+
+
 
 
     private void myComponents(){
@@ -1819,6 +1854,7 @@ public class Principal extends JFrame {
     private javax.swing.JButton BotonRegistrarLLegada;
     private javax.swing.JButton BotonRegistrarSalidas;
     private javax.swing.JLabel BotonRegresar;
+    private javax.swing.JLabel CerrarSesionUser;
     private javax.swing.JLabel Contraseña;
     private javax.swing.JLabel Contraseña1;
     private javax.swing.JLabel DestinosB;
