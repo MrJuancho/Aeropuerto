@@ -60,8 +60,8 @@ public class Principal extends JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         ACoinsdisp = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        BotonRegistrarACoins = new javax.swing.JButton();
+        Obteneracoins = new javax.swing.JTextField();
+        BotonCanjearACoins = new javax.swing.JButton();
         PanelPrincipal = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         IconoSuperior = new javax.swing.JLabel();
@@ -264,29 +264,29 @@ public class Principal extends JFrame {
         ACoinsdisp.setForeground(new java.awt.Color(51, 51, 51));
         jPanel4.add(ACoinsdisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 100, 20));
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
-        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 180, -1));
+        Obteneracoins.setBackground(new java.awt.Color(255, 255, 255));
+        Obteneracoins.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel4.add(Obteneracoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 180, -1));
 
-        BotonRegistrarACoins.setBackground(new java.awt.Color(124, 77, 255));
-        BotonRegistrarACoins.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
-        BotonRegistrarACoins.setForeground(new java.awt.Color(255, 255, 255));
-        BotonRegistrarACoins.setText("Canjear");
-        BotonRegistrarACoins.setBorder(null);
-        BotonRegistrarACoins.setBorderPainted(false);
-        BotonRegistrarACoins.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonRegistrarACoins.setFocusable(false);
-        BotonRegistrarACoins.addMouseListener(new java.awt.event.MouseAdapter() {
+        BotonCanjearACoins.setBackground(new java.awt.Color(124, 77, 255));
+        BotonCanjearACoins.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonCanjearACoins.setForeground(new java.awt.Color(255, 255, 255));
+        BotonCanjearACoins.setText("Canjear");
+        BotonCanjearACoins.setBorder(null);
+        BotonCanjearACoins.setBorderPainted(false);
+        BotonCanjearACoins.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonCanjearACoins.setFocusable(false);
+        BotonCanjearACoins.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonRegistrarACoinsMouseClicked(evt);
+                BotonCanjearACoinsMouseClicked(evt);
             }
         });
-        BotonRegistrarACoins.addActionListener(new java.awt.event.ActionListener() {
+        BotonCanjearACoins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonRegistrarACoinsActionPerformed(evt);
+                BotonCanjearACoinsActionPerformed(evt);
             }
         });
-        jPanel4.add(BotonRegistrarACoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 130, -1));
+        jPanel4.add(BotonCanjearACoins, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 130, -1));
 
         ACoins.getContentPane().add(jPanel4, java.awt.BorderLayout.CENTER);
 
@@ -1746,14 +1746,24 @@ public class Principal extends JFrame {
         ACoinsdisp.setText(String.valueOf(actual.getACoins()));
     }//GEN-LAST:event_lapiz_acoinsMouseClicked
 
-    private void BotonRegistrarACoinsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonRegistrarACoinsMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonRegistrarACoinsMouseClicked
+    private void BotonCanjearACoinsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonCanjearACoinsMouseClicked
+        int acoinsdisp = usuarios.get(actual.getID()).getACoins();
+        String code = Obteneracoins.getText().toString();
+        char [] creditos = code.toCharArray();
+        String nuevo = "";
+        for (int i = 0; i < creditos.length; i++) {
+            if(Character.isDigit(creditos[i]))
+                nuevo += creditos[i];
+        }
+        int nuevoscreditos = acoinsdisp + Integer.valueOf(nuevo);
+        usuarios.get(actual.getID()).setACoins(nuevoscreditos);
+        master.editFileUser(usuarios);
+        ACoinsdisp.setText(String.valueOf(nuevoscreditos));
+    }//GEN-LAST:event_BotonCanjearACoinsMouseClicked
 
-    private void BotonRegistrarACoinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistrarACoinsActionPerformed
+    private void BotonCanjearACoinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCanjearACoinsActionPerformed
         
-        
-    }//GEN-LAST:event_BotonRegistrarACoinsActionPerformed
+    }//GEN-LAST:event_BotonCanjearACoinsActionPerformed
 
     private void CerrarSesionUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionUserMouseClicked
         int opcion = JOptionPane.showConfirmDialog(null, "Estas a punto de Cerrar Sesion...","Saliendo?",JOptionPane.YES_NO_OPTION);
@@ -1846,10 +1856,10 @@ public class Principal extends JFrame {
     private javax.swing.JTextField ApellidosReg;
     private javax.swing.JLabel ApexCoins;
     private javax.swing.JLabel ApexCoinsImg;
+    private javax.swing.JButton BotonCanjearACoins;
     private javax.swing.JButton BotonComprarVuelo;
     private javax.swing.JButton BotonLogin;
     private javax.swing.JButton BotonRegistrar;
-    private javax.swing.JButton BotonRegistrarACoins;
     private javax.swing.JButton BotonRegistrarAvion;
     private javax.swing.JButton BotonRegistrarLLegada;
     private javax.swing.JButton BotonRegistrarSalidas;
@@ -1897,6 +1907,7 @@ public class Principal extends JFrame {
     private javax.swing.JTextField NombreReg;
     private javax.swing.JLabel NombreUsuario;
     private javax.swing.JLabel NombreUsuario1;
+    private javax.swing.JTextField Obteneracoins;
     private javax.swing.JPanel Opciones;
     private javax.swing.JPanel OpcionesUsuario;
     private javax.swing.JPanel OpcionesUsuarioAdmin;
@@ -1974,7 +1985,6 @@ public class Principal extends JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel labelLLegadas;
     private javax.swing.JLabel lapiz_acoins;
     private javax.swing.JLabel lapiz_apellido;
