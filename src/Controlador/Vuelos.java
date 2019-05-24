@@ -17,6 +17,10 @@ public class Vuelos implements Serializable{
     private int lugaresDisp;
     private String horaAbordaje;
 
+    public int getLugaresDisp() {
+        return lugaresDisp;
+    }
+    
     public Vuelos() {
     }
 
@@ -67,11 +71,24 @@ public class Vuelos implements Serializable{
         this.horaAbordaje = horaAbordaje;
     }
 
-    public int getLugaresDisp(){ return AvionAsignado.getLugares().size(); }
+    public int getlugaresDisp(){ return AvionAsignado.getLugares().size(); }
     
     public void setFileVuelo(ArrayList<Vuelos> vuelos){
         String archivo = "vuelos.dat";
         vuelos.add(this);
+        try{
+            ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
+            escritura.writeObject(vuelos);
+            escritura.close();
+        }catch(FileNotFoundException ex){
+            ex.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void editFileVuelo(ArrayList<Vuelos> vuelos){
+        String archivo = "vuelos.dat";
         try{
             ObjectOutputStream escritura = new ObjectOutputStream(new FileOutputStream(archivo));
             escritura.writeObject(vuelos);

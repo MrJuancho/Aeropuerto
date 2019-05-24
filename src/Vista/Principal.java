@@ -20,7 +20,7 @@ public class Principal extends JFrame {
     Usuario master = new Usuario();
     Admin masterAd = new Admin();
     Avion masterAvion = new Avion();
-    Vuelos marterVuelo = new Vuelos();
+    Vuelos masterVuelo = new Vuelos();
     VuelosVuelta masterLLegadas = new VuelosVuelta();
     ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
     ArrayList<Admin> admins = new ArrayList<Admin>();
@@ -123,6 +123,22 @@ public class Principal extends JFrame {
         PlacaReg1 = new javax.swing.JLabel();
         VuelosReg9 = new javax.swing.JLabel();
         ObtenerLlegada = new javax.swing.JTextField();
+        RegistroSalidas = new javax.swing.JDialog();
+        PanelPrincipal6 = new javax.swing.JPanel();
+        jPanel13 = new javax.swing.JPanel();
+        IconoSuperior6 = new javax.swing.JLabel();
+        PanelBotones6 = new javax.swing.JPanel();
+        ExitSalidas = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        modeloReg2 = new javax.swing.JLabel();
+        ObtenerCodeFlight = new javax.swing.JTextField();
+        BGuardarSalida = new javax.swing.JButton();
+        ObtenerDestino = new javax.swing.JTextField();
+        PlacaReg2 = new javax.swing.JLabel();
+        VuelosReg10 = new javax.swing.JLabel();
+        ObtenerHoraLlegada = new javax.swing.JTextField();
+        VuelosReg11 = new javax.swing.JLabel();
+        AvionAsig = new javax.swing.JComboBox<>();
         PanelPrincipal = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         IconoSuperior = new javax.swing.JLabel();
@@ -270,13 +286,6 @@ public class Principal extends JFrame {
         nombreuser = new javax.swing.JLabel();
         imguser = new javax.swing.JLabel();
         CerrarSesionAdmin = new javax.swing.JLabel();
-        EditarSalidas = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        BotonRegistrarSalidas = new javax.swing.JButton();
-        ScrollSalidas = new javax.swing.JScrollPane();
-        TablaSalidas = new javax.swing.JTable();
-        LabelNoSalidas = new javax.swing.JLabel();
-        fodoESalidas = new javax.swing.JLabel();
         Inicio = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         AdminName2 = new javax.swing.JLabel();
@@ -304,6 +313,14 @@ public class Principal extends JFrame {
         TablaLLegadas = new javax.swing.JTable();
         noLLegadas = new javax.swing.JLabel();
         fondoELlegadas = new javax.swing.JLabel();
+        EditarSalidas = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        BotonRegistrarSalidas = new javax.swing.JButton();
+        Actualizar = new javax.swing.JButton();
+        ScrollSalidas = new javax.swing.JScrollPane();
+        TablaSalidas = new javax.swing.JTable();
+        LabelNoSalidas = new javax.swing.JLabel();
+        fodoESalidas = new javax.swing.JLabel();
 
         ACoins.setUndecorated(true);
 
@@ -789,6 +806,105 @@ public class Principal extends JFrame {
         jPanel12.add(ObtenerLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 180, -1));
 
         RegistroLLegadas.getContentPane().add(jPanel12, java.awt.BorderLayout.CENTER);
+
+        RegistroSalidas.setUndecorated(true);
+
+        PanelPrincipal6.setBackground(new java.awt.Color(25, 118, 210));
+        PanelPrincipal6.setLayout(new java.awt.BorderLayout(40, 15));
+
+        jPanel13.setOpaque(false);
+        jPanel13.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 7, 5));
+
+        IconoSuperior6.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        IconoSuperior6.setForeground(new java.awt.Color(255, 255, 255));
+        IconoSuperior6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/apexFlightsIcon.png"))); // NOI18N
+        IconoSuperior6.setText("Registrar Salidas");
+        IconoSuperior6.setAlignmentX(3.0F);
+        IconoSuperior6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        IconoSuperior6.setFocusable(false);
+        IconoSuperior6.setIconTextGap(3);
+        jPanel13.add(IconoSuperior6);
+
+        PanelPrincipal6.add(jPanel13, java.awt.BorderLayout.WEST);
+
+        PanelBotones6.setBackground(new java.awt.Color(25, 118, 210));
+
+        ExitSalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_clear_white_24dp.png"))); // NOI18N
+        ExitSalidas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ExitSalidas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitSalidasMouseClicked(evt);
+            }
+        });
+        PanelBotones6.add(ExitSalidas);
+
+        PanelPrincipal6.add(PanelBotones6, java.awt.BorderLayout.LINE_END);
+
+        RegistroSalidas.getContentPane().add(PanelPrincipal6, java.awt.BorderLayout.PAGE_START);
+
+        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        modeloReg2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        modeloReg2.setForeground(new java.awt.Color(51, 51, 51));
+        modeloReg2.setText("Codigo de Vuelo:");
+        jPanel14.add(modeloReg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 160, 30));
+
+        ObtenerCodeFlight.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerCodeFlight.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel14.add(ObtenerCodeFlight, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 180, -1));
+
+        BGuardarSalida.setBackground(new java.awt.Color(124, 77, 255));
+        BGuardarSalida.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BGuardarSalida.setForeground(new java.awt.Color(255, 255, 255));
+        BGuardarSalida.setText("Guardar Avion");
+        BGuardarSalida.setBorder(null);
+        BGuardarSalida.setBorderPainted(false);
+        BGuardarSalida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BGuardarSalida.setFocusable(false);
+        BGuardarSalida.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BGuardarSalidaMouseClicked(evt);
+            }
+        });
+        BGuardarSalida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BGuardarSalidaActionPerformed(evt);
+            }
+        });
+        jPanel14.add(BGuardarSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 310, -1));
+
+        ObtenerDestino.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerDestino.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel14.add(ObtenerDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 180, -1));
+
+        PlacaReg2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        PlacaReg2.setForeground(new java.awt.Color(51, 51, 51));
+        PlacaReg2.setText("Destino:");
+        jPanel14.add(PlacaReg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 150, 30));
+
+        VuelosReg10.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        VuelosReg10.setForeground(new java.awt.Color(51, 51, 51));
+        VuelosReg10.setText("Hora de abordaje:");
+        jPanel14.add(VuelosReg10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 170, 30));
+
+        ObtenerHoraLlegada.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerHoraLlegada.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel14.add(ObtenerHoraLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 180, -1));
+
+        VuelosReg11.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        VuelosReg11.setForeground(new java.awt.Color(51, 51, 51));
+        VuelosReg11.setText("Avion Asignado:");
+        jPanel14.add(VuelosReg11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 170, 30));
+
+        AvionAsig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AvionAsigActionPerformed(evt);
+            }
+        });
+        jPanel14.add(AvionAsig, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 106, 180, 30));
+
+        RegistroSalidas.getContentPane().add(jPanel14, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("ApexFlights");
@@ -1737,79 +1853,6 @@ public class Principal extends JFrame {
 
         AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
 
-        EditarSalidas.setBackground(new java.awt.Color(255, 255, 255));
-        EditarSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel13.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Editar Vuelos de Salida");
-        EditarSalidas.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
-
-        BotonRegistrarSalidas.setBackground(new java.awt.Color(124, 77, 255));
-        BotonRegistrarSalidas.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
-        BotonRegistrarSalidas.setForeground(new java.awt.Color(255, 255, 255));
-        BotonRegistrarSalidas.setText("Agregar un vuelo de Salida");
-        BotonRegistrarSalidas.setBorder(null);
-        BotonRegistrarSalidas.setBorderPainted(false);
-        BotonRegistrarSalidas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonRegistrarSalidas.setFocusable(false);
-        BotonRegistrarSalidas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonRegistrarSalidasMouseClicked(evt);
-            }
-        });
-        EditarSalidas.add(BotonRegistrarSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 530, 420, 40));
-
-        ScrollSalidas.setBackground(new java.awt.Color(255, 255, 255));
-        ScrollSalidas.setForeground(new java.awt.Color(255, 255, 255));
-
-        TablaSalidas.setBackground(new java.awt.Color(33, 150, 243));
-        TablaSalidas.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        TablaSalidas.setForeground(new java.awt.Color(255, 255, 255));
-        TablaSalidas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Flight Code", "Avion", "Lugares", "Destino", "Hora de Abordaje"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        TablaSalidas.setToolTipText("");
-        TablaSalidas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        TablaSalidas.setGridColor(new java.awt.Color(255, 255, 255));
-        TablaSalidas.setRowHeight(20);
-        ScrollSalidas.setViewportView(TablaSalidas);
-        if (TablaSalidas.getColumnModel().getColumnCount() > 0) {
-            TablaSalidas.getColumnModel().getColumn(0).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(1).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(2).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(3).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(4).setResizable(false);
-            TablaSalidas.getColumnModel().getColumn(5).setResizable(false);
-        }
-
-        EditarSalidas.add(ScrollSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, -1, 440));
-
-        LabelNoSalidas.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        LabelNoSalidas.setText("No hay salidas registrados");
-        LabelNoSalidas.setFocusTraversalPolicyProvider(true);
-        EditarSalidas.add(LabelNoSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
-
-        fodoESalidas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        fodoESalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/llegadas_edit.jpg"))); // NOI18N
-        fodoESalidas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        EditarSalidas.add(fodoESalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        AdminPanel.add(EditarSalidas, java.awt.BorderLayout.CENTER);
-
         Inicio.setBackground(new java.awt.Color(255, 255, 255));
         Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -2074,6 +2117,104 @@ public class Principal extends JFrame {
         EditarLlegadas.add(fondoELlegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
 
         AdminPanel.add(EditarLlegadas, java.awt.BorderLayout.CENTER);
+
+        EditarSalidas.setBackground(new java.awt.Color(255, 255, 255));
+        EditarSalidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Editar Vuelos de Salida");
+        EditarSalidas.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+
+        BotonRegistrarSalidas.setBackground(new java.awt.Color(124, 77, 255));
+        BotonRegistrarSalidas.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonRegistrarSalidas.setForeground(new java.awt.Color(255, 255, 255));
+        BotonRegistrarSalidas.setText("Agregar un vuelo de Salida");
+        BotonRegistrarSalidas.setBorder(null);
+        BotonRegistrarSalidas.setBorderPainted(false);
+        BotonRegistrarSalidas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonRegistrarSalidas.setFocusable(false);
+        BotonRegistrarSalidas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonRegistrarSalidasMouseClicked(evt);
+            }
+        });
+        BotonRegistrarSalidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRegistrarSalidasActionPerformed(evt);
+            }
+        });
+        EditarSalidas.add(BotonRegistrarSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 520, 420, 40));
+
+        Actualizar.setBackground(new java.awt.Color(124, 77, 255));
+        Actualizar.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        Actualizar.setForeground(new java.awt.Color(255, 255, 255));
+        Actualizar.setText("Actualizar");
+        Actualizar.setBorder(null);
+        Actualizar.setBorderPainted(false);
+        Actualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Actualizar.setFocusable(false);
+        Actualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ActualizarMouseClicked(evt);
+            }
+        });
+        Actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActualizarActionPerformed(evt);
+            }
+        });
+        EditarSalidas.add(Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 570, 150, 40));
+
+        ScrollSalidas.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollSalidas.setForeground(new java.awt.Color(255, 255, 255));
+
+        TablaSalidas.setBackground(new java.awt.Color(33, 150, 243));
+        TablaSalidas.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        TablaSalidas.setForeground(new java.awt.Color(255, 255, 255));
+        TablaSalidas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Flight Code", "Avion", "Lugares", "Destino", "Hora de Abordaje"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        TablaSalidas.setToolTipText("");
+        TablaSalidas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        TablaSalidas.setGridColor(new java.awt.Color(255, 255, 255));
+        TablaSalidas.setRowHeight(20);
+        ScrollSalidas.setViewportView(TablaSalidas);
+        if (TablaSalidas.getColumnModel().getColumnCount() > 0) {
+            TablaSalidas.getColumnModel().getColumn(0).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(1).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(2).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(3).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(4).setResizable(false);
+            TablaSalidas.getColumnModel().getColumn(5).setResizable(false);
+        }
+
+        EditarSalidas.add(ScrollSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, -1, 440));
+
+        LabelNoSalidas.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        LabelNoSalidas.setText("No hay salidas registrados");
+        LabelNoSalidas.setFocusTraversalPolicyProvider(true);
+        EditarSalidas.add(LabelNoSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
+
+        fodoESalidas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        fodoESalidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/llegadas_edit.jpg"))); // NOI18N
+        fodoESalidas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        EditarSalidas.add(fodoESalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        AdminPanel.add(EditarSalidas, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
 
@@ -2754,6 +2895,64 @@ public class Principal extends JFrame {
         JOptionPane.showMessageDialog(null,"Se han guardado los objetos");
     }//GEN-LAST:event_BotonActualizarLlegadaMouseClicked
 
+    private void ActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ActualizarMouseClicked
+
+    private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ActualizarActionPerformed
+
+    private void ExitSalidasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitSalidasMouseClicked
+        RegistroSalidas.setVisible(false);
+        RegistroSalidas.dispose();
+    }//GEN-LAST:event_ExitSalidasMouseClicked
+
+    private void BGuardarSalidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BGuardarSalidaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BGuardarSalidaMouseClicked
+
+    private void AvionAsigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AvionAsigActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AvionAsigActionPerformed
+
+    private void BGuardarSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BGuardarSalidaActionPerformed
+        if(ObtenerDestino.getText().equals("") && ObtenerCodeFlight.getText().equals("") && ObtenerHoraLlegada.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "LLena bien los datos...");
+        }
+        
+        Vuelos VRegistro = new Vuelos();
+        File comp = new File("vuelos.dat");
+        File comp2 = new File("aviones.dat");
+        if(comp.exists() && !comp.isDirectory()){
+            System.out.println("Si hay llegadas");
+            salidas = masterVuelo.getFileVuelo();
+        }
+        if(comp2.exists() && !comp2.isDirectory()){
+            System.out.println("Si hay llegadas");
+            aviones = masterAvion.getFileAvion();
+        }
+        
+       VRegistro.setDestino(ObtenerDestino.getText());
+       VRegistro.setFlightCode(ObtenerCodeFlight.getText());
+       VRegistro.setId(salidas.size());
+       VRegistro.setHoraAbordaje(ObtenerHoraLlegada.getText());
+       DefaultComboBoxModel modelo = (DefaultComboBoxModel) AvionAsig.getModel();
+       modelo.removeAllElements();
+        for (int i = 0; i < aviones.size(); i++) {
+            modelo.addElement(aviones.get(i).getPlaca().toString());
+        }
+        AvionAsig.setModel(modelo);
+        VRegistro.setFileVuelo(salidas);
+        JOptionPane.showMessageDialog(null, "Se ha registrado el vuelo con exito");
+    }//GEN-LAST:event_BGuardarSalidaActionPerformed
+
+    private void BotonRegistrarSalidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistrarSalidasActionPerformed
+        RegistroSalidas.setVisible(true);
+        RegistroSalidas.setBounds(0, 0, 400, 275);
+        RegistroSalidas.setLocationRelativeTo(null);
+    }//GEN-LAST:event_BotonRegistrarSalidasActionPerformed
+
     public ImageIcon ResizeImage(String ImagePath){
         ImageIcon MyImage = new ImageIcon(ImagePath);
         Image img = MyImage.getImage();
@@ -2870,6 +3069,7 @@ public class Principal extends JFrame {
     private javax.swing.JDialog ACoins;
     private javax.swing.JLabel ACoinsdisp;
     private javax.swing.JLabel Acoins1;
+    private javax.swing.JButton Actualizar;
     private javax.swing.JButton ActualizarInfoCI;
     private javax.swing.JButton ActualizarInfoEP;
     private javax.swing.JLabel AdminName2;
@@ -2878,8 +3078,10 @@ public class Principal extends JFrame {
     private javax.swing.JTextField ApellidosReg;
     private javax.swing.JLabel ApexCoins;
     private javax.swing.JLabel ApexCoinsImg;
+    private javax.swing.JComboBox<String> AvionAsig;
     private javax.swing.JButton BGuardarAvion;
     private javax.swing.JButton BGuardarLlegada;
+    private javax.swing.JButton BGuardarSalida;
     private javax.swing.JButton BotonActualizarAvion;
     private javax.swing.JButton BotonActualizarLlegada;
     private javax.swing.JButton BotonActualizarUsers;
@@ -2911,6 +3113,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel ErrorRegN;
     private javax.swing.JLabel ErrorRegPass;
     private javax.swing.JLabel ErrorRegU;
+    private javax.swing.JLabel ExitSalidas;
     private javax.swing.JLabel FondoLLegadas;
     private javax.swing.JLabel FondoOpciones;
     private javax.swing.JLabel FondouserSalidas;
@@ -2920,6 +3123,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel IconoSuperior3;
     private javax.swing.JLabel IconoSuperior4;
     private javax.swing.JLabel IconoSuperior5;
+    private javax.swing.JLabel IconoSuperior6;
     private javax.swing.JPanel Imagen;
     private javax.swing.JLabel ImagenBienvenidaAdmin;
     private javax.swing.JDialog InfoTarjeta;
@@ -2943,9 +3147,12 @@ public class Principal extends JFrame {
     private javax.swing.JLabel NombreUsuario1;
     private javax.swing.JTextField ObtenerAvion;
     private javax.swing.JTextField ObtenerCCV;
+    private javax.swing.JTextField ObtenerCodeFlight;
     private javax.swing.JTextField ObtenerCorreo;
+    private javax.swing.JTextField ObtenerDestino;
     private javax.swing.JTextField ObtenerExpDate;
     private javax.swing.JTextField ObtenerFondos;
+    private javax.swing.JTextField ObtenerHoraLlegada;
     private javax.swing.JTextField ObtenerLlegada;
     private javax.swing.JTextField ObtenerLugarBussines;
     private javax.swing.JTextField ObtenerLugarFirst;
@@ -2971,6 +3178,7 @@ public class Principal extends JFrame {
     private javax.swing.JPanel PanelBotones3;
     private javax.swing.JPanel PanelBotones4;
     private javax.swing.JPanel PanelBotones5;
+    private javax.swing.JPanel PanelBotones6;
     private javax.swing.JPanel PanelDestinos;
     private javax.swing.JPanel PanelEntrada;
     private javax.swing.JPanel PanelLlegadas;
@@ -2984,15 +3192,18 @@ public class Principal extends JFrame {
     private javax.swing.JPanel PanelPrincipal3;
     private javax.swing.JPanel PanelPrincipal4;
     private javax.swing.JPanel PanelPrincipal5;
+    private javax.swing.JPanel PanelPrincipal6;
     private javax.swing.JPanel PanelRegistro;
     private javax.swing.JPanel PanelSalidas;
     private javax.swing.JPasswordField PassField;
     private javax.swing.JPasswordField PassReg;
     private javax.swing.JLabel PlacaReg;
     private javax.swing.JLabel PlacaReg1;
+    private javax.swing.JLabel PlacaReg2;
     private javax.swing.JLabel Registro;
     private javax.swing.JDialog RegistroAvionCard;
     private javax.swing.JDialog RegistroLLegadas;
+    private javax.swing.JDialog RegistroSalidas;
     private javax.swing.JLabel SalidasB;
     private javax.swing.JLabel Salir;
     private javax.swing.JLabel SalirACoins;
@@ -3030,6 +3241,8 @@ public class Principal extends JFrame {
     private javax.swing.JPanel UsuarioPanel;
     private javax.swing.JLabel VuelosReg;
     private javax.swing.JLabel VuelosReg1;
+    private javax.swing.JLabel VuelosReg10;
+    private javax.swing.JLabel VuelosReg11;
     private javax.swing.JLabel VuelosReg3;
     private javax.swing.JLabel VuelosReg4;
     private javax.swing.JLabel VuelosReg5;
@@ -3094,6 +3307,8 @@ public class Principal extends JFrame {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -3120,6 +3335,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel lapiznom_user;
     private javax.swing.JLabel modeloReg;
     private javax.swing.JLabel modeloReg1;
+    private javax.swing.JLabel modeloReg2;
     private javax.swing.JLabel noLLegadas;
     private javax.swing.JLabel nombreAdmin;
     private javax.swing.JLabel nombreUser;
