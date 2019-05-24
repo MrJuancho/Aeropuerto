@@ -160,7 +160,7 @@ public class Principal extends JFrame {
         PanelLlegadas = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         TablaConsultaLLegadas = new javax.swing.JScrollPane();
-        TablaLlegadas = new javax.swing.JTable();
+        TablaCLlegadas = new javax.swing.JTable();
         FondoLLegadas = new javax.swing.JLabel();
         PanelSalidas = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -169,37 +169,6 @@ public class Principal extends JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         FondouserSalidas = new javax.swing.JLabel();
-        PanelDestinos = new javax.swing.JPanel();
-        PanelPortrait = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
-        jTextArea2 = new javax.swing.JTextArea();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
         PanelOpUser = new javax.swing.JPanel();
         Imagen = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -232,6 +201,37 @@ public class Principal extends JFrame {
         jLabel9 = new javax.swing.JLabel();
         lapizImgUser = new javax.swing.JLabel();
         lapiz_inforcard1 = new javax.swing.JLabel();
+        PanelDestinos = new javax.swing.JPanel();
+        PanelPortrait = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
         AdminPanel = new javax.swing.JPanel();
         ToolBarAdmin = new javax.swing.JPanel();
         NavegacionAdmin = new javax.swing.JPanel();
@@ -243,10 +243,6 @@ public class Principal extends JFrame {
         nombreuser = new javax.swing.JLabel();
         imguser = new javax.swing.JLabel();
         CerrarSesionAdmin = new javax.swing.JLabel();
-        Inicio = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        AdminName2 = new javax.swing.JLabel();
-        ImagenBienvenidaAdmin = new javax.swing.JLabel();
         EditarUsuarios = new javax.swing.JPanel();
         LabelEUsuarios = new javax.swing.JLabel();
         BotonActualizarUsers = new javax.swing.JButton();
@@ -278,6 +274,10 @@ public class Principal extends JFrame {
         TablaSalidas = new javax.swing.JTable();
         LabelNoSalidas = new javax.swing.JLabel();
         fodoESalidas = new javax.swing.JLabel();
+        Inicio = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        AdminName2 = new javax.swing.JLabel();
+        ImagenBienvenidaAdmin = new javax.swing.JLabel();
         PanelLogin = new javax.swing.JPanel();
         PanelRegistro = new javax.swing.JPanel();
         separadorPassR = new javax.swing.JSeparator();
@@ -1029,7 +1029,7 @@ public class Principal extends JFrame {
 
         TablaConsultaLLegadas.setPreferredSize(new java.awt.Dimension(950, 720));
 
-        TablaLlegadas.setModel(new javax.swing.table.DefaultTableModel(
+        TablaCLlegadas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -1037,10 +1037,10 @@ public class Principal extends JFrame {
                 "ID", "Procedencia", "Hora de Llegada", "Numero de Vuelo"
             }
         ));
-        TablaLlegadas.setMaximumSize(new java.awt.Dimension(950, 720));
-        TablaLlegadas.setMinimumSize(new java.awt.Dimension(950, 720));
-        TablaLlegadas.setPreferredSize(new java.awt.Dimension(950, 720));
-        TablaConsultaLLegadas.setViewportView(TablaLlegadas);
+        TablaCLlegadas.setMaximumSize(new java.awt.Dimension(950, 720));
+        TablaCLlegadas.setMinimumSize(new java.awt.Dimension(950, 720));
+        TablaCLlegadas.setPreferredSize(new java.awt.Dimension(950, 720));
+        TablaConsultaLLegadas.setViewportView(TablaCLlegadas);
 
         PanelLlegadas.add(TablaConsultaLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 770, 400));
 
@@ -1115,172 +1115,6 @@ public class Principal extends JFrame {
         PanelSalidas.add(FondouserSalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
 
         UsuarioPanel.add(PanelSalidas, java.awt.BorderLayout.CENTER);
-
-        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        PanelPortrait.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jTextArea2.setEditable(false);
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea2.setRows(5);
-        jTextArea2.setText("En Apex Flights nos encargamos de que tengas las mejores experiencias\nde vuelo, con los mejores destinos, las mejores ofertas, ofreciendo desde\n los voletos mas accesibles hasta la maxima calidad de Vuelos.\n\nCon el apoyo de las mejores aerolineas, con los mejores Aviones.");
-        jTextArea2.setOpaque(false);
-        jPanel1.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 600, 120));
-
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l2.jpg"))); // NOI18N
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 320, 220));
-
-        jLabel22.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l1.jpg"))); // NOI18N
-        jLabel22.setMaximumSize(new java.awt.Dimension(45, 16));
-        jLabel22.setOpaque(true);
-        jLabel22.setPreferredSize(new java.awt.Dimension(45, 12));
-        jLabel22.setRequestFocusEnabled(false);
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, 320, 220));
-
-        jLabel23.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel23.setMaximumSize(new java.awt.Dimension(45, 16));
-        jLabel23.setOpaque(true);
-        jLabel23.setPreferredSize(new java.awt.Dimension(45, 12));
-        jLabel23.setRequestFocusEnabled(false);
-        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 500, 340, 240));
-
-        jLabel14.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Bienvenido a Apex Flights");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, -1));
-
-        jLabel24.setFont(new java.awt.Font("Montserrat", 3, 36)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("\"Feel top of Sky\"");
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, -1, -1));
-
-        jLabel25.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel25.setMaximumSize(new java.awt.Dimension(45, 16));
-        jLabel25.setOpaque(true);
-        jLabel25.setPreferredSize(new java.awt.Dimension(45, 12));
-        jLabel25.setRequestFocusEnabled(false);
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 340, 240));
-
-        jLabel26.setFont(new java.awt.Font("Roboto Thin", 3, 36)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("No nos crees, te invitamos a verlo...");
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, -1, -1));
-
-        jLabel27.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setText("Cancún, México");
-        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 1320, -1, -1));
-
-        jLabel28.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel28.setText("...Hasta 5000 ACoins(500 USD)");
-        jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 650, 340, 30));
-
-        jLabel29.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel29.setText("...Hasta 5000 ACoins(500 USD)");
-        jPanel1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 920, 340, 30));
-
-        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l3.jpg"))); // NOI18N
-        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 320, 470));
-
-        jLabel31.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel31.setOpaque(true);
-        jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 340, 490));
-
-        jLabel32.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel32.setText("Berlín, Alemania");
-        jPanel1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 520, -1, -1));
-
-        jLabel33.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel33.setText("Desde 1500 ACoins(150 USD)...");
-        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 590, 340, 30));
-
-        jLabel34.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel34.setText("...Hasta 2500 ACoins(250 USD)");
-        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 1460, 340, 40));
-
-        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l4.jpg"))); // NOI18N
-        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 1040, 330, 240));
-
-        jLabel36.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel36.setOpaque(true);
-        jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 1030, 350, 260));
-
-        jLabel37.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel37.setText("Desde 2000 ACoins(200 USD)...");
-        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 860, 340, 30));
-
-        jLabel38.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel38.setText("Moscú, Russia");
-        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 800, -1, -1));
-
-        jLabel39.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel39.setText("Desde 1000 ACoins(100 USD)...");
-        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 1390, 340, 40));
-
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l5.jpg"))); // NOI18N
-        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 1320, 330, 230));
-
-        jLabel41.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel41.setOpaque(true);
-        jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1310, 350, 250));
-
-        jLabel42.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel42.setText("Tokio, Japon");
-        jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 1040, -1, -1));
-
-        jLabel43.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel43.setText("Desde 3000 ACoins(300 USD)...");
-        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 1120, 340, 40));
-
-        jLabel44.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel44.setText("...Hasta 5500 ACoins(550 USD)");
-        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 1200, 340, 40));
-
-        jLabel45.setFont(new java.awt.Font("Montserrat", 1, 40)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel45.setText("Estos son solo algunos de nuestros cientos de vuelos...");
-        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 1700, -1, -1));
-
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/portrait.png"))); // NOI18N
-        jLabel46.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        PanelPortrait.setViewportView(jPanel1);
-
-        PanelDestinos.add(PanelPortrait, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.CENTER);
 
         PanelOpUser.setLayout(new java.awt.BorderLayout());
 
@@ -1486,6 +1320,172 @@ public class Principal extends JFrame {
 
         UsuarioPanel.add(PanelOpUser, java.awt.BorderLayout.CENTER);
 
+        PanelDestinos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PanelPortrait.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea2.setRows(5);
+        jTextArea2.setText("En Apex Flights nos encargamos de que tengas las mejores experiencias\nde vuelo, con los mejores destinos, las mejores ofertas, ofreciendo desde\n los voletos mas accesibles hasta la maxima calidad de Vuelos.\n\nCon el apoyo de las mejores aerolineas, con los mejores Aviones.");
+        jTextArea2.setOpaque(false);
+        jPanel1.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 600, 120));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l2.jpg"))); // NOI18N
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 320, 220));
+
+        jLabel22.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l1.jpg"))); // NOI18N
+        jLabel22.setMaximumSize(new java.awt.Dimension(45, 16));
+        jLabel22.setOpaque(true);
+        jLabel22.setPreferredSize(new java.awt.Dimension(45, 12));
+        jLabel22.setRequestFocusEnabled(false);
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, 320, 220));
+
+        jLabel23.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel23.setMaximumSize(new java.awt.Dimension(45, 16));
+        jLabel23.setOpaque(true);
+        jLabel23.setPreferredSize(new java.awt.Dimension(45, 12));
+        jLabel23.setRequestFocusEnabled(false);
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 500, 340, 240));
+
+        jLabel14.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Bienvenido a Apex Flights");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, -1));
+
+        jLabel24.setFont(new java.awt.Font("Montserrat", 3, 36)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("\"Feel top of Sky\"");
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, -1, -1));
+
+        jLabel25.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel25.setMaximumSize(new java.awt.Dimension(45, 16));
+        jLabel25.setOpaque(true);
+        jLabel25.setPreferredSize(new java.awt.Dimension(45, 12));
+        jLabel25.setRequestFocusEnabled(false);
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 340, 240));
+
+        jLabel26.setFont(new java.awt.Font("Roboto Thin", 3, 36)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("No nos crees, te invitamos a verlo...");
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, -1, -1));
+
+        jLabel27.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("Cancún, México");
+        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 1320, -1, -1));
+
+        jLabel28.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel28.setText("...Hasta 5000 ACoins(500 USD)");
+        jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 650, 340, 30));
+
+        jLabel29.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel29.setText("...Hasta 5000 ACoins(500 USD)");
+        jPanel1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 920, 340, 30));
+
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l3.jpg"))); // NOI18N
+        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 320, 470));
+
+        jLabel31.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel31.setOpaque(true);
+        jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 340, 490));
+
+        jLabel32.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel32.setText("Berlín, Alemania");
+        jPanel1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 520, -1, -1));
+
+        jLabel33.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel33.setText("Desde 1500 ACoins(150 USD)...");
+        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 590, 340, 30));
+
+        jLabel34.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel34.setText("...Hasta 2500 ACoins(250 USD)");
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 1460, 340, 40));
+
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l4.jpg"))); // NOI18N
+        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 1040, 330, 240));
+
+        jLabel36.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel36.setOpaque(true);
+        jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 1030, 350, 260));
+
+        jLabel37.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel37.setText("Desde 2000 ACoins(200 USD)...");
+        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 860, 340, 30));
+
+        jLabel38.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel38.setText("Moscú, Russia");
+        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 800, -1, -1));
+
+        jLabel39.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel39.setText("Desde 1000 ACoins(100 USD)...");
+        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 1390, 340, 40));
+
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/l5.jpg"))); // NOI18N
+        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 1320, 330, 230));
+
+        jLabel41.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setOpaque(true);
+        jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1310, 350, 250));
+
+        jLabel42.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel42.setText("Tokio, Japon");
+        jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 1040, -1, -1));
+
+        jLabel43.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel43.setText("Desde 3000 ACoins(300 USD)...");
+        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 1120, 340, 40));
+
+        jLabel44.setFont(new java.awt.Font("Roboto", 3, 24)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel44.setText("...Hasta 5500 ACoins(550 USD)");
+        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 1200, 340, 40));
+
+        jLabel45.setFont(new java.awt.Font("Montserrat", 1, 40)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setText("Estos son solo algunos de nuestros cientos de vuelos...");
+        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 1700, -1, -1));
+
+        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/portrait.png"))); // NOI18N
+        jLabel46.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        PanelPortrait.setViewportView(jPanel1);
+
+        PanelDestinos.add(PanelPortrait, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        UsuarioPanel.add(PanelDestinos, java.awt.BorderLayout.CENTER);
+
         getContentPane().add(UsuarioPanel, java.awt.BorderLayout.CENTER);
 
         AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -1573,26 +1573,6 @@ public class Principal extends JFrame {
         ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
 
         AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
-
-        Inicio.setBackground(new java.awt.Color(255, 255, 255));
-        Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Bienvenido de Vuelta");
-        Inicio.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 540, -1));
-
-        AdminName2.setFont(new java.awt.Font("Montserrat Alternates Light", 1, 70)); // NOI18N
-        AdminName2.setForeground(new java.awt.Color(255, 255, 255));
-        AdminName2.setToolTipText("");
-        AdminName2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Inicio.add(AdminName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 460, 80));
-
-        ImagenBienvenidaAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImagenBienvenidaAdmin.setToolTipText("");
-        Inicio.add(ImagenBienvenidaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 633));
-
-        AdminPanel.add(Inicio, java.awt.BorderLayout.CENTER);
 
         EditarUsuarios.setBackground(new java.awt.Color(255, 255, 255));
         EditarUsuarios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1933,6 +1913,26 @@ public class Principal extends JFrame {
         EditarSalidas.add(fodoESalidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
 
         AdminPanel.add(EditarSalidas, java.awt.BorderLayout.CENTER);
+
+        Inicio.setBackground(new java.awt.Color(255, 255, 255));
+        Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setFont(new java.awt.Font("Montserrat", 1, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Bienvenido de Vuelta");
+        Inicio.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 540, -1));
+
+        AdminName2.setFont(new java.awt.Font("Montserrat Alternates Light", 1, 70)); // NOI18N
+        AdminName2.setForeground(new java.awt.Color(255, 255, 255));
+        AdminName2.setToolTipText("");
+        AdminName2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Inicio.add(AdminName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 460, 80));
+
+        ImagenBienvenidaAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ImagenBienvenidaAdmin.setToolTipText("");
+        Inicio.add(ImagenBienvenidaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 633));
+
+        AdminPanel.add(Inicio, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
 
@@ -2601,7 +2601,7 @@ public class Principal extends JFrame {
     }//GEN-LAST:event_lapizImgUserMouseClicked
 
     private void BotonComprarVueloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonComprarVueloMouseClicked
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_BotonComprarVueloMouseClicked
 
     private void SalirACoinsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirACoinsMouseClicked
@@ -3035,6 +3035,16 @@ public class Principal extends JFrame {
                    rowsU[2] = llegadas.get(i).getALlegada();
                    rowsU[3] = llegadas.get(i).getProcedencia();
                    model.addRow(rowsU);
+                  
+                }
+                DefaultTableModel model2 = (DefaultTableModel) TablaCLlegadas.getModel();
+                Object rows[] = new Object[4];
+                for (int i = 0; i < llegadas.size(); i++) {
+                   rows[0] = llegadas.get(i).getID();
+                   rows[1] = llegadas.get(i).getHoraLLegada();
+                   rows[2] = llegadas.get(i).getALlegada();
+                   rows[3] = llegadas.get(i).getProcedencia();
+                   model2.addRow(rows);
                 }
             }
     }
@@ -3202,9 +3212,9 @@ public class Principal extends JFrame {
     private javax.swing.JScrollPane ScrollUsuarios;
     private javax.swing.JSeparator SeparadorUsername;
     private javax.swing.JTable TablaAviones;
+    private javax.swing.JTable TablaCLlegadas;
     private javax.swing.JScrollPane TablaConsultaLLegadas;
     private javax.swing.JTable TablaLLegadas;
-    private javax.swing.JTable TablaLlegadas;
     private javax.swing.JTable TablaSalidas;
     private javax.swing.JTable TablaUsuarios;
     private javax.swing.JLabel TextoLogin1;
