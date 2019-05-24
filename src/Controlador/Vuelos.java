@@ -16,10 +16,6 @@ public class Vuelos implements Serializable{
     private Avion AvionAsignado;
     private int lugaresDisp;
     private String horaAbordaje;
-
-    public int getLugaresDisp() {
-        return lugaresDisp;
-    }
     
     public Vuelos() {
     }
