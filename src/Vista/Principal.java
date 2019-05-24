@@ -1,29 +1,15 @@
 package Vista;
 
-import Controlador.Admin;
-import Controlador.Avion;
-import Controlador.CardInformation;
-import Controlador.ElectronicPayment;
-import Controlador.Usuario;
-import Controlador.Vuelos;
-import Controlador.VuelosVuelta;
+import Controlador.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
 import java.awt.Frame;
-import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.Shape;
-import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
-import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.lang.invoke.MethodHandles;
 import java.util.ArrayList;
-import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.*;
@@ -111,11 +97,9 @@ public class Principal extends JFrame {
         VuelosReg = new javax.swing.JLabel();
         VuelosReg1 = new javax.swing.JLabel();
         JLabelLugars = new javax.swing.JLabel();
-        VuelosReg2 = new javax.swing.JLabel();
         VuelosReg3 = new javax.swing.JLabel();
         VuelosReg4 = new javax.swing.JLabel();
         ObtenerNoVuelos = new javax.swing.JTextField();
-        ObtenerTotalLugares = new javax.swing.JTextField();
         ObtenerPrecioCoomercial = new javax.swing.JTextField();
         ObtenerLugarFirst = new javax.swing.JTextField();
         VuelosReg5 = new javax.swing.JLabel();
@@ -125,6 +109,20 @@ public class Principal extends JFrame {
         ObtenerLugarBussines = new javax.swing.JTextField();
         ObtenerPrecioBussines = new javax.swing.JTextField();
         ObtenerPrecioFirst = new javax.swing.JTextField();
+        RegistroLLegadas = new javax.swing.JDialog();
+        PanelPrincipal5 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        IconoSuperior5 = new javax.swing.JLabel();
+        PanelBotones5 = new javax.swing.JPanel();
+        SalirAddL = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        modeloReg1 = new javax.swing.JLabel();
+        ObtenerProcedencia = new javax.swing.JTextField();
+        BGuardarLlegada = new javax.swing.JButton();
+        ObtenerAvion = new javax.swing.JTextField();
+        PlacaReg1 = new javax.swing.JLabel();
+        VuelosReg9 = new javax.swing.JLabel();
+        ObtenerLlegada = new javax.swing.JTextField();
         PanelPrincipal = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         IconoSuperior = new javax.swing.JLabel();
@@ -271,6 +269,7 @@ public class Principal extends JFrame {
         OpcionesUsuarioAdmin = new javax.swing.JPanel();
         nombreuser = new javax.swing.JLabel();
         imguser = new javax.swing.JLabel();
+        CerrarSesionAdmin = new javax.swing.JLabel();
         EditarSalidas = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         BotonRegistrarSalidas = new javax.swing.JButton();
@@ -278,13 +277,6 @@ public class Principal extends JFrame {
         TablaSalidas = new javax.swing.JTable();
         LabelNoSalidas = new javax.swing.JLabel();
         fodoESalidas = new javax.swing.JLabel();
-        EditarLlegadas = new javax.swing.JPanel();
-        labelLLegadas = new javax.swing.JLabel();
-        BotonRegistrarLLegada = new javax.swing.JButton();
-        ScrollLLegadas = new javax.swing.JScrollPane();
-        TablaLLegadas = new javax.swing.JTable();
-        noLLegadas = new javax.swing.JLabel();
-        fondoELlegadas = new javax.swing.JLabel();
         Inicio = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         AdminName2 = new javax.swing.JLabel();
@@ -304,6 +296,14 @@ public class Principal extends JFrame {
         TablaAviones = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         fondoEditA = new javax.swing.JLabel();
+        EditarLlegadas = new javax.swing.JPanel();
+        labelLLegadas = new javax.swing.JLabel();
+        BotonActualizarLlegada = new javax.swing.JButton();
+        BotonRegistrarLLegada = new javax.swing.JButton();
+        ScrollLLegadas = new javax.swing.JScrollPane();
+        TablaLLegadas = new javax.swing.JTable();
+        noLLegadas = new javax.swing.JLabel();
+        fondoELlegadas = new javax.swing.JLabel();
 
         ACoins.setUndecorated(true);
 
@@ -563,7 +563,6 @@ public class Principal extends JFrame {
         InfoTarjeta.getContentPane().add(jPanel8, java.awt.BorderLayout.CENTER);
 
         RegistroAvionCard.setUndecorated(true);
-        RegistroAvionCard.setPreferredSize(new java.awt.Dimension(250, 500));
 
         PanelPrincipal4.setBackground(new java.awt.Color(25, 118, 210));
         PanelPrincipal4.setLayout(new java.awt.BorderLayout(40, 15));
@@ -623,21 +622,11 @@ public class Principal extends JFrame {
                 BGuardarAvionMouseClicked(evt);
             }
         });
-        BGuardarAvion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BGuardarAvionActionPerformed(evt);
-            }
-        });
-        jPanel10.add(BGuardarAvion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 310, -1));
+        jPanel10.add(BGuardarAvion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 310, -1));
 
         ObtenerLugaresComercial.setBackground(new java.awt.Color(255, 255, 255));
         ObtenerLugaresComercial.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
-        ObtenerLugaresComercial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ObtenerLugaresComercialActionPerformed(evt);
-            }
-        });
-        jPanel10.add(ObtenerLugaresComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 40, 30));
+        jPanel10.add(ObtenerLugaresComercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 40, 30));
 
         ObtenerPlaca.setBackground(new java.awt.Color(255, 255, 255));
         ObtenerPlaca.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
@@ -651,7 +640,7 @@ public class Principal extends JFrame {
         VuelosReg.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         VuelosReg.setForeground(new java.awt.Color(51, 51, 51));
         VuelosReg.setText("--$$:");
-        jPanel10.add(VuelosReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 40, 30));
+        jPanel10.add(VuelosReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 40, 30));
 
         VuelosReg1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         VuelosReg1.setForeground(new java.awt.Color(51, 51, 51));
@@ -663,100 +652,143 @@ public class Principal extends JFrame {
         JLabelLugars.setText("Lugares");
         jPanel10.add(JLabelLugars, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, -1, -1));
 
-        VuelosReg2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        VuelosReg2.setForeground(new java.awt.Color(51, 51, 51));
-        VuelosReg2.setText("Total de Lugares:");
-        jPanel10.add(VuelosReg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 150, -1));
-
         VuelosReg3.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         VuelosReg3.setForeground(new java.awt.Color(51, 51, 51));
         VuelosReg3.setText("Commercial:");
-        jPanel10.add(VuelosReg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 110, -1));
+        jPanel10.add(VuelosReg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 110, 30));
 
         VuelosReg4.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         VuelosReg4.setForeground(new java.awt.Color(51, 51, 51));
         VuelosReg4.setText("First Class:");
-        jPanel10.add(VuelosReg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 100, -1));
+        jPanel10.add(VuelosReg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 100, 30));
 
         ObtenerNoVuelos.setBackground(new java.awt.Color(255, 255, 255));
         ObtenerNoVuelos.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
         jPanel10.add(ObtenerNoVuelos, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 180, -1));
 
-        ObtenerTotalLugares.setBackground(new java.awt.Color(255, 255, 255));
-        ObtenerTotalLugares.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
-        ObtenerTotalLugares.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ObtenerTotalLugaresActionPerformed(evt);
-            }
-        });
-        jPanel10.add(ObtenerTotalLugares, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 40, 30));
-
         ObtenerPrecioCoomercial.setBackground(new java.awt.Color(255, 255, 255));
         ObtenerPrecioCoomercial.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
-        ObtenerPrecioCoomercial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ObtenerPrecioCoomercialActionPerformed(evt);
-            }
-        });
-        jPanel10.add(ObtenerPrecioCoomercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 40, 30));
+        jPanel10.add(ObtenerPrecioCoomercial, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 40, 30));
 
         ObtenerLugarFirst.setBackground(new java.awt.Color(255, 255, 255));
         ObtenerLugarFirst.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
-        ObtenerLugarFirst.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ObtenerLugarFirstActionPerformed(evt);
-            }
-        });
-        jPanel10.add(ObtenerLugarFirst, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 40, 30));
+        jPanel10.add(ObtenerLugarFirst, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 40, 30));
 
         VuelosReg5.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         VuelosReg5.setForeground(new java.awt.Color(51, 51, 51));
         VuelosReg5.setText("Bussines:");
-        jPanel10.add(VuelosReg5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 80, -1));
+        jPanel10.add(VuelosReg5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 80, 30));
 
         VuelosReg6.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         VuelosReg6.setForeground(new java.awt.Color(51, 51, 51));
         VuelosReg6.setText("Precios:");
-        jPanel10.add(VuelosReg6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 70, 20));
+        jPanel10.add(VuelosReg6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 70, 20));
 
         VuelosReg7.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         VuelosReg7.setForeground(new java.awt.Color(51, 51, 51));
         VuelosReg7.setText("--$$:");
-        jPanel10.add(VuelosReg7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 40, 30));
+        jPanel10.add(VuelosReg7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 40, 30));
 
         VuelosReg8.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         VuelosReg8.setForeground(new java.awt.Color(51, 51, 51));
         VuelosReg8.setText("--$$:");
-        jPanel10.add(VuelosReg8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 40, 30));
+        jPanel10.add(VuelosReg8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 40, 30));
 
         ObtenerLugarBussines.setBackground(new java.awt.Color(255, 255, 255));
         ObtenerLugarBussines.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
-        ObtenerLugarBussines.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ObtenerLugarBussinesActionPerformed(evt);
-            }
-        });
-        jPanel10.add(ObtenerLugarBussines, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 40, 30));
+        jPanel10.add(ObtenerLugarBussines, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 40, 30));
 
         ObtenerPrecioBussines.setBackground(new java.awt.Color(255, 255, 255));
         ObtenerPrecioBussines.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
-        ObtenerPrecioBussines.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ObtenerPrecioBussinesActionPerformed(evt);
-            }
-        });
-        jPanel10.add(ObtenerPrecioBussines, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 40, 30));
+        jPanel10.add(ObtenerPrecioBussines, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 40, 30));
 
         ObtenerPrecioFirst.setBackground(new java.awt.Color(255, 255, 255));
         ObtenerPrecioFirst.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
-        ObtenerPrecioFirst.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ObtenerPrecioFirstActionPerformed(evt);
-            }
-        });
-        jPanel10.add(ObtenerPrecioFirst, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 40, 30));
+        jPanel10.add(ObtenerPrecioFirst, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 40, 30));
 
         RegistroAvionCard.getContentPane().add(jPanel10, java.awt.BorderLayout.CENTER);
+
+        RegistroLLegadas.setUndecorated(true);
+
+        PanelPrincipal5.setBackground(new java.awt.Color(25, 118, 210));
+        PanelPrincipal5.setLayout(new java.awt.BorderLayout(40, 15));
+
+        jPanel11.setOpaque(false);
+        jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 7, 5));
+
+        IconoSuperior5.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        IconoSuperior5.setForeground(new java.awt.Color(255, 255, 255));
+        IconoSuperior5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/apexFlightsIcon.png"))); // NOI18N
+        IconoSuperior5.setText("Agregar Vuelo LLegada");
+        IconoSuperior5.setAlignmentX(3.0F);
+        IconoSuperior5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        IconoSuperior5.setFocusable(false);
+        IconoSuperior5.setIconTextGap(3);
+        jPanel11.add(IconoSuperior5);
+
+        PanelPrincipal5.add(jPanel11, java.awt.BorderLayout.WEST);
+
+        PanelBotones5.setBackground(new java.awt.Color(25, 118, 210));
+
+        SalirAddL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_clear_white_24dp.png"))); // NOI18N
+        SalirAddL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SalirAddL.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalirAddLMouseClicked(evt);
+            }
+        });
+        PanelBotones5.add(SalirAddL);
+
+        PanelPrincipal5.add(PanelBotones5, java.awt.BorderLayout.LINE_END);
+
+        RegistroLLegadas.getContentPane().add(PanelPrincipal5, java.awt.BorderLayout.PAGE_START);
+
+        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        modeloReg1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        modeloReg1.setForeground(new java.awt.Color(51, 51, 51));
+        modeloReg1.setText("Procedencia:");
+        jPanel12.add(modeloReg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 160, -1));
+
+        ObtenerProcedencia.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerProcedencia.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel12.add(ObtenerProcedencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 180, -1));
+
+        BGuardarLlegada.setBackground(new java.awt.Color(124, 77, 255));
+        BGuardarLlegada.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BGuardarLlegada.setForeground(new java.awt.Color(255, 255, 255));
+        BGuardarLlegada.setText("Guardar Avion");
+        BGuardarLlegada.setBorder(null);
+        BGuardarLlegada.setBorderPainted(false);
+        BGuardarLlegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BGuardarLlegada.setFocusable(false);
+        BGuardarLlegada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BGuardarLlegadaMouseClicked(evt);
+            }
+        });
+        jPanel12.add(BGuardarLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 310, -1));
+
+        ObtenerAvion.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerAvion.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel12.add(ObtenerAvion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 180, -1));
+
+        PlacaReg1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        PlacaReg1.setForeground(new java.awt.Color(51, 51, 51));
+        PlacaReg1.setText("Avion Asignado:");
+        jPanel12.add(PlacaReg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 150, -1));
+
+        VuelosReg9.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        VuelosReg9.setForeground(new java.awt.Color(51, 51, 51));
+        VuelosReg9.setText("Hora Llegada:");
+        jPanel12.add(VuelosReg9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 170, -1));
+
+        ObtenerLlegada.setBackground(new java.awt.Color(255, 255, 255));
+        ObtenerLlegada.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jPanel12.add(ObtenerLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 180, -1));
+
+        RegistroLLegadas.getContentPane().add(jPanel12, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("ApexFlights");
@@ -1431,7 +1463,7 @@ public class Principal extends JFrame {
         PanelRegistro.add(TextoPass5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
 
         PassReg.setBackground(new java.awt.Color(33, 150, 243));
-        PassReg.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
+        PassReg.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         PassReg.setForeground(new java.awt.Color(255, 255, 255));
         PassReg.setBorder(null);
         PassReg.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -1439,7 +1471,7 @@ public class Principal extends JFrame {
         PanelRegistro.add(PassReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 420, 30));
 
         UserReg.setBackground(new java.awt.Color(33, 150, 243));
-        UserReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        UserReg.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         UserReg.setForeground(new java.awt.Color(255, 255, 255));
         UserReg.setBorder(null);
         UserReg.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -1447,7 +1479,7 @@ public class Principal extends JFrame {
         PanelRegistro.add(UserReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 420, 30));
 
         NombreReg.setBackground(new java.awt.Color(33, 150, 243));
-        NombreReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        NombreReg.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         NombreReg.setForeground(new java.awt.Color(255, 255, 255));
         NombreReg.setBorder(null);
         NombreReg.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -1455,7 +1487,7 @@ public class Principal extends JFrame {
         PanelRegistro.add(NombreReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 420, 30));
 
         ApellidosReg.setBackground(new java.awt.Color(33, 150, 243));
-        ApellidosReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        ApellidosReg.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         ApellidosReg.setForeground(new java.awt.Color(255, 255, 255));
         ApellidosReg.setBorder(null);
         ApellidosReg.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -1463,7 +1495,7 @@ public class Principal extends JFrame {
         PanelRegistro.add(ApellidosReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 420, 30));
 
         MailReg.setBackground(new java.awt.Color(33, 150, 243));
-        MailReg.setFont(new java.awt.Font("Montserrat Alternates", 0, 18)); // NOI18N
+        MailReg.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         MailReg.setForeground(new java.awt.Color(255, 255, 255));
         MailReg.setBorder(null);
         MailReg.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -1692,6 +1724,15 @@ public class Principal extends JFrame {
         });
         OpcionesUsuarioAdmin.add(imguser);
 
+        CerrarSesionAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/drawable-mdpi/ic_exit_to_app_white_24dp.png"))); // NOI18N
+        CerrarSesionAdmin.setToolTipText("Cerrar Sesion");
+        CerrarSesionAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CerrarSesionAdminMouseClicked(evt);
+            }
+        });
+        OpcionesUsuarioAdmin.add(CerrarSesionAdmin);
+
         ToolBarAdmin.add(OpcionesUsuarioAdmin, java.awt.BorderLayout.LINE_END);
 
         AdminPanel.add(ToolBarAdmin, java.awt.BorderLayout.PAGE_START);
@@ -1769,77 +1810,6 @@ public class Principal extends JFrame {
 
         AdminPanel.add(EditarSalidas, java.awt.BorderLayout.CENTER);
 
-        EditarLlegadas.setBackground(new java.awt.Color(255, 255, 255));
-        EditarLlegadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        labelLLegadas.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
-        labelLLegadas.setForeground(new java.awt.Color(255, 255, 255));
-        labelLLegadas.setText("Editar Vuelos de Vuelta");
-        EditarLlegadas.add(labelLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
-
-        BotonRegistrarLLegada.setBackground(new java.awt.Color(124, 77, 255));
-        BotonRegistrarLLegada.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
-        BotonRegistrarLLegada.setForeground(new java.awt.Color(255, 255, 255));
-        BotonRegistrarLLegada.setText("Agregar Avion");
-        BotonRegistrarLLegada.setBorder(null);
-        BotonRegistrarLLegada.setBorderPainted(false);
-        BotonRegistrarLLegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonRegistrarLLegada.setFocusable(false);
-        BotonRegistrarLLegada.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonRegistrarLLegadaMouseClicked(evt);
-            }
-        });
-        EditarLlegadas.add(BotonRegistrarLLegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 540, 420, 40));
-
-        ScrollLLegadas.setBackground(new java.awt.Color(255, 255, 255));
-        ScrollLLegadas.setForeground(new java.awt.Color(255, 255, 255));
-
-        TablaLLegadas.setBackground(new java.awt.Color(33, 150, 243));
-        TablaLLegadas.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        TablaLLegadas.setForeground(new java.awt.Color(255, 255, 255));
-        TablaLLegadas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Hora de llegada", "Avion Asignado", "Procedencia"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        TablaLLegadas.setToolTipText("");
-        TablaLLegadas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        TablaLLegadas.setGridColor(new java.awt.Color(255, 255, 255));
-        TablaLLegadas.setRowHeight(20);
-        ScrollLLegadas.setViewportView(TablaLLegadas);
-        if (TablaLLegadas.getColumnModel().getColumnCount() > 0) {
-            TablaLLegadas.getColumnModel().getColumn(0).setResizable(false);
-            TablaLLegadas.getColumnModel().getColumn(1).setResizable(false);
-            TablaLLegadas.getColumnModel().getColumn(2).setResizable(false);
-            TablaLLegadas.getColumnModel().getColumn(3).setResizable(false);
-        }
-
-        EditarLlegadas.add(ScrollLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, -1, 440));
-
-        noLLegadas.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        noLLegadas.setText("No hay llegadas registradas");
-        noLLegadas.setFocusTraversalPolicyProvider(true);
-        EditarLlegadas.add(noLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
-
-        fondoELlegadas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        fondoELlegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/salidas.jpg"))); // NOI18N
-        fondoELlegadas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        EditarLlegadas.add(fondoELlegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
-
-        AdminPanel.add(EditarLlegadas, java.awt.BorderLayout.CENTER);
-
         Inicio.setBackground(new java.awt.Color(255, 255, 255));
         Inicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1881,11 +1851,6 @@ public class Principal extends JFrame {
                 BotonActualizarUsersMouseClicked(evt);
             }
         });
-        BotonActualizarUsers.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonActualizarUsersActionPerformed(evt);
-            }
-        });
         EditarUsuarios.add(BotonActualizarUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 540, 420, 40));
 
         ScrollUsuarios.setBackground(new java.awt.Color(255, 255, 255));
@@ -1901,7 +1866,15 @@ public class Principal extends JFrame {
             new String [] {
                 "ID", "Nombre", "Apellido", "Correo", "N_Usuario", "Password", "ApexCoins"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         TablaUsuarios.setToolTipText("");
         TablaUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         TablaUsuarios.setGridColor(new java.awt.Color(255, 255, 255));
@@ -1978,9 +1951,16 @@ public class Principal extends JFrame {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
             };
+            boolean[] canEdit = new boolean [] {
+                true, true, false, true
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         TablaAviones.setToolTipText("");
@@ -2008,6 +1988,92 @@ public class Principal extends JFrame {
         EditarAviones.add(fondoEditA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
 
         AdminPanel.add(EditarAviones, java.awt.BorderLayout.CENTER);
+
+        EditarLlegadas.setBackground(new java.awt.Color(255, 255, 255));
+        EditarLlegadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        labelLLegadas.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
+        labelLLegadas.setForeground(new java.awt.Color(255, 255, 255));
+        labelLLegadas.setText("Editar Vuelos de Vuelta");
+        EditarLlegadas.add(labelLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
+
+        BotonActualizarLlegada.setBackground(new java.awt.Color(124, 77, 255));
+        BotonActualizarLlegada.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonActualizarLlegada.setForeground(new java.awt.Color(255, 255, 255));
+        BotonActualizarLlegada.setText("Actualizar");
+        BotonActualizarLlegada.setBorder(null);
+        BotonActualizarLlegada.setBorderPainted(false);
+        BotonActualizarLlegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonActualizarLlegada.setFocusable(false);
+        BotonActualizarLlegada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonActualizarLlegadaMouseClicked(evt);
+            }
+        });
+        EditarLlegadas.add(BotonActualizarLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 510, 230, 40));
+
+        BotonRegistrarLLegada.setBackground(new java.awt.Color(124, 77, 255));
+        BotonRegistrarLLegada.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
+        BotonRegistrarLLegada.setForeground(new java.awt.Color(255, 255, 255));
+        BotonRegistrarLLegada.setText("Agregar Avion");
+        BotonRegistrarLLegada.setBorder(null);
+        BotonRegistrarLLegada.setBorderPainted(false);
+        BotonRegistrarLLegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonRegistrarLLegada.setFocusable(false);
+        BotonRegistrarLLegada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BotonRegistrarLLegadaMouseClicked(evt);
+            }
+        });
+        EditarLlegadas.add(BotonRegistrarLLegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 510, 230, 40));
+
+        ScrollLLegadas.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollLLegadas.setForeground(new java.awt.Color(255, 255, 255));
+
+        TablaLLegadas.setBackground(new java.awt.Color(33, 150, 243));
+        TablaLLegadas.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        TablaLLegadas.setForeground(new java.awt.Color(255, 255, 255));
+        TablaLLegadas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Hora de llegada", "Avion Asignado", "Procedencia"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        TablaLLegadas.setToolTipText("");
+        TablaLLegadas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        TablaLLegadas.setGridColor(new java.awt.Color(255, 255, 255));
+        TablaLLegadas.setRowHeight(20);
+        ScrollLLegadas.setViewportView(TablaLLegadas);
+        if (TablaLLegadas.getColumnModel().getColumnCount() > 0) {
+            TablaLLegadas.getColumnModel().getColumn(0).setResizable(false);
+            TablaLLegadas.getColumnModel().getColumn(1).setResizable(false);
+            TablaLLegadas.getColumnModel().getColumn(2).setResizable(false);
+            TablaLLegadas.getColumnModel().getColumn(3).setResizable(false);
+        }
+
+        EditarLlegadas.add(ScrollLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(773, 60, 480, 440));
+
+        noLLegadas.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        noLLegadas.setText("No hay llegadas registradas");
+        noLLegadas.setFocusTraversalPolicyProvider(true);
+        EditarLlegadas.add(noLLegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, -1, -1));
+
+        fondoELlegadas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fondoELlegadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/salidas.jpg"))); // NOI18N
+        fondoELlegadas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        EditarLlegadas.add(fondoELlegadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 630));
+
+        AdminPanel.add(EditarLlegadas, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(AdminPanel, java.awt.BorderLayout.CENTER);
 
@@ -2039,11 +2105,10 @@ public class Principal extends JFrame {
             
         }else
             entrada.setUserName(UserField.getText());
-        
         usuarios = master.getFileUser();
         admins = masterAd.getFileAdmin();
          for (int i = 0; i < admins.size(); i++) {
-            if(admins.get(i).getUsername().contains(entrada.getUserName()) && admins.get(i).getPassword().contains(entrada.getPassword())){
+            if(admins.get(i).getUsername().equals(entrada.getUserName()) && admins.get(i).getPassword().equals(entrada.getPassword())){
                 remove(PanelLogin);
                 repaint();
                 revalidate();
@@ -2055,12 +2120,12 @@ public class Principal extends JFrame {
                 nombreuser.setText(adminactual.getUsername());
                 AdminName2.setText(adminactual.getUsername());
             }else{
-               if(!usuarios.get(i).getPassword().contains(entrada.getPassword())){
+               if(!admins.get(i).getPassword().equals(entrada.getPassword())){
                     separadorPassword.setBackground(new Color(239,83,80));
                     separadorPassword.setForeground(new Color(239,83,80));
                     ErrorPass.setText("Contraseña Incorrecta...");
                 }
-                if(!usuarios.get(i).getUserName().contains(entrada.getUserName())){
+                if(!admins.get(i).getUsername().equals(entrada.getUserName())){
                     separadorNombre.setBackground(new Color(239,83,80));
                     separadorNombre.setForeground(new Color(239,83,80));
                     ErrorName.setText("Username Incorrecto...");
@@ -2068,7 +2133,7 @@ public class Principal extends JFrame {
             }
         }
         for (int i = 0; i < usuarios.size(); i++) {
-            if(usuarios.get(i).getUserName().contains(entrada.getUserName()) && usuarios.get(i).getPassword().contains(entrada.getPassword())){
+            if(usuarios.get(i).getUserName().equals(entrada.getUserName()) && usuarios.get(i).getPassword().equals(entrada.getPassword())){
                 remove(PanelLogin);
                 repaint();
                 revalidate();
@@ -2089,12 +2154,12 @@ public class Principal extends JFrame {
                     UserImage.setIcon(ResizeImage(actual.getProfilePhoto()));
                 }
             }else{
-               if(!usuarios.get(i).getPassword().contains(entrada.getPassword())){
+               if(!usuarios.get(i).getPassword().equals(entrada.getPassword())){
                     separadorPassword.setBackground(new Color(239,83,80));
                     separadorPassword.setForeground(new Color(239,83,80));
                     ErrorPass.setText("Contraseña Incorrecta...");
                 }
-                if(!usuarios.get(i).getUserName().contains(entrada.getUserName())){
+                if(!usuarios.get(i).getUserName().equals(entrada.getUserName())){
                     separadorNombre.setBackground(new Color(239,83,80));
                     separadorNombre.setForeground(new Color(239,83,80));
                     ErrorName.setText("Username Incorrecto...");
@@ -2125,7 +2190,11 @@ public class Principal extends JFrame {
 
     private void BotonRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonRegistrarMouseClicked
         Usuario registrado = new Usuario();
-        usuarios = master.getFileUser();
+        File comp = new File("users.dat");
+        if(comp.exists() && !comp.isDirectory()){
+            System.out.println("Si hay usuarios");
+            usuarios = master.getFileUser();
+        }
         if(PassReg.getPassword().length == 0){
             separadorPassR.setBackground(new Color(239,83,80));
             separadorPassR.setForeground(new Color(239,83,80));
@@ -2360,7 +2429,6 @@ public class Principal extends JFrame {
         AdminPanel.revalidate();
     }//GEN-LAST:event_imguserMouseClicked
 
-
     private void BotonRegistrarAvionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonRegistrarAvionMouseClicked
         RegistroAvionCard.setVisible(true);
         RegistroAvionCard.setBounds(0, 0, 400, 500);
@@ -2368,7 +2436,9 @@ public class Principal extends JFrame {
     }//GEN-LAST:event_BotonRegistrarAvionMouseClicked
 
     private void BotonRegistrarLLegadaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonRegistrarLLegadaMouseClicked
-        // TODO add your handling code here:
+        RegistroLLegadas.setVisible(true);
+        RegistroLLegadas.setBounds(0, 0, 400, 250);
+        RegistroLLegadas.setLocationRelativeTo(null);
     }//GEN-LAST:event_BotonRegistrarLLegadaMouseClicked
 
     private void BotonRegistrarSalidasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonRegistrarSalidasMouseClicked
@@ -2519,7 +2589,7 @@ public class Principal extends JFrame {
 
     private void lapiz_inforcard1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lapiz_inforcard1MouseClicked
         InfoTarjeta.setVisible(true);
-        InfoTarjeta.setBounds(0, 0, 425, 300);
+        InfoTarjeta.setBounds(0, 0, 425, 275);
         InfoTarjeta.setLocationRelativeTo(null);
     }//GEN-LAST:event_lapiz_inforcard1MouseClicked
 
@@ -2527,36 +2597,47 @@ public class Principal extends JFrame {
         DefaultTableModel tabla = (DefaultTableModel) TablaUsuarios.getModel();
         int nRow = tabla.getRowCount();
         ArrayList<Usuario> update = new ArrayList<Usuario>();
-        Object rows[] = new Object[7];
         for (int i = 0; i < nRow; i++) {
-            rows[0] = tabla.getValueAt(i,0);
-            rows[1] = tabla.getValueAt(i,1);
-            rows[2] = tabla.getValueAt(i,2);
-            rows[3] = tabla.getValueAt(i,3);
-            rows[4] = tabla.getValueAt(i,4);
-            rows[5] = tabla.getValueAt(i,5);
-            rows[6] = tabla.getValueAt(i,6);
+            int id = Integer.parseInt(tabla.getValueAt(i,0).toString());
+            String nombre = tabla.getValueAt(i,1).toString();
+            String apellido = tabla.getValueAt(i,2).toString();
+            String mail = tabla.getValueAt(i,3).toString();
+            String uname = tabla.getValueAt(i,4).toString();
+            String pass = tabla.getValueAt(i,5).toString();
+            int ac = Integer.parseInt(tabla.getValueAt(i,6).toString());
             Usuario temp = new Usuario();
-            temp.setID((int)rows[0]);
-            System.out.println((int)rows[0]);
-            temp.setNombre((String)rows[1]);
-            temp.setApellido((String)rows[2]);
-            temp.setMail((String)rows[3]);
-            temp.setUserName((String)rows[4]);
-            temp.setPassword((String)rows[5]);
-            temp.setACoins((int)rows[6]);
+            temp.setID(id);
+            temp.setNombre(nombre);
+            temp.setApellido(apellido);
+            temp.setMail(mail);
+            temp.setUserName(uname);
+            temp.setPassword(pass);
+            temp.setACoins(ac);
             update.add(temp);
         }
         master.editFileUser(update);
         JOptionPane.showMessageDialog(null,"Se han guardado los objetos");
     }//GEN-LAST:event_BotonActualizarUsersMouseClicked
 
-    private void BotonActualizarUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarUsersActionPerformed
-        
-    }//GEN-LAST:event_BotonActualizarUsersActionPerformed
-
     private void BotonActualizarAvionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonActualizarAvionMouseClicked
-        // TODO add your handling code here:
+        aviones = masterAvion.getFileAvion();
+        DefaultTableModel tabla = (DefaultTableModel) TablaAviones.getModel();
+        int nRow = tabla.getRowCount();
+        ArrayList<Avion> update = new ArrayList<Avion>();
+        for (int i = 0; i < nRow; i++) {
+            String modelo = tabla.getValueAt(i,1).toString();
+            String placa = tabla.getValueAt(i,0).toString();
+            int NoVuelos = Integer.parseInt(tabla.getValueAt(i,3).toString());
+           
+            Avion temp = new Avion();
+            temp.setModelo(modelo);
+            temp.setPlaca(placa);
+            temp.setNoVuelos(NoVuelos);
+            temp.setLugares(aviones.get(i).getLugares());
+            update.add(temp);
+        }
+        masterAvion.editFileAvion(update);
+        JOptionPane.showMessageDialog(null,"Se han guardado los objetos");
     }//GEN-LAST:event_BotonActualizarAvionMouseClicked
 
     private void SalirAddAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirAddAMouseClicked
@@ -2565,44 +2646,115 @@ public class Principal extends JFrame {
     }//GEN-LAST:event_SalirAddAMouseClicked
 
     private void BGuardarAvionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BGuardarAvionMouseClicked
-        // TODO add your handling code here:
+        if(ObtenerModelo.getText().equals("")
+                && ObtenerPlaca.getText().equals("") && ObtenerNoVuelos.getText().equals("")
+                && ObtenerLugarBussines.getText().equals("") && ObtenerLugarFirst.getText().equals("")
+                && ObtenerLugaresComercial.getText().equals("") && ObtenerPrecioBussines.getText().equals("")
+                && ObtenerPrecioFirst.getText().equals("") && ObtenerPrecioCoomercial.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "LLena bien los datos...");
+        }
+        
+        Avion ARegistro = new Avion();
+        File comp = new File("aviones.dat");
+        if(comp.exists() && !comp.isDirectory()){
+            System.out.println("Si hay aviones");
+            aviones = masterAvion.getFileAvion();
+        }
+       ARegistro.setModelo(ObtenerModelo.getText());
+       ARegistro.setPlaca(ObtenerPlaca.getText());
+       ARegistro.setNoVuelos(Integer.valueOf(ObtenerNoVuelos.getText()));
+       ArrayList<Lugar> lugares = new ArrayList<Lugar>();
+        for (int i = 0; i < Integer.valueOf(ObtenerLugarBussines.getText()); i++) {
+            Lugar asignarB = new Lugar();
+            asignarB.setID(i);
+            asignarB.setPrecio(Integer.valueOf(ObtenerPrecioBussines.getText()));
+            asignarB.setClase(1);
+            asignarB.setAvailable(true);
+            lugares.add(asignarB);
+        }
+        for (int i = 0; i < Integer.valueOf(ObtenerLugarFirst.getText()); i++) {
+            Lugar asignarF = new Lugar();
+            asignarF.setID(i);
+            asignarF.setPrecio(Integer.valueOf(ObtenerPrecioFirst.getText()));
+            asignarF.setClase(2);
+            asignarF.setAvailable(true);
+            lugares.add(asignarF);
+        }
+        for (int i = 0; i < Integer.valueOf(ObtenerLugaresComercial.getText()); i++) {
+            Lugar asignarC = new Lugar();
+            asignarC.setID(i);
+            asignarC.setPrecio(Integer.valueOf(ObtenerPrecioCoomercial.getText()));
+            asignarC.setClase(3);
+            asignarC.setAvailable(true);
+            lugares.add(asignarC);
+        }
+        ARegistro.setLugares(lugares);
+        ARegistro.setFileAvion(aviones);
+        JOptionPane.showMessageDialog(null, "Se ha registrado el avion con exito");
     }//GEN-LAST:event_BGuardarAvionMouseClicked
 
-    private void BGuardarAvionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BGuardarAvionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BGuardarAvionActionPerformed
+    private void CerrarSesionAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionAdminMouseClicked
+        int opcion = JOptionPane.showConfirmDialog(null, "Estas a punto de Cerrar Sesion...","Saliendo?",JOptionPane.YES_NO_OPTION);
+        if(opcion == JOptionPane.YES_OPTION){
+        adminactual = null;
+        remove(AdminPanel);
+        repaint();
+        revalidate();
 
-    private void ObtenerLugaresComercialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObtenerLugaresComercialActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ObtenerLugaresComercialActionPerformed
+        add(PanelLogin,BorderLayout.CENTER);
+        repaint();
+        revalidate();
+        }else{
+            JOptionPane.showMessageDialog(null,"Perfecto Decidiste Quedarte");
+        }
+    }//GEN-LAST:event_CerrarSesionAdminMouseClicked
 
-    private void ObtenerTotalLugaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObtenerTotalLugaresActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ObtenerTotalLugaresActionPerformed
+    private void SalirAddLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirAddLMouseClicked
+        RegistroLLegadas.setVisible(false);
+        RegistroLLegadas.dispose();
+    }//GEN-LAST:event_SalirAddLMouseClicked
 
-    private void ObtenerPrecioCoomercialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObtenerPrecioCoomercialActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ObtenerPrecioCoomercialActionPerformed
+    private void BGuardarLlegadaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BGuardarLlegadaMouseClicked
+        if(ObtenerProcedencia.getText().equals("") && ObtenerLlegada.getText().equals("") && ObtenerAvion.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "LLena bien los datos...");
+        }
+        
+        VuelosVuelta LLRegistro = new VuelosVuelta();
+        File comp = new File("llegadas.dat");
+        if(comp.exists() && !comp.isDirectory()){
+            System.out.println("Si hay llegadas");
+           llegadas = masterLLegadas.getFileVVuelta();
+        }
+       LLRegistro.setHoraLLegada(ObtenerLlegada.getText());
+       LLRegistro.setALlegada(ObtenerAvion.getText());
+       LLRegistro.setID(llegadas.size());
+       LLRegistro.setProcedencia(ObtenerProcedencia.getText());
+       LLRegistro.setFileVVuelta(llegadas);
+        JOptionPane.showMessageDialog(null, "Se ha registrado el avion con exito");
+    }//GEN-LAST:event_BGuardarLlegadaMouseClicked
 
-    private void ObtenerLugarFirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObtenerLugarFirstActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ObtenerLugarFirstActionPerformed
+    private void BotonActualizarLlegadaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonActualizarLlegadaMouseClicked
+        llegadas = masterLLegadas.getFileVVuelta();
+        DefaultTableModel tabla = (DefaultTableModel) TablaLLegadas.getModel();
+        int nRow = tabla.getRowCount();
+        ArrayList<VuelosVuelta> update = new ArrayList<VuelosVuelta>();
+        for (int i = 0; i < nRow; i++) {
+            String proc = tabla.getValueAt(i,2).toString();
+            String placaA = tabla.getValueAt(i,1).toString();
+            String hr = tabla.getValueAt(i,0).toString();
+           
+            VuelosVuelta temp = new VuelosVuelta();
+            temp.setProcedencia(proc);
+            temp.setALlegada(placaA);
+            temp.setHoraLLegada(hr);
+            temp.setID(llegadas.get(i).getID());
+            update.add(temp);
+        }
+        masterLLegadas.editFileVVuelta(update);
+        JOptionPane.showMessageDialog(null,"Se han guardado los objetos");
+    }//GEN-LAST:event_BotonActualizarLlegadaMouseClicked
 
-    private void ObtenerLugarBussinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObtenerLugarBussinesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ObtenerLugarBussinesActionPerformed
-
-    private void ObtenerPrecioBussinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObtenerPrecioBussinesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ObtenerPrecioBussinesActionPerformed
-
-    private void ObtenerPrecioFirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObtenerPrecioFirstActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ObtenerPrecioFirstActionPerformed
-
-
-    public ImageIcon ResizeImage(String ImagePath)
-    {
+    public ImageIcon ResizeImage(String ImagePath){
         ImageIcon MyImage = new ImageIcon(ImagePath);
         Image img = MyImage.getImage();
         Image newImg = img.getScaledInstance(UserImage.getWidth(), UserImage.getHeight(), Image.SCALE_SMOOTH);
@@ -2623,54 +2775,84 @@ public class Principal extends JFrame {
              cambiarsize(jLabel4,"/Images/_recortado.png");
              cambiarsize(ImagenBienvenidaAdmin,"/Images/Cielo1.jpg");
              cambiarsize(ApexCoinsImg,"/Images/ApexCoins.png");
-             usuarios = master.getFileUser();
-             
-             if(aviones.size() == 0){
-                 EditarAviones.remove(ScrollAviones);
-                 EditarAviones.repaint();
-                 EditarAviones.revalidate();
-                 System.out.println("No Aviones");
-             }else{
-                 
-             }
-             
-             if(salidas.size() == 0){
-                 EditarSalidas.remove(ScrollSalidas);
-                 EditarSalidas.repaint();
-                 EditarSalidas.revalidate();
-                 System.out.println("No Salidas");
-             }else{
-                 
-             }
-             
-             if(usuarios.size() == 0){
-                 EditarUsuarios.remove(ScrollUsuarios);
-                 EditarUsuarios.repaint();
-                 EditarUsuarios.revalidate();
-                 System.out.println("No Usuarios");
-             }else{
-                 DefaultTableModel model = (DefaultTableModel) TablaUsuarios.getModel();
-                 Object rows[] = new Object[7];
-                 for (int i = 0; i < usuarios.size(); i++) {
-                    rows[0] = usuarios.get(i).getID();
-                    rows[1] = usuarios.get(i).getNombre();
-                    rows[2] = usuarios.get(i).getApellido();
-                    rows[3] = usuarios.get(i).getMail();
-                    rows[4] = usuarios.get(i).getUserName();
-                    rows[5] = usuarios.get(i).getPassword();
-                    rows[6] = usuarios.get(i).getACoins();
-                    model.addRow(rows);
-                 }
-             }
-             
-             if(llegadas.size() == 0){
-                 EditarLlegadas.remove(ScrollLLegadas);
-                 EditarLlegadas.repaint();
-                 EditarLlegadas.revalidate();
-                 System.out.println("No Llegadas");
-             }else{
-                 
-             }
+             File comp = new File("llegadas.dat");
+            if(comp.exists() && !comp.isDirectory()){
+                System.out.println("Si hay llegadas");
+                llegadas = masterLLegadas.getFileVVuelta();
+            }
+            File comp2 = new File("aviones.dat");
+            if(comp2.exists() && !comp.isDirectory()){
+                System.out.println("Si hay aviones");
+                aviones = masterAvion.getFileAvion();
+            }
+            File comp3 = new File("users.dat");
+            if(comp3.exists() && !comp.isDirectory()){
+                System.out.println("Si hay usuarios");
+                usuarios = master.getFileUser();
+            }
+            
+            if(aviones.size() == 0){
+                EditarAviones.remove(ScrollAviones);
+                EditarAviones.repaint();
+                EditarAviones.revalidate();
+                System.out.println("No Aviones");
+            }else{
+                DefaultTableModel model2 = (DefaultTableModel) TablaAviones.getModel();
+                Object rows[] = new Object[4];
+                for (int i = 0; i < aviones.size(); i++) {
+                   rows[0] = aviones.get(i).getPlaca();
+                   rows[1] = aviones.get(i).getModelo();
+                   rows[2] = aviones.get(i).getLugares().size();
+                   rows[3] = aviones.get(i).getNoVuelos();
+                   model2.addRow(rows);
+                }
+            }
+
+            if(salidas.size() == 0){
+                EditarSalidas.remove(ScrollSalidas);
+                EditarSalidas.repaint();
+                EditarSalidas.revalidate();
+                System.out.println("No Salidas");
+            }else{
+
+            }
+
+            if(usuarios.size() == 0){
+                EditarUsuarios.remove(ScrollUsuarios);
+                EditarUsuarios.repaint();
+                EditarUsuarios.revalidate();
+                System.out.println("No Usuarios");
+            }else{
+                DefaultTableModel model = (DefaultTableModel) TablaUsuarios.getModel();
+                Object rowsU[] = new Object[7];
+                for (int i = 0; i < usuarios.size(); i++) {
+                   rowsU[0] = usuarios.get(i).getID();
+                   rowsU[1] = usuarios.get(i).getNombre();
+                   rowsU[2] = usuarios.get(i).getApellido();
+                   rowsU[3] = usuarios.get(i).getMail();
+                   rowsU[4] = usuarios.get(i).getUserName();
+                   rowsU[5] = usuarios.get(i).getPassword();
+                   rowsU[6] = usuarios.get(i).getACoins();
+                   model.addRow(rowsU);
+                }
+            }
+
+            if(llegadas.size() == 0){
+                EditarLlegadas.remove(ScrollLLegadas);
+                EditarLlegadas.repaint();
+                EditarLlegadas.revalidate();
+                System.out.println("No Llegadas");
+            }else{
+                DefaultTableModel model = (DefaultTableModel) TablaLLegadas.getModel();
+                Object rowsU[] = new Object[4];
+                for (int i = 0; i < llegadas.size(); i++) {
+                   rowsU[0] = llegadas.get(i).getID();
+                   rowsU[1] = llegadas.get(i).getHoraLLegada();
+                   rowsU[2] = llegadas.get(i).getALlegada();
+                   rowsU[3] = llegadas.get(i).getProcedencia();
+                   model.addRow(rowsU);
+                }
+            }
     }
     
     private void cambiarsize(JLabel jl,String url_imagen){
@@ -2697,7 +2879,9 @@ public class Principal extends JFrame {
     private javax.swing.JLabel ApexCoins;
     private javax.swing.JLabel ApexCoinsImg;
     private javax.swing.JButton BGuardarAvion;
+    private javax.swing.JButton BGuardarLlegada;
     private javax.swing.JButton BotonActualizarAvion;
+    private javax.swing.JButton BotonActualizarLlegada;
     private javax.swing.JButton BotonActualizarUsers;
     private javax.swing.JButton BotonCanjearACoins;
     private javax.swing.JButton BotonComprarVuelo;
@@ -2707,6 +2891,7 @@ public class Principal extends JFrame {
     private javax.swing.JButton BotonRegistrarLLegada;
     private javax.swing.JButton BotonRegistrarSalidas;
     private javax.swing.JLabel BotonRegresar;
+    private javax.swing.JLabel CerrarSesionAdmin;
     private javax.swing.JLabel CerrarSesionUser;
     private javax.swing.JLabel Contraseña;
     private javax.swing.JLabel Contraseña1;
@@ -2734,6 +2919,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel IconoSuperior2;
     private javax.swing.JLabel IconoSuperior3;
     private javax.swing.JLabel IconoSuperior4;
+    private javax.swing.JLabel IconoSuperior5;
     private javax.swing.JPanel Imagen;
     private javax.swing.JLabel ImagenBienvenidaAdmin;
     private javax.swing.JDialog InfoTarjeta;
@@ -2755,10 +2941,12 @@ public class Principal extends JFrame {
     private javax.swing.JTextField NombreReg;
     private javax.swing.JLabel NombreUsuario;
     private javax.swing.JLabel NombreUsuario1;
+    private javax.swing.JTextField ObtenerAvion;
     private javax.swing.JTextField ObtenerCCV;
     private javax.swing.JTextField ObtenerCorreo;
     private javax.swing.JTextField ObtenerExpDate;
     private javax.swing.JTextField ObtenerFondos;
+    private javax.swing.JTextField ObtenerLlegada;
     private javax.swing.JTextField ObtenerLugarBussines;
     private javax.swing.JTextField ObtenerLugarFirst;
     private javax.swing.JTextField ObtenerLugaresComercial;
@@ -2769,8 +2957,8 @@ public class Principal extends JFrame {
     private javax.swing.JTextField ObtenerPrecioBussines;
     private javax.swing.JTextField ObtenerPrecioCoomercial;
     private javax.swing.JTextField ObtenerPrecioFirst;
+    private javax.swing.JTextField ObtenerProcedencia;
     private javax.swing.JTextField ObtenerTarjeta;
-    private javax.swing.JTextField ObtenerTotalLugares;
     private javax.swing.JTextField Obteneracoins;
     private javax.swing.JPanel Opciones;
     private javax.swing.JPanel OpcionesUsuario;
@@ -2782,6 +2970,7 @@ public class Principal extends JFrame {
     private javax.swing.JPanel PanelBotones2;
     private javax.swing.JPanel PanelBotones3;
     private javax.swing.JPanel PanelBotones4;
+    private javax.swing.JPanel PanelBotones5;
     private javax.swing.JPanel PanelDestinos;
     private javax.swing.JPanel PanelEntrada;
     private javax.swing.JPanel PanelLlegadas;
@@ -2794,17 +2983,21 @@ public class Principal extends JFrame {
     private javax.swing.JPanel PanelPrincipal2;
     private javax.swing.JPanel PanelPrincipal3;
     private javax.swing.JPanel PanelPrincipal4;
+    private javax.swing.JPanel PanelPrincipal5;
     private javax.swing.JPanel PanelRegistro;
     private javax.swing.JPanel PanelSalidas;
     private javax.swing.JPasswordField PassField;
     private javax.swing.JPasswordField PassReg;
     private javax.swing.JLabel PlacaReg;
+    private javax.swing.JLabel PlacaReg1;
     private javax.swing.JLabel Registro;
     private javax.swing.JDialog RegistroAvionCard;
+    private javax.swing.JDialog RegistroLLegadas;
     private javax.swing.JLabel SalidasB;
     private javax.swing.JLabel Salir;
     private javax.swing.JLabel SalirACoins;
     private javax.swing.JLabel SalirAddA;
+    private javax.swing.JLabel SalirAddL;
     private javax.swing.JLabel SalirCI;
     private javax.swing.JLabel SalirPE;
     private javax.swing.JScrollPane ScrollAviones;
@@ -2837,13 +3030,13 @@ public class Principal extends JFrame {
     private javax.swing.JPanel UsuarioPanel;
     private javax.swing.JLabel VuelosReg;
     private javax.swing.JLabel VuelosReg1;
-    private javax.swing.JLabel VuelosReg2;
     private javax.swing.JLabel VuelosReg3;
     private javax.swing.JLabel VuelosReg4;
     private javax.swing.JLabel VuelosReg5;
     private javax.swing.JLabel VuelosReg6;
     private javax.swing.JLabel VuelosReg7;
     private javax.swing.JLabel VuelosReg8;
+    private javax.swing.JLabel VuelosReg9;
     private javax.swing.JLabel fodoESalidas;
     private javax.swing.JLabel fondoELlegadas;
     private javax.swing.JLabel fondoEditA;
@@ -2899,6 +3092,8 @@ public class Principal extends JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2924,6 +3119,7 @@ public class Principal extends JFrame {
     private javax.swing.JLabel lapiz_passw;
     private javax.swing.JLabel lapiznom_user;
     private javax.swing.JLabel modeloReg;
+    private javax.swing.JLabel modeloReg1;
     private javax.swing.JLabel noLLegadas;
     private javax.swing.JLabel nombreAdmin;
     private javax.swing.JLabel nombreUser;
