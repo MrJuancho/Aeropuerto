@@ -790,7 +790,7 @@ public class Principal extends JFrame {
         BGuardarLlegada.setBackground(new java.awt.Color(124, 77, 255));
         BGuardarLlegada.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
         BGuardarLlegada.setForeground(new java.awt.Color(255, 255, 255));
-        BGuardarLlegada.setText("Guardar Avion");
+        BGuardarLlegada.setText("Guardar Llegada");
         BGuardarLlegada.setBorder(null);
         BGuardarLlegada.setBorderPainted(false);
         BGuardarLlegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -798,6 +798,11 @@ public class Principal extends JFrame {
         BGuardarLlegada.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BGuardarLlegadaMouseClicked(evt);
+            }
+        });
+        BGuardarLlegada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BGuardarLlegadaActionPerformed(evt);
             }
         });
         jPanel12.add(BGuardarLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 310, -1));
@@ -872,7 +877,7 @@ public class Principal extends JFrame {
         BGuardarSalida.setBackground(new java.awt.Color(124, 77, 255));
         BGuardarSalida.setFont(new java.awt.Font("Montserrat Alternates", 1, 24)); // NOI18N
         BGuardarSalida.setForeground(new java.awt.Color(255, 255, 255));
-        BGuardarSalida.setText("Guardar Avion");
+        BGuardarSalida.setText("Guardas Salidas");
         BGuardarSalida.setBorder(null);
         BGuardarSalida.setBorderPainted(false);
         BGuardarSalida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -880,6 +885,11 @@ public class Principal extends JFrame {
         BGuardarSalida.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BGuardarSalidaMouseClicked(evt);
+            }
+        });
+        BGuardarSalida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BGuardarSalidaActionPerformed(evt);
             }
         });
         jPanel14.add(BGuardarSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 310, -1));
@@ -3190,6 +3200,14 @@ public class Principal extends JFrame {
         
         
     }//GEN-LAST:event_ConfirmarCompraMouseClicked
+
+    private void BGuardarLlegadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BGuardarLlegadaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BGuardarLlegadaActionPerformed
+
+    private void BGuardarSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BGuardarSalidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BGuardarSalidaActionPerformed
 
     public ImageIcon ResizeImage(String ImagePath){
         ImageIcon MyImage = new ImageIcon(ImagePath);
